@@ -1,0 +1,9 @@
+ @import "tailwindcss";
+ 
+ @theme {
+    --color-prueba: #09f;
+ }
+
+ .social-button{
+    @apply inline-flex items-center justify-center rounded-sm bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75;
+ }
