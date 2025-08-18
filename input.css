@@ -24,3 +24,7 @@
  .boton-header {
    @apply text-white hover:text-gray-300 text-xl;
  }
+
+ .card-header {
+   @apply font-semibold text-white text-2xl;
+ }
