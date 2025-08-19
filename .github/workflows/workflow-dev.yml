@@ -3,7 +3,7 @@ name: Deploy Website
 on:
   push:
     branches:
-      - main
+      - main   # se ejecuta cuando hagas push a main
   workflow_dispatch:
 
 jobs:
@@ -11,18 +11,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Descargar código del repo
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Instala dependencias
+      # 2. Instalar PNPM 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.14.0
+
+      # 3. Instalar dependencias 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
-      # Compila Tailwind
+      # 4. Compilar Tailwind 
       - name: Build CSS with Tailwind
-        run: npx tailwindcss -i ./input.css -o ./assets/output.css --minify
+        run: pnpm run build:styles
 
-      # Deploy a GitHub Pages
+      # 5. Desplegar a GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
