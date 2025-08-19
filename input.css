@@ -1,0 +1,47 @@
+ @import "tailwindcss";
+
+ @font-face {
+   font-family: 'Cormorant Garamond';
+   src: url('/assets/fonts/CormorantGaramond.woff2') format('woff2');
+   font-style: normal;
+   font-display: swap;
+ }
+ 
+ @theme {
+   /*Colores*/
+   --color-amarillo: #FFD300;
+   --color-plomo: #EEEEEE;
+
+    /*Fuentes*/
+   --font-sans: 'Cormorant Garamond', ui-sans-serif, system-ui, sans-serif;
+
+}
+
+ .social-button{
+    @apply inline-flex items-center justify-center rounded-sm bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75;
+ }
+
+ .boton-header {
+   @apply text-white hover:text-gray-300 text-xl;
+ }
+
+ /* Estilos para las tarjetas flip 3D */
+ .perspective-1000 {
+   perspective: 1000px;
+ }
+
+ .transform-style-preserve-3d {
+   transform-style: preserve-3d;
+ }
+
+ .backface-hidden {
+   backface-visibility: hidden;
+ }
+
+ .rotate-y-180 {
+   transform: rotateY(180deg);
+ }
+
+ .group:hover .group-hover\:rotate-y-180 {
+   transform: rotateY(180deg);
+ }
