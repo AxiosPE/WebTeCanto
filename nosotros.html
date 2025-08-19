@@ -3,18 +3,45 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Voces de fe – Cantante cristiana</title>
+    <title>Nosotros</title>
     <meta name="description" content="Elencos lírico–clásico y música moderna para tu evento. Contrata a una cantante de música cristiana con repertorio clásico y contemporáneo." />
     <link rel="stylesheet" href="./assets/output.css" />
   </head>
 
   <body class="font-sans antialiased text-gray-700 bg-white selection:bg-[--color-amarillo]/50">
     <!-- ================= HERO ================= -->
-    <section class="bg-[--color-plomo] h-screen flex items-center relative overflow-hidden" role="banner" aria-labelledby="hero-title">
-      <!-- Elementos decorativos de fondo simplificados -->
+    <section class="h-screen flex items-center relative overflow-hidden bg-cover bg-center bg-no-repeat" style="background-image: url('./assets/Fondo-inicio.jpg');" role="banner" aria-labelledby="hero-title">
+      <!-- Overlay principal para legibilidad -->
+      <div class="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-black/50"></div>
+      
+      <!-- Overlay dorado sutil para armonía -->
+      <div class="absolute inset-0 bg-gradient-to-tr from-yellow-900/10 via-transparent to-yellow-800/15"></div>
+      
+      <!-- Elementos decorativos que dan vida -->
       <div class="absolute inset-0" aria-hidden="true">
-        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-300/30 to-transparent"></div>
-        <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-300/30 to-transparent"></div>
+        <!-- Elementos dorados flotantes -->
+        <div class="absolute top-20 left-16 w-24 h-24 bg-gradient-to-br from-yellow-400/15 to-yellow-600/8 rounded-full blur-xl animate-pulse" style="animation-duration: 4s;"></div>
+        <div class="absolute top-60 right-20 w-32 h-32 bg-gradient-to-br from-yellow-300/12 to-yellow-500/6 rounded-full blur-2xl animate-pulse" style="animation-duration: 6s; animation-delay: 1s;"></div>
+        <div class="absolute bottom-40 left-32 w-20 h-20 bg-gradient-to-br from-yellow-500/10 to-yellow-700/5 rounded-full blur-lg animate-pulse" style="animation-duration: 5s; animation-delay: 2s;"></div>
+        <div class="absolute bottom-20 right-40 w-36 h-36 bg-gradient-to-br from-yellow-200/8 to-yellow-400/4 rounded-full blur-3xl animate-pulse" style="animation-duration: 7s; animation-delay: 0.5s;"></div>
+        
+        <!-- Partículas de luz que flotan -->
+        <div class="absolute top-40 left-1/5 w-2 h-2 bg-yellow-300/60 rounded-full animate-bounce shadow-lg shadow-yellow-300/30" style="animation-duration: 3s; animation-delay: 0.5s;"></div>
+        <div class="absolute top-80 right-1/4 w-1.5 h-1.5 bg-yellow-400/50 rounded-full animate-bounce shadow-md shadow-yellow-400/25" style="animation-duration: 4s; animation-delay: 1s;"></div>
+        <div class="absolute bottom-60 left-1/6 w-2.5 h-2.5 bg-yellow-200/70 rounded-full animate-bounce shadow-lg shadow-yellow-200/35" style="animation-duration: 3.5s; animation-delay: 2s;"></div>
+        <div class="absolute bottom-32 right-1/5 w-2 h-2 bg-yellow-300/45 rounded-full animate-bounce shadow-md shadow-yellow-300/20" style="animation-duration: 2.8s; animation-delay: 0.8s;"></div>
+        
+        <!-- Líneas de energía musical -->
+        <div class="absolute top-1/4 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-yellow-300/25 to-transparent animate-pulse" style="animation-duration: 6s;"></div>
+        <div class="absolute bottom-1/4 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-yellow-400/20 to-transparent animate-pulse" style="animation-duration: 8s; animation-delay: 2s;"></div>
+        
+        <!-- Elementos geométricos musicales -->
+        <div class="absolute top-32 left-1/4 w-1 h-6 bg-gradient-to-b from-yellow-400/30 to-transparent transform rotate-12 animate-pulse" style="animation-duration: 3s;"></div>
+        <div class="absolute top-96 right-1/3 w-1 h-8 bg-gradient-to-b from-yellow-300/25 to-transparent transform -rotate-12 animate-pulse" style="animation-duration: 4s; animation-delay: 1.5s;"></div>
+        
+        <!-- Brillo sutil en los bordes -->
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-yellow-300/40 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-yellow-300/40 to-transparent"></div>
       </div>
       
       <div class="mx-auto max-w-7xl px-8 w-full relative z-10 text-center">
@@ -22,8 +49,8 @@
           
           <!-- Título principal más grande -->
           <div class="relative">
-            <h1 id="hero-title" class="text-6xl md:text-8xl lg:text-9xl xl:text-10xl font-light leading-tight tracking-wide text-black mb-4">
-              Voces de fe
+            <h1 id="hero-title" class="text-6xl md:text-8xl lg:text-9xl xl:text-10xl font-light leading-tight tracking-wide text-white mb-4 drop-shadow-lg">
+            Elenco
             </h1>
             <!-- Línea decorativa -->
             <div class="w-32 h-1 mx-auto mb-6" style="background: linear-gradient(90deg, transparent, #FFD300, transparent);"></div>
@@ -31,11 +58,11 @@
           
           <!-- Subtítulo más grande -->
           <div class="max-w-5xl mx-auto">
-            <p class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-gray-600 leading-relaxed font-light tracking-wide mb-4">
-              Elencos lírico–clásico y música moderna para cada ocasión
+            <p class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-gray-100 leading-relaxed font-light tracking-wide mb-4 drop-shadow-md">
+              Lírico–clásico y música moderna para cada ocasión
             </p>
             <!-- Descriptor -->
-            <p class="text-lg md:text-xl lg:text-2xl text-gray-500 font-light tracking-wide opacity-90">
+            <p class="text-lg md:text-xl lg:text-2xl text-gray-200 font-light tracking-wide opacity-90 drop-shadow-sm">
               EXPERIENCIAS MUSICALES • EVENTOS ESPECIALES • MOMENTOS ÚNICOS
             </p>
           </div>
@@ -44,7 +71,7 @@
           <div class="pt-6">
             <div class="flex flex-col sm:flex-row gap-5 justify-center items-center max-w-2xl mx-auto">
               <a href="#video"
-                 class="group relative w-full sm:w-auto max-w-xs inline-flex items-center justify-center rounded-full px-14 py-6 text-black text-2xl font-medium tracking-wide transition-all duration-300 min-h-[75px] focus:outline-none focus:ring-4 focus:ring-yellow-300 focus:ring-opacity-75"
+                 class="group relative w-full sm:w-auto max-w-xs inline-flex items-center justify-center rounded-full px-14 py-6 text-black text-2xl font-medium tracking-wide transition-all duration-300 min-h-[75px] focus:outline-none focus:ring-4 focus:ring-yellow-300 focus:ring-opacity-75 hover:scale-105 shadow-lg backdrop-blur-sm"
                  style="background-color: #FFD300;"
                  role="button"
                  aria-label="Ver repertorio clásico">
@@ -52,7 +79,7 @@
               </a>
               
               <a href="#video"
-                 class="group relative w-full sm:w-auto max-w-xs inline-flex items-center justify-center rounded-full bg-black px-14 py-6 text-white text-2xl font-medium tracking-wide transition-all duration-300 min-h-[75px] border-2 border-gray-700 hover:border-gray-500 focus:outline-none focus:ring-4 focus:ring-gray-400 focus:ring-opacity-75"
+                 class="group relative w-full sm:w-auto max-w-xs inline-flex items-center justify-center rounded-full bg-white/90 backdrop-blur-sm px-14 py-6 text-gray-900 text-2xl font-medium tracking-wide transition-all duration-300 min-h-[75px] border-2 border-white/20 hover:border-white/40 hover:bg-white hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/50 shadow-lg"
                  role="button"
                  aria-label="Ver repertorio moderno">
                 <span class="relative z-10">Moderno</span>
