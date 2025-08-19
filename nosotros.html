@@ -10,87 +10,183 @@
 
   <body class="font-sans antialiased text-gray-700 bg-white selection:bg-[--color-amarillo]/50">
     <!-- ================= HERO ================= -->
-    <section class="bg-[--color-plomo] min-h-screen flex items-center">
-      <div class="mx-auto max-w-6xl px-6 py-16 md:py-20 text-center w-full">
-        <h1 class="text-5xl md:text-7xl font-semibold leading-tight tracking-tight text-black mb-6">
-          Voces de fe
-        </h1>
-        <p class="mt-6 text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-          Elencos lírico–clásico y música moderna para cada ocasión
-        </p>
+    <section class="bg-[--color-plomo] min-h-screen flex items-center relative overflow-hidden">
+      <!-- Elementos decorativos de fondo -->
+      <div class="absolute inset-0">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-300/30 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-300/30 to-transparent"></div>
+        <div class="absolute top-20 left-10 w-1 h-1 bg-gray-400/20 rounded-full animate-pulse"></div>
+        <div class="absolute top-40 right-16 w-1.5 h-1.5 bg-gray-400/15 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+        <div class="absolute bottom-32 left-20 w-1 h-1 bg-gray-400/25 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+      </div>
+      
+      <div class="mx-auto max-w-6xl px-6 py-20 md:py-24 text-center w-full relative z-10">
+        <div class="space-y-8">
+          
+          <!-- Título principal refinado -->
+          <div class="relative">
+            <h1 class="text-6xl md:text-8xl lg:text-9xl font-light leading-tight tracking-[0.1em] text-black mb-4">
+              Voces de fe
+            </h1>
+            <!-- Línea decorativa dorada -->
+            <div class="w-32 h-px mx-auto mb-8" style="background: linear-gradient(90deg, transparent, #FFD300, transparent);"></div>
+          </div>
+          
+          <!-- Subtítulo elegante -->
+          <div class="max-w-4xl mx-auto">
+            <p class="text-xl md:text-2xl lg:text-3xl text-gray-600 leading-relaxed font-light tracking-wide">
+              Elencos lírico–clásico y música moderna para cada ocasión
+            </p>
+            <!-- Descriptor adicional -->
+            <p class="text-sm md:text-base text-gray-500 mt-4 font-light tracking-[0.15em] opacity-80">
+              EXPERIENCIAS MUSICALES • EVENTOS ESPECIALES • MOMENTOS ÚNICOS
+            </p>
+          </div>
 
-        <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href="#video"
-             class="inline-flex items-center rounded-full px-8 py-4 text-black text-lg font-semibold active:translate-y-0.5 transition-all duration-300 shadow-lg hover:shadow-xl hover:opacity-90"
-             style="background-color: #FFD300;">
-            Clásico
-          </a>
-          <a href="#video"
-             class="inline-flex items-center rounded-full bg-black px-8 py-4 text-white text-lg font-semibold hover:bg-gray-800 active:translate-y-0.5 transition-all duration-300 shadow-lg hover:shadow-xl">
-            Moderno
-          </a>
+          <!-- Botones sofisticados -->
+          <div class="pt-12">
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-lg mx-auto">
+              <a href="#video"
+                 class="group relative w-full sm:w-auto inline-flex items-center justify-center rounded-full px-12 py-5 text-black text-lg font-light tracking-wide transition-all duration-500 overflow-hidden min-w-[160px]"
+                 style="background-color: #FFD300;">
+                <span class="relative z-10 transition-transform duration-300 group-hover:scale-105">Clásico</span>
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+              </a>
+              
+              <a href="#video"
+                 class="group relative w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-black px-12 py-5 text-white text-lg font-light tracking-wide transition-all duration-500 overflow-hidden min-w-[160px] border border-gray-800 hover:border-gray-600">
+                <span class="relative z-10 transition-transform duration-300 group-hover:scale-105">Moderno</span>
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+              </a>
+            </div>
+          </div>
+          
         </div>
       </div>
     </section>
 
     <!-- ================= VIDEO ================= -->
-    <section id="video" class="bg-yellow-300 scroll-mt-24">
-      <div class="mx-auto max-w-6xl px-6 py-16 md:py-24">
-        <!-- Título de la sección -->
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-semibold text-black mb-4">
-            Escucha mi música
-          </h2>
-          <p class="text-lg md:text-xl text-gray-800 max-w-2xl mx-auto">
+    <section id="video" class="scroll-mt-24 relative overflow-hidden" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef, #dee2e6);">
+      <!-- Elementos decorativos -->
+      <div class="absolute inset-0">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent"></div>
+        <div class="absolute top-16 right-12 w-2 h-2 bg-gray-600/15 rounded-full animate-pulse"></div>
+        <div class="absolute bottom-20 left-8 w-1.5 h-1.5 bg-gray-600/20 rounded-full animate-pulse" style="animation-delay: 1.5s;"></div>
+        <!-- Toques dorados sutiles -->
+        <div class="absolute top-10 left-1/4 w-1 h-1 bg-yellow-400/20 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-16 right-1/3 w-1.5 h-1.5 bg-yellow-400/15 rounded-full animate-pulse" style="animation-delay: 3s;"></div>
+        <!-- Textura elegante -->
+        <div class="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-gray-200/30 opacity-50"></div>
+      </div>
+      
+      <div class="mx-auto max-w-6xl px-6 py-20 md:py-28 relative z-10">
+        
+        <!-- Título de la sección refinado -->
+        <div class="text-center mb-16">
+          <div class="inline-block">
+            <h2 class="text-4xl md:text-6xl lg:text-7xl font-light text-gray-800 mb-6 leading-tight tracking-[0.05em]">
+              Escucha mi música
+            </h2>
+            <!-- Línea decorativa -->
+            <div class="w-24 h-px mx-auto mb-8 bg-gradient-to-r from-transparent via-gray-600/40 to-transparent"></div>
+          </div>
+          
+          <p class="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-light tracking-wide">
             Descubre mi repertorio de música cristiana, desde clásicos hasta composiciones contemporáneas
+          </p>
+          
+          <!-- Descriptor adicional -->
+          <p class="text-sm md:text-base text-gray-600 mt-6 font-light tracking-[0.1em] opacity-70">
+            EXPERIENCIA AUDITIVA • REPERTORIO COMPLETO • MÚSICA ESPIRITUAL
           </p>
         </div>
 
-        <!-- Video container con aspect ratio responsivo -->
-        <div class="mx-auto max-w-4xl">
-          <div class="relative w-full overflow-hidden rounded-2xl shadow-2xl ring-1 ring-black/20 bg-black" style="padding-bottom: 56.25%;">
-            <iframe
-              class="absolute inset-0 w-full h-full"
-              src="https://www.youtube-nocookie.com/embed/LuSRKoksyhs?rel=0&modestbranding=1&color=white&showinfo=0"
-              title="Voces de fe - Demo musical"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
+        <!-- Video container sofisticado -->
+        <div class="mx-auto max-w-5xl">
+          <div class="relative group">
+            <!-- Resplandor decorativo -->
+            <div class="absolute -inset-2 bg-gradient-to-r from-black/20 via-transparent to-black/20 rounded-3xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
+            
+            <div class="relative w-full overflow-hidden rounded-3xl shadow-2xl ring-1 ring-black/30 bg-black backdrop-blur-sm" style="padding-bottom: 56.25%;">
+              <!-- Borde brillante superior -->
+              <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+              
+              <iframe
+                class="absolute inset-0 w-full h-full rounded-3xl"
+                src="https://www.youtube-nocookie.com/embed/LuSRKoksyhs?rel=0&modestbranding=1&color=white&showinfo=0"
+                title="Voces de fe - Demo musical"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
           </div>
         </div>
 
-        <!-- Información adicional -->
-        <div class="text-center mt-12">
-          <p class="text-sm md:text-base text-gray-700">
-            ¿Te gustó lo que escuchaste? 
-            <a href="#contacto" class="font-semibold text-black hover:text-yellow-600 transition-colors">
-              Contáctame para tu evento
+        <!-- Información adicional elegante -->
+        <div class="text-center mt-16">
+          <div class="max-w-2xl mx-auto">
+            <p class="text-lg md:text-xl text-gray-700 leading-relaxed font-light mb-6">
+              ¿Te gustó lo que escuchaste?
+            </p>
+            
+            <a href="#contacto" class="group inline-flex items-center font-light text-gray-800 hover:text-gray-600 transition-all duration-300 text-lg tracking-wide">
+              <span class="border-b border-gray-600/30 group-hover:border-gray-600/60 transition-colors duration-300">
+                Contáctame para tu evento
+              </span>
+              <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
             </a>
-          </p>
+          </div>
         </div>
+        
       </div>
     </section>
 
     <!-- ================= SERVICIOS MUSICALES ================= -->
-    <section class="bg-gradient-to-br from-gray-50 to-gray-100 py-24 md:py-32">
-      <div class="mx-auto max-w-7xl px-6">
+    <section class="bg-gradient-to-br from-gray-50 to-gray-100 py-28 md:py-36 relative overflow-hidden">
+      <!-- Elementos decorativos de fondo -->
+      <div class="absolute inset-0">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-300/40 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-300/40 to-transparent"></div>
+        <div class="absolute top-24 left-16 w-2 h-2 bg-gray-400/15 rounded-full animate-pulse"></div>
+        <div class="absolute top-60 right-20 w-1.5 h-1.5 bg-gray-400/20 rounded-full animate-pulse" style="animation-delay: 1.5s;"></div>
+        <div class="absolute bottom-40 left-12 w-1 h-1 bg-gray-400/25 rounded-full animate-pulse" style="animation-delay: 3s;"></div>
+        <div class="absolute bottom-20 right-16 w-2 h-2 bg-gray-400/10 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+      </div>
+      
+      <div class="mx-auto max-w-7xl px-6 relative z-10">
         
-        <!-- Título principal elegante -->
-        <div class="text-center mb-20">
+        <!-- Título principal ultra-elegante -->
+        <div class="text-center mb-24">
           <div class="inline-block">
-            <h2 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Nuestros <span class="text-transparent bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text">Servicios</span>
+            <h2 class="text-5xl md:text-7xl lg:text-8xl font-light text-gray-900 mb-8 leading-tight tracking-[0.05em]">
+              Nuestros <span class="text-transparent bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800 bg-clip-text">Servicios</span>
             </h2>
-            <div class="w-24 h-1 mx-auto mb-8" style="background-color: #FFD300;"></div>
+            
+            <!-- Línea dorada sofisticada -->
+            <div class="relative mb-12">
+              <div class="w-32 h-px mx-auto" style="background: linear-gradient(90deg, transparent, #FFD300, transparent);"></div>
+              <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full" style="background-color: #FFD300;"></div>
+            </div>
           </div>
-          <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
-            Dos experiencias musicales distintivas, cada una diseñada para crear momentos inolvidables en tu celebración especial
-          </p>
+          
+          <div class="max-w-4xl mx-auto space-y-6">
+            <p class="text-2xl md:text-3xl text-gray-600 leading-relaxed font-light tracking-wide">
+              Dos experiencias musicales distintivas, cada una diseñada para crear momentos inolvidables en tu celebración especial
+            </p>
+            
+            <!-- Descriptor adicional -->
+            <p class="text-base md:text-lg text-gray-500 font-light tracking-[0.1em] opacity-70">
+              EXPERIENCIAS ÚNICAS • MOMENTOS MEMORABLES • CELEBRACIONES ESPECIALES
+            </p>
+          </div>
         </div>
 
-        <!-- Contenedor de tarjetas elegantes -->
-        <div class="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
+        <!-- Contenedor de tarjetas ultra-elegantes -->
+        <div class="grid lg:grid-cols-2 gap-20 max-w-6xl mx-auto">
           
           <!-- Tarjeta Música Lírica -->
           <div class="group perspective-1000">
@@ -232,22 +328,39 @@
 
         </div>
 
-        <!-- Sección adicional elegante -->
-        <div class="mt-20 text-center">
-          <div class="max-w-4xl mx-auto">
-            <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-6">
-              Experiencia que Trasciende
-            </h3>
-            <p class="text-lg text-gray-600 leading-relaxed mb-8">
+        <!-- Sección adicional ultra-elegante -->
+        <div class="mt-24 text-center">
+          <div class="max-w-5xl mx-auto">
+            
+            <!-- Título de cierre refinado -->
+            <div class="mb-12">
+              <h3 class="text-3xl md:text-5xl font-light text-gray-900 mb-6 tracking-wide">
+                Experiencia que Trasciende
+              </h3>
+              <div class="w-20 h-px mx-auto" style="background: linear-gradient(90deg, transparent, #FFD300, transparent);"></div>
+            </div>
+            
+            <p class="text-xl md:text-2xl text-gray-600 leading-relaxed mb-12 font-light tracking-wide">
               Cada presentación es cuidadosamente adaptada para complementar la atmósfera y el significado de tu evento especial, 
               creando una experiencia musical que permanecerá en los corazones de todos los presentes.
             </p>
+            
+            <!-- Botón sofisticado -->
             <div class="inline-block">
-              <button class="px-8 py-4 text-white font-semibold rounded-full transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95" 
-                      style="background-color: #FFD300; color: black;">
-                Solicitar Información
+              <button class="group relative px-12 py-5 text-black font-light rounded-full transition-all duration-500 overflow-hidden tracking-wide text-lg hover:scale-105 active:scale-95" 
+                      style="background-color: #FFD300;">
+                <span class="relative z-10">Solicitar Información</span>
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
               </button>
             </div>
+            
+            <!-- Elementos decorativos finales -->
+            <div class="mt-16 flex justify-center space-x-2 opacity-30">
+              <div class="w-1 h-1 bg-gray-400 rounded-full animate-pulse"></div>
+              <div class="w-1 h-1 bg-gray-400 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
+              <div class="w-1 h-1 bg-gray-400 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+            </div>
+            
           </div>
         </div>
 
