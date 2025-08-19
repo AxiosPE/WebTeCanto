@@ -1,0 +1,24 @@
+# Dependencias
+node_modules/
+
+# Archivos de compilación / build
+dist/
+build/
+.tmp/
+.temp/
+
+# Archivos generados de Tailwind (opcional, si prefieres que los genere GitHub Actions)
+assets/output.css
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Configuración del editor
+.vscode/
