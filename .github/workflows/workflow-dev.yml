@@ -1,6 +1,9 @@
 name: Deploy Website
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -11,14 +14,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Instala dependencias
+      - name: Install dependencies
+        run: npm ci
+
+      # Compila Tailwind
       - name: Build CSS with Tailwind
-        run: |
-          npm install
-          npx tailwindcss -i ./input.css -o ./assets/output.css --minify
+        run: npx tailwindcss -i ./input.css -o ./assets/output.css --minify
 
-
+      # Deploy a GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .   
+          publish_dir: .
