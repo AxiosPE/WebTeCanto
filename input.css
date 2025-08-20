@@ -6,13 +6,13 @@
    font-style: normal;
    font-display: swap;
  }
- 
+
  @theme {
    /*Colores*/
-   --color-amarillo: #FFD300;
+   --color-amarillo: #FFB42F;
    --color-plomo: #EEEEEE;
 
-    /*Fuentes*/
+   /*Fuentes*/
    --font-sans: 'Cormorant Garamond', ui-sans-serif, system-ui, sans-serif;
 
 }
@@ -23,6 +23,10 @@
 
  .boton-header {
    @apply text-white hover:text-gray-300 text-xl;
+ }
+
+  .card-header {
+   @apply font-semibold text-white text-2xl;
  }
 
  /* Estilos para las tarjetas flip 3D */
