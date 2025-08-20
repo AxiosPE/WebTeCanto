@@ -6,13 +6,13 @@
    font-style: normal;
    font-display: swap;
  }
- 
+
  @theme {
    /*Colores*/
-   --color-amarillo: #FFD300;
+   --color-amarillo: #FFB42F;
    --color-plomo: #EEEEEE;
 
-    /*Fuentes*/
+   /*Fuentes*/
    --font-sans: 'Cormorant Garamond', ui-sans-serif, system-ui, sans-serif;
 
 }
@@ -25,6 +25,27 @@
    @apply text-white hover:text-gray-300 text-xl;
  }
 
- .card-header {
+  .card-header {
    @apply font-semibold text-white text-2xl;
+ }
+
+ /* Estilos para las tarjetas flip 3D */
+ .perspective-1000 {
+   perspective: 1000px;
+ }
+
+ .transform-style-preserve-3d {
+   transform-style: preserve-3d;
+ }
+
+ .backface-hidden {
+   backface-visibility: hidden;
+ }
+
+ .rotate-y-180 {
+   transform: rotateY(180deg);
+ }
+
+ .group:hover .group-hover\:rotate-y-180 {
+   transform: rotateY(180deg);
  }

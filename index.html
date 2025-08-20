@@ -10,39 +10,38 @@
 
 <body>
     <header class="absolute inset-x-0 top-0 z-20">
-        <div class="mx-auto flex h-16 items-center gap-8 px-8">
+        <div class="mx-auto flex h-16 sm:h-20 lg:h-24 items-center gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-6 lg:px-8">
             <!-- Logo -->
             <div class="flex items-center gap-2">
-                <a href="#" clavss="block">
+                <a href="#" class="block">
                     <span class="sr-only">Logo de Te Canto</span>
-                    <img src="./assets/Logo-transparente.png" alt="Logo de Te Canto" class="h-10" />
+                    <img src="./assets/Logo-transparente.png" alt="Logo de Te Canto" class="h-8 sm:h-10 lg:h-12" />
                 </a>
-                <div class="text-white font-bold">TE CANTO</div>
+                <div class="text-amarillo font-bold text-base sm:text-base lg:text-lg">TeCanto Music</div>
             </div>
-            </a>
 
             <!-- Botones -->
-            <div class="flex flex-1 items-center justify-center ">
+            <div class="flex flex-1 items-center justify-center">
                 <nav aria-label="Global" class="hidden md:block">
-                    <ul class="flex items-center gap-12">
+                    <ul class="flex items-center gap-6 lg:gap-8 xl:gap-12">
                         <li>
-                            <a href="#" class="boton-header">Inicio</a>
+                            <a href="#" class="boton-header text-sm lg:text-base">Inicio</a>
                         </li>
                         <li>
-                            <a href="#" class="boton-header">Quién soy</a>
+                            <a href="#" class="boton-header text-sm lg:text-base">Quién soy</a>
                         </li>
                         <li>
-                            <a href="#" class="boton-header">Nuestros Servicios</a>
+                            <a href="#" class="boton-header text-sm lg:text-base">Nuestros Servicios</a>
                         </li>
                         <li>
-                            <a href="#" class="boton-header">Contáctanos</a>
+                            <a href="#" class="boton-header text-sm lg:text-base">Contáctanos</a>
                         </li>
                     </ul>
                 </nav>
             </div>
 
             <!-- Menú para pantallas pequeñas -->
-            <button class="block rounded-sm bg-amarillo p-2.5 text-black transition md:hidden">
+            <button id="openMenuBtn" class="block rounded-sm bg-amarillo p-2 sm:p-2.5 text-black transition md:hidden">
                 <span class="sr-only">Menú</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
@@ -50,13 +49,36 @@
                 </svg>
             </button>
         </div>
+
+        <!-- Overlay y panel deslizante -->
+        <div id="mobileMenuOverlay" class="fixed inset-0 z-40 bg-black/50 hidden transition-opacity duration-300"></div>
+        <aside id="mobileMenuPanel"
+            class="fixed top-0 right-0 h-full w-64 bg-black z-50 shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+            <div class="flex items-center justify-between p-6 border-b border-gray-700">
+                <span class="font-bold text-xl text-white">Menú</span>
+                <button id="closeMenuBtn" class="text-white p-2 rounded hover:bg-amarillo hover:text-black transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex-1 p-6">
+                <ul class="flex flex-col gap-6">
+                    <li><a href="#" class="text-white text-lg font-semibold hover:text-amarillo transition-colors">Inicio</a></li>
+                    <li><a href="#" class="text-white text-lg font-semibold hover:text-amarillo transition-colors">Quién soy</a></li>
+                    <li><a href="#" class="text-white text-lg font-semibold hover:text-amarillo transition-colors">Nuestros Servicios</a></li>
+                    <li><a href="#" class="text-white text-lg font-semibold hover:text-amarillo transition-colors">Contáctanos</a></li>
+                </ul>
+            </nav>
+        </aside>
     </header>
 
     <main>
         <!-- Hero a pantalla completa -->
         <section class="relative h-screen bg-cover bg-center bg-no-repeat text-white flex items-center justify-center"
             style="background-image:
-        linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0) 30%),
+        linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0) 70%),
         linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%),
         
         url('./assets/Fondo-inicio.jpg');">
@@ -96,7 +118,7 @@
 
                 <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                     <!-- Card: Bodas -->
-                    <article class="group overflow-hidden rounded-lg shadow-sm transition hover:shadow-md">
+                    <article class="group overflow-hidden rounded-lg shadow-sm transition hover:shadow-md bg-black">
                         <!-- Imagen -->
                         <div class="bg-gray-200 aspect-[16/9] flex items-center justify-center">
                             <svg class="size-12 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -109,7 +131,10 @@
                         <div class="bg-black text-white p-4 transition-colors group-hover:bg-black/90">
                             <div class="flex items-start justify-between gap-4">
                                 <h3 class="card-header">Bodas</h3>
-                                <span aria-hidden="true" class="text-2xl">💍</span>
+                                <svg class="size-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                    <path fill="#ffffff"
+                                        d="M128 272C128 279.8 132.4 290.7 145.1 302.3C190.5 278.1 252.8 264 320 264C387.2 264 449.5 278.1 494.9 302.3C507.7 290.7 512 279.8 512 272C512 259.7 501.2 240 464.1 221.4C428.9 203.8 378 192 320 192C262 192 211.1 203.8 175.9 221.4C138.8 240 128 259.7 128 272zM320 312C273 312 230.7 319.6 197.1 331.7C230.3 344.1 272.8 352 320 352C367.2 352 409.7 344.2 442.9 331.7C409.3 319.6 367 312 320 312zM64 272C64 222.4 103.4 186.2 147.3 164.2C193.1 141.3 254.3 128 320 128C385.7 128 446.9 141.3 492.7 164.2C536.6 186.2 576 222.4 576 272L576 368C576 417.6 536.6 453.8 492.7 475.8C446.8 498.7 385.7 512 320 512C254.3 512 193.1 498.7 147.3 475.8C103.4 453.8 64 417.6 64 368L64 272z" />
+                                </svg>
                             </div>
                             <p class="mt-2 text-sm text-white/80">
                                 Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse.
@@ -118,7 +143,7 @@
                     </article>
 
                     <!-- Card: Bautizos -->
-                    <article class="group overflow-hidden rounded-lg shadow-sm transition hover:shadow-md">
+                    <article class="group overflow-hidden rounded-lg shadow-sm transition hover:shadow-md bg-black">
                         <div class="bg-gray-100 aspect-[16/9] flex items-center justify-center">
                             <svg class="size-12 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
@@ -129,7 +154,10 @@
                         <div class="bg-black text-white p-4 transition-colors group-hover:bg-black/90">
                             <div class="flex items-start justify-between gap-4">
                                 <h3 class="card-header">Bautizos</h3>
-                                <span aria-hidden="true" class="text-2xl">🕊️</span>
+                                <svg class="size-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                    <path fill="#ffffff"
+                                        d="M560 128C573.2 128 580.7 143.1 572.8 153.6L544 192L544 368C544 447.5 479.5 512 400 512L288 512L241.7 558.3C231.3 568.7 215.2 570.7 202.6 563.1L105.5 504.9C88.5 494.7 90.5 469.4 108.9 462L224 416C87.8 375.1 71.5 233.8 86 159.7C89.6 141.9 109.3 135.4 125.3 144.2L384 288L384 208C384 163.8 419.8 128 464 128L560 128zM464 184C450.7 184 440 194.7 440 208C440 221.3 450.7 232 464 232C477.3 232 488 221.3 488 208C488 194.7 477.3 184 464 184zM246.5 54.4C258.9 40.7 279.8 45.5 289 61.5L345.4 159.8C339.6 174.2 336.2 189.9 336 206.3L202.1 132C212.2 100.4 229.1 73.6 246.5 54.4z" />
+                                </svg>
                             </div>
                             <p class="mt-2 text-sm text-white/80">
                                 Acompañamos el primer paso de fe con dulzura y devoción.
@@ -138,7 +166,7 @@
                     </article>
 
                     <!-- Card: Funerales -->
-                    <article class="group overflow-hidden rounded-lg shadow-sm transition hover:shadow-md">
+                    <article class="group overflow-hidden rounded-lg shadow-sm transition hover:shadow-md bg-black">
                         <div class="bg-gray-100 aspect-[16/9] flex items-center justify-center">
                             <svg class="size-12 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
@@ -149,7 +177,10 @@
                         <div class="bg-black text-white p-4 transition-colors group-hover:bg-black/90">
                             <div class="flex items-start justify-between gap-4">
                                 <h3 class="card-header">Funerales</h3>
-                                <span aria-hidden="true" class="text-2xl">✝️</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-10" viewBox="0 0 640 640">
+                                    <path fill="#ffffff"
+                                        d="M304 64C277.5 64 256 85.5 256 112L256 192L176 192C149.5 192 128 213.5 128 240L128 272C128 298.5 149.5 320 176 320L256 320L256 528C256 554.5 277.5 576 304 576L336 576C362.5 576 384 554.5 384 528L384 320L464 320C490.5 320 512 298.5 512 272L512 240C512 213.5 490.5 192 464 192L384 192L384 112C384 85.5 362.5 64 336 64L304 64z" />
+                                </svg>
                             </div>
                             <p class="mt-2 text-sm text-white/80">
                                 Ofrecemos consuelo y esperanza con música que honra la vida.
@@ -158,7 +189,7 @@
                     </article>
 
                     <!-- Card: Ceremonias -->
-                    <article class="group overflow-hidden rounded-lg shadow-sm transition hover:shadow-md">
+                    <article class="group overflow-hidden rounded-lg shadow-sm transition hover:shadow-md bg-black">
                         <div class="bg-gray-100 aspect-[16/9] flex items-center justify-center">
                             <svg class="size-12 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
@@ -169,7 +200,10 @@
                         <div class="bg-black text-white p-4 transition-colors group-hover:bg-black/90">
                             <div class="flex items-start justify-between gap-4">
                                 <h3 class="card-header">Ceremonias</h3>
-                                <span aria-hidden="true" class="text-2xl">🎉</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="size-10" viewBox="0 0 640 640">
+                                    <path fill="#ffffff"
+                                        d="M532 71C539.6 77.1 544 86.3 544 96L544 400C544 444.2 501 480 448 480C395 480 352 444.2 352 400C352 355.8 395 320 448 320C459.2 320 470 321.6 480 324.6L480 207.9L256 257.7L256 464C256 508.2 213 544 160 544C107 544 64 508.2 64 464C64 419.8 107 384 160 384C171.2 384 182 385.6 192 388.6L192 160C192 145 202.4 132 217.1 128.8L505.1 64.8C514.6 62.7 524.5 65 532.1 71.1z" />
+                                </svg>
                             </div>
                             <p class="mt-2 text-sm text-white/80">
                                 Vigilias, misas especiales, homenajes, reuniones.
@@ -182,6 +216,49 @@
     </main>
 
     <footer></footer>
+    <script>
+        // Funcionalidad del panel deslizante móvil
+        const openMenuBtn = document.getElementById('openMenuBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mobileMenuPanel = document.getElementById('mobileMenuPanel');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+
+        function openMenu() {
+            // Mostrar overlay
+            mobileMenuOverlay.classList.remove('hidden');
+            // Deslizar panel hacia la izquierda
+            setTimeout(() => {
+                mobileMenuPanel.classList.remove('translate-x-full');
+                mobileMenuPanel.classList.add('translate-x-0');
+            }, 10);
+            // Prevenir scroll del body
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            // Deslizar panel hacia la derecha
+            mobileMenuPanel.classList.remove('translate-x-0');
+            mobileMenuPanel.classList.add('translate-x-full');
+            // Ocultar overlay después de la animación
+            setTimeout(() => {
+                mobileMenuOverlay.classList.add('hidden');
+            }, 300);
+            // Restaurar scroll del body
+            document.body.style.overflow = '';
+        }
+
+        // Event listeners
+        openMenuBtn.addEventListener('click', openMenu);
+        closeMenuBtn.addEventListener('click', closeMenu);
+        mobileMenuOverlay.addEventListener('click', closeMenu);
+
+        // Cerrar con tecla Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !mobileMenuOverlay.classList.contains('hidden')) {
+                closeMenu();
+            }
+        });
+    </script>
 </body>
 
 </html>
