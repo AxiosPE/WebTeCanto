@@ -94,6 +94,9 @@
     animation: fadeInDelayed 1.5s ease-out forwards;
     animation-delay: 1s; /* entra después del título */
   }
+  .animate-fade-delayed-zero {
+    animation: fadeInDelayed 1.5s ease-out forwards;
+  }
 
   @keyframes typing {
     from { width: 0 }

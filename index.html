@@ -10,6 +10,52 @@
     <title>TeCanto Music · Coro para tus momentos</title>
 </head>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('fs-form');
+        if (!form) return;
+
+        const btn = document.getElementById('fs-submit');
+        const ok = document.getElementById('fs-success');
+        const err = document.getElementById('fs-error');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            ok.classList.add('hidden');
+            err.classList.add('hidden');
+            btn.disabled = true;
+            btn.textContent = 'Enviando…';
+
+            try {
+                const data = new FormData(form);
+                const res = await fetch('https://formspree.io/f/xnnzkzov', {
+                    method: 'POST',
+                    headers: { 'Accept': 'application/json' },
+                    body: data
+                });
+
+                if (res.ok) {
+                    form.reset();
+                    ok.classList.remove('hidden');
+                } else {
+                    // Opcional: inspeccionar detalles
+                    // const payload = await res.json().catch(() => ({}));
+                    err.textContent = 'No pudimos enviar tu mensaje. Revisa los campos e inténtalo nuevamente.';
+                    err.classList.remove('hidden');
+                }
+            } catch {
+                err.textContent = 'Ocurrió un error de red. Inténtalo de nuevo.';
+                err.classList.remove('hidden');
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Enviar mensaje';
+            }
+        });
+    });
+</script>
+
+
+
 <body>
     <header class="absolute inset-x-0 top-0 z-20">
         <div class="mx-auto flex h-16 sm:h-20 lg:h-24 items-center gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-6 lg:px-8">
@@ -154,9 +200,11 @@
                 <div class="text-center md:text-left relative z-10 md:pl-6">
                     <h2 class="text-4xl md:text-6xl lg:text-8xl font-extrabold mb-6 text-amarillo">Quién soy</h2>
                     <p class="text-base md:text-lg lg:text-xl leading-relaxed max-w-prose mx-auto md:mx-0">
-                        Soy [Nombre], directora del coro <em>Te Canto</em>, con [X] años de experiencia en
-                        formación vocal, dirección coral y producción de eventos. Me apasiona transformar
-                        historias en música y crear momentos inolvidables con cada presentación.
+                        Soy Cinthia Benaducci Angeles, cantante católica, directora y compositora de Lima – Perú. Desde
+                        hace más de 16 años me dedico a la música litúrgica con el deseo de transmitir fe y belleza a
+                        través del canto. Así nació TeCanto Music, con el propósito de ofrecer interpretaciones
+                        auténticas y cuidadas en los sacramentos, reuniendo a músicos y cantantes profesionales que
+                        acompañan con devoción cada celebración de la Iglesia.
                     </p>
                 </div>
 
@@ -176,12 +224,10 @@
                 <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                     <!-- Card: Bodas -->
                     <article class="group overflow-hidden rounded-lg shadow-sm transition hover:shadow-md bg-black">
-                        <div class="bg-gray-100 aspect-[16/9] flex items-center justify-center">
-                            <svg class="size-12 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" aria-hidden="true">
-                                <rect x="3" y="3" width="18" height="18" rx="2" />
-                                <path d="M3 16l5-5 5 5 8-8" />
-                            </svg>
+                        <!-- Imagen -->
+                        <div class="aspect-[16/9] overflow-hidden">
+                            <img src="./assets/Boda.jpg" alt="Boda"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                         </div>
                         <div class="bg-black text-white p-4 transition-colors group-hover:bg-black/90">
                             <div class="flex items-start justify-between gap-4">
@@ -192,20 +238,18 @@
                                         d="M128 272C128 279.8 132.4 290.7 145.1 302.3C190.5 278.1 252.8 264 320 264C387.2 264 449.5 278.1 494.9 302.3C507.7 290.7 512 279.8 512 272C512 259.7 501.2 240 464.1 221.4C428.9 203.8 378 192 320 192C262 192 211.1 203.8 175.9 221.4C138.8 240 128 259.7 128 272zM320 312C273 312 230.7 319.6 197.1 331.7C230.3 344.1 272.8 352 320 352C367.2 352 409.7 344.2 442.9 331.7C409.3 319.6 367 312 320 312zM64 272C64 222.4 103.4 186.2 147.3 164.2C193.1 141.3 254.3 128 320 128C385.7 128 446.9 141.3 492.7 164.2C536.6 186.2 576 222.4 576 272L576 368C576 417.6 536.6 453.8 492.7 475.8C446.8 498.7 385.7 512 320 512C254.3 512 193.1 498.7 147.3 475.8C103.4 453.8 64 417.6 64 368L64 272z" />
                                 </svg>
                             </div>
-                            <p class="mt-2 text-sm text-white/80">
-                                Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse.
+                            <p class="mt-2 text-md text-white">
+                                Melodías que acompañan su promesa de amor y hacen inolvidable el día de su boda.
                             </p>
                         </div>
                     </article>
 
                     <!-- Card: Bautizos -->
                     <article class="group overflow-hidden rounded-lg shadow-sm transition hover:shadow-md bg-black">
-                        <div class="bg-gray-100 aspect-[16/9] flex items-center justify-center">
-                            <svg class="size-12 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" aria-hidden="true">
-                                <rect x="3" y="3" width="18" height="18" rx="2" />
-                                <path d="M3 16l5-5 5 5 8-8" />
-                            </svg>
+                        <!-- Imagen -->
+                        <div class="aspect-[16/9] overflow-hidden">
+                            <img src="./assets/Bautizos-alt.jpg" alt="Bautizo"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                         </div>
                         <div class="bg-black text-white p-4 transition-colors group-hover:bg-black/90">
                             <div class="flex items-start justify-between gap-4">
@@ -216,20 +260,18 @@
                                         d="M560 128C573.2 128 580.7 143.1 572.8 153.6L544 192L544 368C544 447.5 479.5 512 400 512L288 512L241.7 558.3C231.3 568.7 215.2 570.7 202.6 563.1L105.5 504.9C88.5 494.7 90.5 469.4 108.9 462L224 416C87.8 375.1 71.5 233.8 86 159.7C89.6 141.9 109.3 135.4 125.3 144.2L384 288L384 208C384 163.8 419.8 128 464 128L560 128zM464 184C450.7 184 440 194.7 440 208C440 221.3 450.7 232 464 232C477.3 232 488 221.3 488 208C488 194.7 477.3 184 464 184zM246.5 54.4C258.9 40.7 279.8 45.5 289 61.5L345.4 159.8C339.6 174.2 336.2 189.9 336 206.3L202.1 132C212.2 100.4 229.1 73.6 246.5 54.4z" />
                                 </svg>
                             </div>
-                            <p class="mt-2 text-sm text-white/80">
-                                Acompañamos el primer paso de fe con dulzura y devoción.
+                            <p class="mt-2 text-md text-white">
+                                Cantos llenos de ternura y fe que celebran el inicio de una nueva vida espiritual.
                             </p>
                         </div>
                     </article>
 
                     <!-- Card: Funerales -->
                     <article class="group overflow-hidden rounded-lg shadow-sm transition hover:shadow-md bg-black">
-                        <div class="bg-gray-100 aspect-[16/9] flex items-center justify-center">
-                            <svg class="size-12 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" aria-hidden="true">
-                                <rect x="3" y="3" width="18" height="18" rx="2" />
-                                <path d="M3 16l5-5 5 5 8-8" />
-                            </svg>
+                        <!-- Imagen -->
+                        <div class="aspect-[16/9] overflow-hidden">
+                            <img src="./assets/Funeral-alt.jpg" alt="Funeral"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                         </div>
                         <div class="bg-black text-white p-4 transition-colors group-hover:bg-black/90">
                             <div class="flex items-start justify-between gap-4">
@@ -240,20 +282,18 @@
                                         d="M304 64C277.5 64 256 85.5 256 112L256 192L176 192C149.5 192 128 213.5 128 240L128 272C128 298.5 149.5 320 176 320L256 320L256 528C256 554.5 277.5 576 304 576L336 576C362.5 576 384 554.5 384 528L384 320L464 320C490.5 320 512 298.5 512 272L512 240C512 213.5 490.5 192 464 192L384 192L384 112C384 85.5 362.5 64 336 64L304 64z" />
                                 </svg>
                             </div>
-                            <p class="mt-2 text-sm text-white/80">
-                                Ofrecemos consuelo y esperanza con música que honra la vida.
+                            <p class="mt-2 text-md text-white">
+                                Música que honra la memoria y ofrece consuelo en los momentos de despedida.
                             </p>
                         </div>
                     </article>
 
                     <!-- Card: Ceremonias -->
                     <article class="group overflow-hidden rounded-lg shadow-sm transition hover:shadow-md bg-black">
-                        <div class="bg-gray-100 aspect-[16/9] flex items-center justify-center">
-                            <svg class="size-12 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" aria-hidden="true">
-                                <rect x="3" y="3" width="18" height="18" rx="2" />
-                                <path d="M3 16l5-5 5 5 8-8" />
-                            </svg>
+                        <!-- Imagen -->
+                        <div class="aspect-[16/9] overflow-hidden">
+                            <img src="./assets/Ceremonias.jpg" alt="Boda"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                         </div>
                         <div class="bg-black text-white p-4 transition-colors group-hover:bg-black/90">
                             <div class="flex items-start justify-between gap-4">
@@ -264,8 +304,9 @@
                                         d="M532 71C539.6 77.1 544 86.3 544 96L544 400C544 444.2 501 480 448 480C395 480 352 444.2 352 400C352 355.8 395 320 448 320C459.2 320 470 321.6 480 324.6L480 207.9L256 257.7L256 464C256 508.2 213 544 160 544C107 544 64 508.2 64 464C64 419.8 107 384 160 384C171.2 384 182 385.6 192 388.6L192 160C192 145 202.4 132 217.1 128.8L505.1 64.8C514.6 62.7 524.5 65 532.1 71.1z" />
                                 </svg>
                             </div>
-                            <p class="mt-2 text-sm text-white/80">
-                                Vigilias, misas especiales, homenajes, reuniones.
+                            <p class="mt-2 text-md text-white">
+                                La música que transforma vigilias, misas y homenajes en momentos sagrados e
+                                inolvidables.
                             </p>
                         </div>
                     </article>
@@ -273,11 +314,71 @@
             </div>
         </section>
 
-        <!-- (Opcional) Sección de contacto como ancla del menú -->
+        <!-- Sección: Contáctanos (Formspree con AJAX) -->
         <section id="contacto" class="bg-black text-white px-8 py-20 rounded-t-4xl">
-            <div class="mx-auto max-w-3xl">
+            <div class="mx-auto max-w-3xl text-center">
                 <h2 class="text-3xl font-bold mb-4">Contáctanos</h2>
-                <p class="text-white/80">[Tu formulario o datos de contacto aquí]</p>
+                <p class="text-white/80 mb-8">
+                    Será un honor acompañar tu celebración con nuestra música. Escríbenos y conversemos sobre tu evento.
+                </p>
+
+                <form id="fs-form" class="space-y-4 text-left max-w-xl mx-auto">
+                    <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
+                    <input type="hidden" name="_subject" value="Nuevo mensaje desde TeCanto Music">
+
+                    <div>
+                        <label class="block mb-1 text-sm text-white/80" for="nombre">Nombre</label>
+                        <input id="nombre" name="nombre" type="text" required class="w-full px-4 py-3 rounded-lg bg-white/10 text-white placeholder-gray-400
+                      focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Tu nombre">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block mb-1 text-sm text-white/80" for="email">Correo</label>
+                            <input id="email" name="email" type="email" required class="w-full px-4 py-3 rounded-lg bg-white/10 text-white placeholder-gray-400
+                        focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="tu@correo.com">
+                        </div>
+                        <div>
+                            <label class="block mb-1 text-sm text-white/80" for="telefono">Teléfono</label>
+                            <input id="telefono" name="telefono" type="tel" class="w-full px-4 py-3 rounded-lg bg-white/10 text-white placeholder-gray-400
+                        focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="+51 999 999 999">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block mb-1 text-sm text-white/80" for="tipo">Tipo de evento</label>
+                            <input id="tipo" name="tipo" type="text" class="w-full px-4 py-3 rounded-lg bg-white/10 text-white placeholder-gray-400
+                        focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Tipo de evento">
+                        </div>
+                        <div>
+                            <label class="block mb-1 text-sm text-white/80" for="fecha">Fecha tentativa</label>
+                            <input id="fecha" name="fecha" type="date" class="w-full px-4 py-3 rounded-lg bg-white/10 text-white
+                        focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block mb-1 text-sm text-white/80" for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="message" rows="4" required class="w-full px-4 py-3 rounded-lg bg-white/10 text-white placeholder-gray-400
+                         focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                            placeholder="Cuéntanos sobre tu celebración (lugar, horario, repertorio, etc.)"></textarea>
+                    </div>
+
+                    <button id="fs-submit" type="submit" class="w-full bg-yellow-400 text-black font-semibold py-3 rounded-lg
+                     hover:bg-yellow-300 transition">
+                        Enviar mensaje
+                    </button>
+
+                    <!-- Mensajes -->
+                    <p id="fs-success" class="hidden mt-4 text-green-400 animate-fade-delayed-zero" role="status" aria-live="polite">
+                        ¡Gracias! Hemos recibido tu mensaje y te responderemos pronto.
+                    </p>
+                    <p id="fs-error" class="hidden mt-4 text-red-400 animate-fade-delayed-zero" role="status" aria-live="polite">
+                        Ocurrió un error al enviar. Inténtalo de nuevo.
+                    </p>
+
+                </form>
             </div>
         </section>
     </main>
