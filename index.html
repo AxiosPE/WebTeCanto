@@ -74,7 +74,7 @@
                 <nav aria-label="Global" class="hidden md:block">
                     <ul class="flex items-center gap-6 lg:gap-8 xl:gap-12">
                         <li>
-                            <a href="#" class="boton-header">Inicio</a>
+                            <a href="#" class="boton-header boton-activo">Inicio</a>
                         </li>
                         <li>
                             <a href="#quien-soy" class="boton-header">Quién soy</a>
@@ -83,10 +83,10 @@
                             <a href="#momentos" class="boton-header">Nuestros Servicios</a>
                         </li>
                         <li>
-                            <a href="nosotros.html" class="boton-header boton-elenco">Elenco</a>
+                            <a href="#contacto" class="boton-header">Contáctanos</a>
                         </li>
                         <li>
-                            <a href="#contacto" class="boton-header">Contáctanos</a>
+                            <a href="nosotros.html" class="boton-header boton-animado">Elenco</a>
                         </li>
                     </ul>
                 </nav>
@@ -132,11 +132,11 @@
                     <li><a href="#momentos"
                             class="text-white text-lg font-semibold hover:text-amarillo transition-colors">Nuestros
                             Servicios</a></li>
-                    <li><a href="nosotros.html"
-                            class="text-white text-lg font-semibold hover:text-amarillo transition-colors">Elenco</a>
-                    </li>
                     <li><a href="#contacto"
                             class="text-white text-lg font-semibold hover:text-amarillo transition-colors">Contáctanos</a>
+                    </li>
+                    <li><a href="nosotros.html"
+                            class="text-white text-lg font-semibold hover:text-amarillo transition-colors boton-animado-mobile">Elenco</a>
                     </li>
                 </ul>
             </nav>
@@ -385,74 +385,89 @@
         </section>
     </main>
 
-    <footer class="bg-black/90 border-t border-white/10 px-8 py-8">
-        <div class="mx-auto max-w-6xl text-sm text-white/70">
-            © <span id="year"></span> TeCanto Music. Todos los derechos reservados.
-        </div>
-    </footer>
-
     <script>
-        // ====== Utilidades ======
-        const $ = (sel) => document.querySelector(sel);
+        document.addEventListener('DOMContentLoaded', () => {
+            // ====== Utilidades ======
+            const $ = (sel) => document.querySelector(sel);
 
-        // ====== Elementos ======
-        const openMenuBtn = $('#openMenuBtn');
-        const closeMenuBtn = $('#closeMenuBtn');
-        const mobileMenuPanel = $('#mobileMenuPanel');
-        const mobileMenuOverlay = $('#mobileMenuOverlay');
+            // ====== Elementos ======
+            const openMenuBtn = $('#openMenuBtn');
+            const closeMenuBtn = $('#closeMenuBtn');
+            const mobileMenuPanel = $('#mobileMenuPanel');
+            const mobileMenuOverlay = $('#mobileMenuOverlay');
 
-        // Año en footer
-        $('#year').textContent = new Date().getFullYear();
+            // Verificar que todos los elementos existen antes de agregar event listeners
+            if (!openMenuBtn || !closeMenuBtn || !mobileMenuPanel || !mobileMenuOverlay) {
+                console.error('Error: Algunos elementos del menú móvil no fueron encontrados');
+                console.log('openMenuBtn:', openMenuBtn);
+                console.log('closeMenuBtn:', closeMenuBtn);
+                console.log('mobileMenuPanel:', mobileMenuPanel);
+                console.log('mobileMenuOverlay:', mobileMenuOverlay);
+                return;
+            }
 
-        function openMenu() {
-            mobileMenuOverlay.classList.remove('hidden', 'opacity-0');
-            // Forzar reflujo para que la transición de opacidad ocurra
-            void mobileMenuOverlay.offsetWidth;
-            mobileMenuOverlay.classList.add('opacity-100');
+            // Año en footer
+            const yearElement = $('#year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
 
-            mobileMenuPanel.classList.remove('translate-x-full');
-            mobileMenuPanel.setAttribute('aria-hidden', 'false');
-            openMenuBtn.setAttribute('aria-expanded', 'true');
+            function openMenu() {
+                if (!mobileMenuOverlay || !mobileMenuPanel || !openMenuBtn) return;
 
-            document.body.style.overflow = 'hidden';
-            mobileMenuPanel.focus();
-        }
+                mobileMenuOverlay.classList.remove('hidden', 'opacity-0');
+                // Forzar reflujo para que la transición de opacidad ocurra
+                void mobileMenuOverlay.offsetWidth;
+                mobileMenuOverlay.classList.add('opacity-100');
 
-        function closeMenu() {
-            mobileMenuOverlay.classList.remove('opacity-100');
-            mobileMenuOverlay.classList.add('opacity-0');
-            setTimeout(() => {
-                mobileMenuOverlay.classList.add('hidden');
-            }, 300); // igual a duration-300
+                mobileMenuPanel.classList.remove('translate-x-full');
+                mobileMenuPanel.setAttribute('aria-hidden', 'false');
+                openMenuBtn.setAttribute('aria-expanded', 'true');
 
-            mobileMenuPanel.classList.add('translate-x-full');
-            mobileMenuPanel.setAttribute('aria-hidden', 'true');
-            openMenuBtn.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = 'hidden';
+                mobileMenuPanel.focus();
+            }
 
-            document.body.style.overflow = '';
-            openMenuBtn.focus();
-        }
+            function closeMenu() {
+                if (!mobileMenuOverlay || !mobileMenuPanel || !openMenuBtn) return;
 
-        openMenuBtn.addEventListener('click', openMenu);
-        closeMenuBtn.addEventListener('click', closeMenu);
-        mobileMenuOverlay.addEventListener('click', closeMenu);
+                mobileMenuOverlay.classList.remove('opacity-100');
+                mobileMenuOverlay.classList.add('opacity-0');
+                setTimeout(() => {
+                    if (mobileMenuOverlay) {
+                        mobileMenuOverlay.classList.add('hidden');
+                    }
+                }, 300); // igual a duration-300
 
-        // Cerrar menú móvil al hacer clic en enlaces internos
-        const mobileMenuLinks = mobileMenuPanel.querySelectorAll('a[href^="#"]');
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                // Solo cerrar si el enlace va a una sección (no es solo "#")
-                if (link.getAttribute('href') !== '#') {
+                mobileMenuPanel.classList.add('translate-x-full');
+                mobileMenuPanel.setAttribute('aria-hidden', 'true');
+                openMenuBtn.setAttribute('aria-expanded', 'false');
+
+                document.body.style.overflow = '';
+                openMenuBtn.focus();
+            }
+
+            openMenuBtn.addEventListener('click', openMenu);
+            closeMenuBtn.addEventListener('click', closeMenu);
+            mobileMenuOverlay.addEventListener('click', closeMenu);
+
+            // Cerrar menú móvil al hacer clic en enlaces internos
+            const mobileMenuLinks = mobileMenuPanel.querySelectorAll('a[href^="#"]');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    // Solo cerrar si el enlace va a una sección (no es solo "#")
+                    if (link.getAttribute('href') !== '#') {
+                        closeMenu();
+                    }
+                });
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && mobileMenuOverlay && !mobileMenuOverlay.classList.contains('hidden')) {
                     closeMenu();
                 }
             });
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && mobileMenuOverlay && !mobileMenuOverlay.classList.contains('hidden')) {
-                closeMenu();
-            }
-        });
+        }); // Cierre del DOMContentLoaded
     </script>
 
     <!-- Botón flotante de WhatsApp -->
@@ -465,8 +480,8 @@
     </a>
 
     <style>
-        /* Botón Elenco destacado */
-        .boton-elenco {
+        /* Botón activo (página actual) */
+        .boton-activo {
             color: #000 !important;
             background-color: #FFB42F !important;
             font-weight: 600 !important;
@@ -475,9 +490,64 @@
             transition: all 0.3s ease !important;
         }
 
-        .boton-elenco:hover {
+        .boton-activo:hover {
             background-color: #e6a029 !important;
             transform: translateY(-1px) !important;
+        }
+
+        /* Botón animado para Elenco en index */
+        .boton-animado {
+            color: #FFB42F !important;
+            font-weight: 600 !important;
+            padding: 8px 16px !important;
+            border-radius: 6px !important;
+            position: relative !important;
+            transition: all 0.3s ease !important;
+            animation: bounceGlow 2s ease-in-out infinite !important;
+            border: 2px solid transparent !important;
+        }
+
+        .boton-animado:hover {
+            color: #000 !important;
+            background-color: #FFB42F !important;
+            animation: none !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 8px 25px rgba(255, 180, 47, 0.4) !important;
+        }
+
+        /* Botón animado para móvil */
+        .boton-animado-mobile {
+            animation: bounceGlow 2s ease-in-out infinite !important;
+            position: relative !important;
+        }
+
+        .boton-animado-mobile:hover {
+            animation: none !important;
+        }
+
+        /* Animaciones nuevas */
+        @keyframes bounceGlow {
+
+            0%,
+            100% {
+                text-shadow: 0 0 8px rgba(255, 180, 47, 0.6) !important;
+                transform: scale(1) !important;
+            }
+
+            25% {
+                text-shadow: 0 0 15px rgba(255, 180, 47, 0.8) !important;
+                transform: scale(1.02) !important;
+            }
+
+            50% {
+                text-shadow: 0 0 20px rgba(255, 180, 47, 1) !important;
+                transform: scale(1.05) !important;
+            }
+
+            75% {
+                text-shadow: 0 0 15px rgba(255, 180, 47, 0.8) !important;
+                transform: scale(1.02) !important;
+            }
         }
 
         /* Botón WhatsApp flotante */
