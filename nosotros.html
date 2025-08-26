@@ -137,12 +137,10 @@
           <div class="max-w-5xl mx-auto">
             <p
               class="text-lg md:text-xl lg:text-2xl text-white/95 leading-relaxed font-light tracking-wide mb-4 drop-shadow-xl">
-              Lírico–clásico y música moderna para cada ocasión
+              Lírico–clásico y música moderna para cada ocasión.
             </p>
             <!-- Descriptor -->
-            <p class="text-sm md:text-base text-white/80 font-light tracking-wide opacity-90 drop-shadow-lg">
-              EXPERIENCIAS MUSICALES • EVENTOS ESPECIALES • MOMENTOS ÚNICOS
-            </p>
+
           </div>
 
           <!-- Botones más grandes -->
@@ -193,7 +191,8 @@
         </div>
 
         <p class="text-base md:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed font-medium tracking-wide mb-3">
-          Descubre mi repertorio de música cristiana, desde clásicos hasta composiciones contemporáneas. Este video es
+          Descubre mi repertorio de música cristiana católica, desde clásicos hasta composiciones contemporáneas. Este
+          video es
           solo una muestra de la experiencia que podrás vivir.
         </p>
       </div>
@@ -288,19 +287,18 @@
       <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 max-w-5xl mx-auto mt-0">
 
         <!-- Tarjeta Música Lírica -->
-        <div class="group perspective-1000 px-4" style="margin-bottom: 4rem;">
-          <div
-            class="relative w-full h-[520px] transition-all duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+        <div class="card-container perspective-1000 px-4" style="margin-bottom: 4rem;" data-card="clasico">
+          <div class="card-inner relative w-full h-[520px] transition-all duration-700 transform-style-preserve-3d">
 
             <!-- Frente de la tarjeta -->
             <div
-              class="absolute inset-0 w-full h-full backface-hidden rounded-2xl shadow-2xl border border-gray-800/50 overflow-hidden backdrop-blur-sm bg-black">
+              class="card-face absolute inset-0 w-full h-full backface-hidden rounded-2xl shadow-2xl border border-gray-800/50 overflow-hidden backdrop-blur-sm bg-black">
               <div
                 class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent">
               </div>
 
               <div class="relative h-full flex flex-col items-center justify-center p-12">
-                <div class="mb-8 transform transition-transform duration-500 group-hover:scale-110">
+                <div class="card-logo mb-8 transform transition-transform duration-500">
                   <img src="./assets/Logo-transparente.png" alt="Logo Voces de Fe"
                     class="w-32 h-32 md:w-36 md:h-36 object-contain opacity-90 filter brightness-110">
                 </div>
@@ -330,7 +328,7 @@
 
             <!-- Parte trasera de la tarjeta -->
             <div
-              class="absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl shadow-2xl border border-gray-800/50 p-10 backdrop-blur-sm bg-black">
+              class="card-face back absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl shadow-2xl border border-gray-800/50 p-10 backdrop-blur-sm bg-black">
               <div
                 class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent">
               </div>
@@ -371,13 +369,12 @@
         </div>
 
         <!-- Tarjeta Música Moderna -->
-        <div class="group perspective-1000 px-4">
-          <div
-            class="relative w-full h-[520px] transition-all duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+        <div class="card-container perspective-1000 px-4" data-card="moderno">
+          <div class="card-inner relative w-full h-[520px] transition-all duration-700 transform-style-preserve-3d">
 
             <!-- Frente de la tarjeta -->
             <div
-              class="absolute inset-0 w-full h-full backface-hidden rounded-2xl shadow-xl border border-amber-200/60 overflow-hidden backdrop-blur-sm"
+              class="card-face absolute inset-0 w-full h-full backface-hidden rounded-2xl shadow-xl border border-amber-200/60 overflow-hidden backdrop-blur-sm"
               style="background: linear-gradient(135deg, #fefcf3, #f9f7f4, #ffffff);">
               <div
                 class="absolute inset-0 bg-gradient-to-br from-amber-50/30 via-transparent to-amber-100/20 opacity-50">
@@ -387,7 +384,7 @@
               </div>
 
               <div class="relative h-full flex flex-col items-center justify-center p-12">
-                <div class="mb-8 transform transition-transform duration-500 group-hover:scale-110">
+                <div class="card-logo mb-8 transform transition-transform duration-500">
                   <img src="./assets/Logo-transparente.png" alt="Logo Voces de Fe"
                     class="w-32 h-32 md:w-36 md:h-36 object-contain opacity-75 filter contrast-110">
                 </div>
@@ -417,7 +414,7 @@
 
             <!-- Parte trasera de la tarjeta -->
             <div
-              class="absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl shadow-xl border border-amber-200/60 p-10 backdrop-blur-sm"
+              class="card-face back absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl shadow-xl border border-amber-200/60 p-10 backdrop-blur-sm"
               style="background: linear-gradient(135deg, #fefcf3, #f9f7f4, #ffffff);">
               <div
                 class="absolute inset-0 bg-gradient-to-br from-amber-50/30 via-transparent to-amber-100/20 opacity-50">
@@ -673,9 +670,34 @@
 
     /* Estilo para separar tarjetas en responsive */
     @media (min-width: 1024px) {
-      .group.perspective-1000.px-4[style*="margin-bottom"] {
+      .card-container.perspective-1000.px-4[style*="margin-bottom"] {
         margin-bottom: 0 !important;
       }
+    }
+
+    /* Sistema de tarjetas flip independientes */
+    .card-container {
+      cursor: pointer;
+    }
+
+    .card-inner {
+      transform-style: preserve-3d;
+    }
+
+    .card-inner.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-container:hover .card-logo {
+      transform: scale(1.1);
+    }
+
+    .card-face {
+      backface-visibility: hidden;
+    }
+
+    .card-face.back {
+      transform: rotateY(180deg);
     }
 
     /* Carrusel responsive */
@@ -802,6 +824,36 @@
         if (e.key === 'Escape' && mobileMenuOverlay && !mobileMenuOverlay.classList.contains('hidden')) {
           closeMenu();
         }
+      });
+
+      // Sistema de tarjetas flip independientes
+      const cardContainers = document.querySelectorAll('.card-container');
+
+      cardContainers.forEach(container => {
+        const cardInner = container.querySelector('.card-inner');
+        let isFlipped = false;
+
+        // Función para alternar el estado de la tarjeta
+        const toggleCard = () => {
+          isFlipped = !isFlipped;
+          if (isFlipped) {
+            cardInner.classList.add('flipped');
+          } else {
+            cardInner.classList.remove('flipped');
+          }
+        };
+
+        // Evento de click para alternar
+        container.addEventListener('click', (e) => {
+          e.preventDefault();
+          toggleCard();
+        });
+
+        // Para dispositivos táctiles
+        container.addEventListener('touchstart', (e) => {
+          e.preventDefault();
+          toggleCard();
+        });
       });
 
       // Carrusel de galería
