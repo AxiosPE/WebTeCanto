@@ -28,6 +28,10 @@
   @apply font-semibold text-white text-2xl;
 }
 
+.label-form {
+  @apply block mb-1 md:text-base lg:text-lg xl:text-xl text-white;
+}
+
 /* Estilos para las tarjetas flip 3D */
 .perspective-1000 {
   perspective: 1000px;
