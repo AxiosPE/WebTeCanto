@@ -16,11 +16,11 @@
     <div class="mx-auto flex h-16 sm:h-20 lg:h-24 items-center gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-6 lg:px-8">
       <!-- Logo -->
       <div class="flex items-center gap-2">
-        <a href="#" class="block">
+        <a href="index.html" class="block">
           <span class="sr-only">Logo de Te Canto</span>
-          <img src="./assets/Logo-transparente.png" alt="Logo de Te Canto" class="h-8 sm:h-10 lg:h-12" />
+          <img src="./assets/Logo-transparente.png" alt="Logo de Te Canto" class="h-8 sm:h-10 lg:h-12 xl:h-14" />
         </a>
-        <div class="text-amarillo font-bold text-base sm:text-base lg:text-lg">TeCanto Music</div>
+        <div class="text-amarillo font-bold text-base sm:text-base lg:text-lg xl:text-2xl">TeCanto Music</div>
       </div>
 
       <!-- Botones -->
@@ -37,10 +37,10 @@
               <a href="index.html#momentos" class="boton-header">Nuestros Servicios</a>
             </li>
             <li>
-              <a href="nosotros.html" class="boton-header">Nosotros</a>
+              <a href="index.html#contacto" class="boton-header">Contáctanos</a>
             </li>
             <li>
-              <a href="index.html#contacto" class="boton-header">Contáctanos</a>
+              <a href="nosotros.html" class="boton-header boton-activo">Elenco</a>
             </li>
           </ul>
         </nav>
@@ -77,19 +77,21 @@
       </div>
       <nav class="flex-1 p-6" aria-label="Principal móvil">
         <ul class="flex flex-col gap-6">
-          <li><a href="index.html" class="text-white text-lg font-semibold hover:text-amarillo transition-colors">Inicio</a>
+          <li><a href="index.html"
+              class="text-white text-lg font-semibold hover:text-amarillo transition-colors">Inicio</a>
           </li>
-          <li><a href="index.html#quien-soy" class="text-white text-lg font-semibold hover:text-amarillo transition-colors">Quién
+          <li><a href="index.html#quien-soy"
+              class="text-white text-lg font-semibold hover:text-amarillo transition-colors">Quién
               soy</a>
           </li>
           <li><a href="index.html#momentos"
               class="text-white text-lg font-semibold hover:text-amarillo transition-colors">Nuestros
               Servicios</a></li>
-          <li><a href="nosotros.html"
-              class="text-white text-lg font-semibold hover:text-amarillo transition-colors">Nosotros</a>
-          </li>
           <li><a href="index.html#contacto"
               class="text-white text-lg font-semibold hover:text-amarillo transition-colors">Contáctanos</a>
+          </li>
+          <li><a href="nosotros.html"
+              class="text-white text-lg font-semibold hover:text-amarillo transition-colors">Elenco</a>
           </li>
         </ul>
       </nav>
@@ -127,7 +129,7 @@
             </h1>
             <!-- Línea decorativa -->
             <div class="w-32 h-1 mx-auto mb-6"
-              style="background: linear-gradient(90deg, transparent, #FFD300, transparent); box-shadow: 0 0 30px rgba(255, 211, 0, 0.6);">
+              style="background: linear-gradient(90deg, transparent, var(--color-amarillo), transparent); box-shadow: 0 0 30px rgba(255, 211, 0, 0.6);">
             </div>
           </div>
 
@@ -135,12 +137,10 @@
           <div class="max-w-5xl mx-auto">
             <p
               class="text-lg md:text-xl lg:text-2xl text-white/95 leading-relaxed font-light tracking-wide mb-4 drop-shadow-xl">
-              Lírico–clásico y música moderna para cada ocasión
+              Lírico–clásico y música moderna para cada ocasión.
             </p>
             <!-- Descriptor -->
-            <p class="text-sm md:text-base text-white/80 font-light tracking-wide opacity-90 drop-shadow-lg">
-              EXPERIENCIAS MUSICALES • EVENTOS ESPECIALES • MOMENTOS ÚNICOS
-            </p>
+
           </div>
 
           <!-- Botones más grandes -->
@@ -148,8 +148,8 @@
             <div class="flex flex-col sm:flex-row gap-5 justify-center items-center max-w-2xl mx-auto">
               <a href="#video"
                 class="group relative w-full sm:w-auto max-w-xs inline-flex items-center justify-center rounded-full px-10 py-4 text-black text-lg font-medium tracking-wide transition-all duration-300 min-h-[60px] focus:outline-none focus:ring-4 focus:ring-yellow-300 focus:ring-opacity-75 hover:scale-105 shadow-2xl backdrop-blur-sm"
-                style="background-color: #FFD300; box-shadow: 0 10px 40px rgba(255, 211, 0, 0.3);" role="button"
-                aria-label="Ver repertorio clásico">
+                style="background-color: var(--color-amarillo); box-shadow: 0 10px 40px rgba(255, 211, 0, 0.3);"
+                role="button" aria-label="Ver repertorio clásico">
                 <span class="relative z-10">Clásico</span>
               </a>
 
@@ -177,36 +177,33 @@
       </div>
     </div>
 
-    <div class="mx-auto max-w-7xl px-8 py-28 md:py-36 relative z-10">
+    <div class="mx-auto max-w-7xl px-8 py-16 md:py-20 relative z-10">
 
-      <!-- Título de la sección más grande y accesible -->
-      <div class="text-center mb-20">
+      <!-- Título de la sección más compacto -->
+      <div class="text-center mb-12">
         <div class="inline-block">
           <h2 id="video-title"
-            class="text-3xl md:text-4xl lg:text-5xl font-light text-gray-800 mb-8 leading-tight tracking-wide">
+            class="text-2xl md:text-3xl lg:text-4xl font-light text-gray-800 mb-6 leading-tight tracking-wide">
             Escucha mi música
           </h2>
-          <!-- Línea decorativa más prominente -->
-          <div class="w-32 h-1 mx-auto mb-12 bg-gradient-to-r from-transparent via-gray-600/60 to-transparent"></div>
+          <!-- Línea decorativa más compacta -->
+          <div class="w-24 h-0.5 mx-auto mb-8 bg-gradient-to-r from-transparent via-gray-600/60 to-transparent"></div>
         </div>
 
-        <p class="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium tracking-wide mb-8">
-          Descubre mi repertorio de música cristiana, desde clásicos hasta composiciones contemporáneas
-        </p>
-
-        <!-- Descriptor más visible -->
-        <p class="text-sm md:text-base text-gray-600 mt-8 font-medium tracking-wide">
-          EXPERIENCIA AUDITIVA • REPERTORIO COMPLETO • MÚSICA ESPIRITUAL
+        <p class="text-base md:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed font-medium tracking-wide mb-3">
+          Descubre mi repertorio de música cristiana católica, desde clásicos hasta composiciones contemporáneas. Este
+          video es
+          solo una muestra de la experiencia que podrás vivir.
         </p>
       </div>
 
-      <!-- Video container más accesible -->
-      <div class="mx-auto max-w-6xl">
+      <!-- Video container más compacto -->
+      <div class="mx-auto max-w-5xl">
         <div class="relative group">
           <!-- Marco más simple y visible -->
-          <div class="relative w-full overflow-hidden rounded-2xl shadow-2xl ring-2 ring-gray-400/50 bg-white"
+          <div class="relative w-full overflow-hidden rounded-xl shadow-xl ring-1 ring-gray-400/50 bg-white"
             style="padding-bottom: 56.25%;">
-            <iframe class="absolute inset-0 w-full h-full rounded-2xl"
+            <iframe class="absolute inset-0 w-full h-full rounded-xl"
               src="https://www.youtube-nocookie.com/embed/LuSRKoksyhs?rel=0&modestbranding=1&color=white&showinfo=0"
               title="Voces de fe - Música cristiana y repertorio completo" loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -216,20 +213,19 @@
         </div>
       </div>
 
-      <!-- Información adicional más accesible -->
-      <div class="text-center mt-20">
-        <div class="max-w-3xl mx-auto">
-          <p class="text-lg md:text-xl text-gray-700 leading-relaxed font-medium mb-10">
+      <!-- Información adicional más compacta -->
+      <div class="text-center mt-8">
+        <div class="max-w-2xl mx-auto">
+          <p class="text-base md:text-lg text-gray-700 leading-relaxed font-medium mb-8">
             ¿Te gustó lo que escuchaste?
           </p>
 
-          <a href="#contacto"
-            class="inline-flex items-center px-8 py-4 text-base font-semibold text-gray-800 border-2 border-gray-600 rounded-xl hover:bg-gray-600 hover:text-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-gray-400 focus:ring-opacity-75"
-            role="button" aria-label="Contactar para contratar servicios musicales">
-            Contáctame para tu evento
-            <svg class="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
+          <a href="https://wa.me/51990157878" target="_blank" rel="noopener noreferrer"
+            class="group relative inline-flex items-center justify-center rounded-full px-10 py-4 text-black text-lg font-medium tracking-wide transition-all duration-300 min-h-[60px] focus:outline-none focus:ring-4 focus:ring-yellow-300 focus:ring-opacity-75 hover:scale-105 shadow-2xl backdrop-blur-sm"
+            style="background-color: var(--color-amarillo); box-shadow: 0 10px 40px rgba(255, 211, 0, 0.0);"
+            role="button" aria-label="Contactar por WhatsApp para contratar servicios musicales">
+            <span class="relative z-10">Contáctame</span>
+          </a>
           </a>
         </div>
       </div>
@@ -238,8 +234,7 @@
   </section>
 
   <!-- ================= SERVICIOS MUSICALES ================= -->
-  <section class="py-28 md:py-36 relative overflow-hidden"
-    style="background: linear-gradient(135deg, #f8f9fa, #e9ecef, #dee2e6);">
+  <section class="py-20 md:py-24 relative overflow-hidden bg-amarillo">>
     <!-- Elementos decorativos de fondo -->
     <div class="absolute inset-0">
       <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent">
@@ -261,66 +256,60 @@
     <div class="mx-auto max-w-7xl px-6 relative z-10">
 
       <!-- Título principal ultra-elegante -->
-      <div class="text-center mb-24">
+      <div class="text-center mb-12">
         <div class="inline-block">
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-light text-gray-900 mb-8 leading-tight tracking-[0.05em]">
-            Nuestros <span
-              class="text-transparent bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800 bg-clip-text">Servicios</span>
+          <h2
+            class="text-3xl md:text-5xl lg:text-6xl font-light font-serif text-gray-900 mb-4 leading-relaxed tracking-tight">
+            Nuestros Servicios
           </h2>
 
+
+
           <!-- Línea dorada sofisticada -->
-          <div class="relative mb-12">
+          <div class="relative mb-4">
             <div class="w-32 h-px mx-auto"
-              style="background: linear-gradient(90deg, transparent, #FFD300, transparent);"></div>
+              style="background: linear-gradient(90deg, transparent, var(--color-amarillo), transparent);"></div>
             <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full"
-              style="background-color: #FFD300;"></div>
+              style="background-color: var(--color-amarillo);"></div>
           </div>
         </div>
 
         <div class="max-w-4xl mx-auto space-y-6">
-          <p class="text-lg md:text-xl text-gray-600 leading-relaxed font-light tracking-wide">
+          <p class="text-lg md:text-xl text-gray-900 leading-relaxed font-medium tracking-wide">
             Dos experiencias musicales distintivas, cada una diseñada para crear momentos inolvidables en tu celebración
             especial
           </p>
 
-          <!-- Descriptor adicional -->
-          <p class="text-sm md:text-base text-gray-500 font-light tracking-[0.1em] opacity-70">
-            EXPERIENCIAS ÚNICAS • MOMENTOS MEMORABLES • CELEBRACIONES ESPECIALES
-          </p>
         </div>
       </div>
 
       <!-- Contenedor de tarjetas ultra-elegantes -->
-      <div class="grid lg:grid-cols-2 gap-20 max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 max-w-5xl mx-auto mt-0">
 
         <!-- Tarjeta Música Lírica -->
-        <div class="group perspective-1000">
-          <div
-            class="relative w-full h-[520px] transition-all duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+        <div class="card-container perspective-1000 px-4" style="margin-bottom: 4rem;" data-card="clasico">
+          <div class="card-inner relative w-full h-[520px] transition-all duration-700 transform-style-preserve-3d">
 
             <!-- Frente de la tarjeta -->
             <div
-              class="absolute inset-0 w-full h-full backface-hidden rounded-2xl shadow-2xl border border-gray-800/50 overflow-hidden backdrop-blur-sm"
-              style="background: linear-gradient(135deg, #1a1a1a, #2d2d2d, #1f1f1f);">
-              <div class="absolute inset-0 bg-gradient-to-br from-gray-700/10 via-transparent to-black/20 opacity-60">
-              </div>
+              class="card-face absolute inset-0 w-full h-full backface-hidden rounded-2xl shadow-2xl border border-gray-800/50 overflow-hidden backdrop-blur-sm bg-black">
               <div
                 class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent">
               </div>
 
               <div class="relative h-full flex flex-col items-center justify-center p-12">
-                <div class="mb-8 transform transition-transform duration-500 group-hover:scale-110">
+                <div class="card-logo mb-8 transform transition-transform duration-500">
                   <img src="./assets/Logo-transparente.png" alt="Logo Voces de Fe"
                     class="w-32 h-32 md:w-36 md:h-36 object-contain opacity-90 filter brightness-110">
                 </div>
 
                 <div class="text-center space-y-6">
-                  <h3 class="text-xl md:text-2xl font-light text-white tracking-[0.2em] mb-4">
+                  <h3 class="text-2xl md:text-3xl font-light text-white tracking-[0.2em] mb-4">
                     CLÁSICO
                   </h3>
                   <div class="w-16 h-px mx-auto"
                     style="background: linear-gradient(90deg, transparent, #FFD300, transparent);"></div>
-                  <p class="text-base text-gray-300 font-light tracking-wide opacity-90">
+                  <p class="text-lg text-gray-300 font-light tracking-wide opacity-90">
                     Tradición • Elegancia • Espiritualidad
                   </p>
                 </div>
@@ -339,42 +328,39 @@
 
             <!-- Parte trasera de la tarjeta -->
             <div
-              class="absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl shadow-2xl border border-gray-800/50 p-10 backdrop-blur-sm"
-              style="background: linear-gradient(135deg, #1a1a1a, #2d2d2d, #1f1f1f);">
-              <div class="absolute inset-0 bg-gradient-to-br from-gray-700/10 via-transparent to-black/20 opacity-60">
-              </div>
+              class="card-face back absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl shadow-2xl border border-gray-800/50 p-10 backdrop-blur-sm bg-black">
               <div
                 class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent">
               </div>
 
               <div class="h-full flex flex-col justify-center">
                 <div class="text-center mb-10">
-                  <h3 class="text-xl md:text-2xl font-light text-white mb-6 tracking-wide">
+                  <h3 class="text-2xl md:text-3xl font-light text-white mb-6 tracking-wide">
                     Música Lírica
                   </h3>
                   <div class="w-20 h-px mx-auto mb-8"
                     style="background: linear-gradient(90deg, transparent, #FFD300, transparent);"></div>
                 </div>
 
-                <p class="text-lg md:text-xl text-gray-200 leading-relaxed mb-10 font-light text-center">
+                <p class="text-xl md:text-2xl text-gray-200 leading-relaxed mb-10 font-light text-center">
                   Interpretaciones clásicas y corales que elevan cada ceremonia a un momento memorable y espiritual.
                 </p>
 
                 <div class="space-y-5">
                   <div class="flex items-center justify-center text-gray-300 group/item">
                     <div class="w-2 h-2 rounded-full mr-5 transition-all duration-300 group-hover/item:scale-125"
-                      style="background-color: #FFD300;"></div>
-                    <span class="text-base font-light tracking-wide">Repertorio sacro y clásico</span>
+                      style="background-color: var(--color-amarillo);"></div>
+                    <span class="text-lg font-light tracking-wide">Repertorio sacro y clásico</span>
                   </div>
                   <div class="flex items-center justify-center text-gray-300 group/item">
                     <div class="w-2 h-2 rounded-full mr-5 transition-all duration-300 group-hover/item:scale-125"
-                      style="background-color: #FFD300;"></div>
-                    <span class="text-base font-light tracking-wide">Ceremonias religiosas</span>
+                      style="background-color: var(--color-amarillo);"></div>
+                    <span class="text-lg font-light tracking-wide">Ceremonias religiosas</span>
                   </div>
                   <div class="flex items-center justify-center text-gray-300 group/item">
                     <div class="w-2 h-2 rounded-full mr-5 transition-all duration-300 group-hover/item:scale-125"
-                      style="background-color: #FFD300;"></div>
-                    <span class="text-base font-light tracking-wide">Eventos formales</span>
+                      style="background-color: var(--color-amarillo);"></div>
+                    <span class="text-lg font-light tracking-wide">Eventos formales</span>
                   </div>
                 </div>
               </div>
@@ -383,43 +369,43 @@
         </div>
 
         <!-- Tarjeta Música Moderna -->
-        <div class="group perspective-1000">
-          <div
-            class="relative w-full h-[520px] transition-all duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+        <div class="card-container perspective-1000 px-4" data-card="moderno">
+          <div class="card-inner relative w-full h-[520px] transition-all duration-700 transform-style-preserve-3d">
 
             <!-- Frente de la tarjeta -->
             <div
-              class="absolute inset-0 w-full h-full backface-hidden rounded-2xl shadow-xl border border-gray-200/80 overflow-hidden backdrop-blur-sm"
-              style="background: linear-gradient(135deg, #f8f9fa, #e9ecef, #dee2e6);">
-              <div class="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-gray-200/30 opacity-50">
+              class="card-face absolute inset-0 w-full h-full backface-hidden rounded-2xl shadow-xl border border-amber-200/60 overflow-hidden backdrop-blur-sm"
+              style="background: linear-gradient(135deg, #fefcf3, #f9f7f4, #ffffff);">
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-amber-50/30 via-transparent to-amber-100/20 opacity-50">
               </div>
               <div
-                class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent">
+                class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-300/30 to-transparent">
               </div>
 
               <div class="relative h-full flex flex-col items-center justify-center p-12">
-                <div class="mb-8 transform transition-transform duration-500 group-hover:scale-110">
+                <div class="card-logo mb-8 transform transition-transform duration-500">
                   <img src="./assets/Logo-transparente.png" alt="Logo Voces de Fe"
                     class="w-32 h-32 md:w-36 md:h-36 object-contain opacity-75 filter contrast-110">
                 </div>
 
                 <div class="text-center space-y-6">
-                  <h3 class="text-xl md:text-2xl font-light text-gray-800 tracking-[0.2em] mb-4">
+                  <h3 class="text-2xl md:text-3xl font-light text-gray-800 tracking-[0.2em] mb-4">
                     MODERNO
                   </h3>
                   <div class="w-16 h-px mx-auto"
                     style="background: linear-gradient(90deg, transparent, #FFD300, transparent);"></div>
-                  <p class="text-base text-gray-600 font-light tracking-wide opacity-90">
+                  <p class="text-lg text-gray-600 font-light tracking-wide opacity-90">
                     Contemporáneo • Fresco • Celebración
                   </p>
                 </div>
 
                 <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-60">
                   <div class="flex items-center space-x-1.5">
-                    <div class="w-1.5 h-1.5 bg-gray-500/40 rounded-full animate-pulse"></div>
-                    <div class="w-1.5 h-1.5 bg-gray-500/40 rounded-full animate-pulse" style="animation-delay: 0.2s;">
+                    <div class="w-1.5 h-1.5 bg-amber-600/40 rounded-full animate-pulse"></div>
+                    <div class="w-1.5 h-1.5 bg-amber-600/40 rounded-full animate-pulse" style="animation-delay: 0.2s;">
                     </div>
-                    <div class="w-1.5 h-1.5 bg-gray-500/40 rounded-full animate-pulse" style="animation-delay: 0.4s;">
+                    <div class="w-1.5 h-1.5 bg-amber-600/40 rounded-full animate-pulse" style="animation-delay: 0.4s;">
                     </div>
                   </div>
                 </div>
@@ -428,42 +414,43 @@
 
             <!-- Parte trasera de la tarjeta -->
             <div
-              class="absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl shadow-xl border border-gray-200/80 p-10 backdrop-blur-sm"
-              style="background: linear-gradient(135deg, #f8f9fa, #e9ecef, #dee2e6);">
-              <div class="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-gray-200/30 opacity-50">
+              class="card-face back absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl shadow-xl border border-amber-200/60 p-10 backdrop-blur-sm"
+              style="background: linear-gradient(135deg, #fefcf3, #f9f7f4, #ffffff);">
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-amber-50/30 via-transparent to-amber-100/20 opacity-50">
               </div>
               <div
-                class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent">
+                class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-300/30 to-transparent">
               </div>
 
               <div class="h-full flex flex-col justify-center">
                 <div class="text-center mb-10">
-                  <h3 class="text-xl md:text-2xl font-light text-gray-800 mb-6 tracking-wide">
+                  <h3 class="text-2xl md:text-3xl font-light text-gray-800 mb-6 tracking-wide">
                     Música Moderna
                   </h3>
                   <div class="w-20 h-px mx-auto mb-8"
                     style="background: linear-gradient(90deg, transparent, #FFD300, transparent);"></div>
                 </div>
 
-                <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-10 font-light text-center">
+                <p class="text-xl md:text-2xl text-gray-700 leading-relaxed mb-10 font-light text-center">
                   Repertorio contemporáneo con arreglos frescos, ideal para bodas, bautizos y celebraciones especiales.
                 </p>
 
                 <div class="space-y-5">
                   <div class="flex items-center justify-center text-gray-600 group/item">
                     <div class="w-2 h-2 rounded-full mr-5 transition-all duration-300 group-hover/item:scale-125"
-                      style="background-color: #FFD300;"></div>
-                    <span class="text-base font-light tracking-wide">Música contemporánea</span>
+                      style="background-color: var(--color-amarillo);"></div>
+                    <span class="text-lg font-light tracking-wide">Música contemporánea</span>
                   </div>
                   <div class="flex items-center justify-center text-gray-600 group/item">
                     <div class="w-2 h-2 rounded-full mr-5 transition-all duration-300 group-hover/item:scale-125"
-                      style="background-color: #FFD300;"></div>
-                    <span class="text-base font-light tracking-wide">Bodas y celebraciones</span>
+                      style="background-color: var(--color-amarillo);"></div>
+                    <span class="text-lg font-light tracking-wide">Bodas y celebraciones</span>
                   </div>
                   <div class="flex items-center justify-center text-gray-600 group/item">
                     <div class="w-2 h-2 rounded-full mr-5 transition-all duration-300 group-hover/item:scale-125"
-                      style="background-color: #FFD300;"></div>
-                    <span class="text-base font-light tracking-wide">Eventos sociales</span>
+                      style="background-color: var(--color-amarillo);"></div>
+                    <span class="text-lg font-light tracking-wide">Eventos sociales</span>
                   </div>
                 </div>
               </div>
@@ -473,111 +460,487 @@
 
       </div>
 
-      <!-- Sección adicional ultra-elegante -->
-      <div class="mt-24 text-center">
-        <div class="max-w-5xl mx-auto">
-
-          <!-- Título de cierre refinado -->
-          <div class="mb-12">
-            <h3 class="text-2xl md:text-3xl font-light text-gray-900 mb-6 tracking-wide">
-              Experiencia que Trasciende
-            </h3>
-            <div class="w-20 h-px mx-auto"
-              style="background: linear-gradient(90deg, transparent, #FFD300, transparent);"></div>
-          </div>
-
-          <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-12 font-light tracking-wide">
-            Cada presentación es cuidadosamente adaptada para complementar la atmósfera y el significado de tu evento
-            especial,
-            creando una experiencia musical que permanecerá en los corazones de todos los presentes.
-          </p>
-
-          <!-- Botón sofisticado -->
-          <div class="inline-block">
-            <button
-              class="group relative px-8 py-4 text-black font-light rounded-full transition-all duration-500 overflow-hidden tracking-wide text-base hover:scale-105 active:scale-95"
-              style="background-color: #FFD300;">
-              <span class="relative z-10">Solicitar Información</span>
-              <div
-                class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700">
-              </div>
-            </button>
-          </div>
-
-          <!-- Elementos decorativos finales -->
-          <div class="mt-16 flex justify-center space-x-2 opacity-30">
-            <div class="w-1 h-1 bg-gray-400 rounded-full animate-pulse"></div>
-            <div class="w-1 h-1 bg-gray-400 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
-            <div class="w-1 h-1 bg-gray-400 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
-          </div>
-
-        </div>
-      </div>
-
     </div>
   </section>
 
+  <!-- ================= GALERÍA ================= -->
+  <section class="relative py-20 md:py-32 bg-black overflow-hidden">
+    <!-- Elementos decorativos de fondo -->
+    <div class="absolute inset-0" aria-hidden="true">
+      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-yellow-500/40 to-transparent">
+      </div>
+      <div
+        class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-yellow-500/40 to-transparent">
+      </div>
+
+      <!-- Patrones geométricos sutiles -->
+      <div class="absolute top-20 left-10 w-3 h-3 bg-yellow-400/20 rounded-full animate-pulse"></div>
+      <div class="absolute top-40 right-16 w-2 h-2 bg-yellow-400/25 rounded-full animate-pulse"
+        style="animation-delay: 1s;"></div>
+      <div class="absolute bottom-32 left-20 w-1.5 h-1.5 bg-yellow-400/30 rounded-full animate-pulse"
+        style="animation-delay: 2s;"></div>
+      <div class="absolute bottom-16 right-12 w-4 h-4 bg-yellow-400/15 rounded-full animate-pulse"
+        style="animation-delay: 3s;"></div>
+
+      <!-- Gradientes sutiles -->
+      <div class="absolute inset-0 bg-gradient-to-br from-yellow-500/10 via-transparent to-yellow-400/5 opacity-50">
+      </div>
+    </div>
+
+    <div class="mx-auto max-w-7xl px-6 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+
+        <!-- Lado izquierdo - Texto descriptivo mejorado -->
+        <div class="space-y-8 order-2 lg:order-1">
+          <!-- Título principal elegante -->
+          <div class="relative text-center">
+            <h2
+              class="text-4xl md:text-5xl lg:text-6xl font-light font-serif text-white mb-6 leading-tight tracking-tight">
+              Momentos
+              <span class="block italic" style="color: var(--color-amarillo);">Capturados</span>
+            </h2>
+
+            <!-- Línea decorativa sofisticada -->
+            <div class="relative mb-8">
+              <div class="w-24 h-0.5 bg-gradient-to-r from-yellow-500 via-yellow-400 to-transparent mx-auto"></div>
+              <div
+                class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-yellow-500 rounded-full shadow-lg">
+              </div>
+            </div>
+          </div>
+
+          <!-- Texto principal con mejor tipografía -->
+          <div class="space-y-6 text-center">
+            <p class="text-xl md:text-2xl text-white leading-relaxed font-medium tracking-wide">
+              Cada presentación es única y especial.
+            </p>
+
+            <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+              Aquí puedes ver algunos de los momentos más memorables de nuestras actuaciones en diferentes eventos y
+              ceremonias sagradas.
+            </p>
+
+            <p class="text-base md:text-lg text-gray-300 leading-relaxed">
+              Desde ceremonias íntimas hasta grandes celebraciones, nuestra música ha sido parte de momentos
+              inolvidables que quedarán por siempre en el corazón de quienes los vivieron.
+            </p>
+          </div>
+        </div>
+
+        <!-- Lado derecho - Carrusel funcional -->
+        <div class="relative flex justify-center items-center order-2 lg:order-2 mt-8 lg:mt-0">
+          <div class="relative">
+            <!-- Contenedor del carrusel simple y funcional -->
+            <div class="carousel-container"
+              style="position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.2); border: 3px solid var(--color-amarillo);">
+
+              <!-- Slides simples -->
+              <div class="carousel-slide"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 1; transition: opacity 0.7s ease-in-out; z-index: 1;">
+                <img src="./assets/Gallery/1.jpg" alt="Imagen 1" class="w-full h-full block rounded-xl"
+                  style="object-fit: cover; object-position: 50% 30%;">
+              </div>
+              <div class="carousel-slide"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.7s ease-in-out; z-index: 1;">
+                <img src="./assets/Gallery/2.jpg" alt="Momento especial 2"
+                  style="width: 100%; height: 100%; object-fit: cover; display: block;">
+              </div>
+              <div class="carousel-slide"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.7s ease-in-out; z-index: 1;">
+                <img src="./assets/Gallery/3.jpg" alt="Momento especial 3"
+                  style="width: 100%; height: 100%; object-fit: cover; display: block;">
+              </div>
+              <div class="carousel-slide"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.7s ease-in-out; z-index: 1;">
+                <img src="./assets/Gallery/4.jpg" alt="Momento especial 4"
+                  style="width: 100%; height: 100%; object-fit: cover; display: block;">
+              </div>
+              <div class="carousel-slide"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.7s ease-in-out; z-index: 1;">
+                <img src="./assets/Gallery/5.jpg" alt="Momento especial 5"
+                  style="width: 100%; height: 100%; object-fit: cover; display: block;">
+              </div>
+            </div>
+
+            <!-- Indicadores clickeables -->
+            <div class="carousel-indicators"
+              style="display: flex; justify-content: center; gap: 12px; margin-top: 24px;">
+              <div class="indicator active" data-slide="0"
+                style="width: 12px; height: 12px; border-radius: 50%; background-color: var(--color-amarillo); box-shadow: 0 2px 4px rgba(0,0,0,0.2); cursor: pointer; transition: all 0.3s ease;">
+              </div>
+              <div class="indicator" data-slide="1"
+                style="width: 12px; height: 12px; border-radius: 50%; background-color: #D1D5DB; box-shadow: 0 2px 4px rgba(0,0,0,0.2); cursor: pointer; transition: all 0.3s ease;">
+              </div>
+              <div class="indicator" data-slide="2"
+                style="width: 12px; height: 12px; border-radius: 50%; background-color: #D1D5DB; box-shadow: 0 2px 4px rgba(0,0,0,0.2); cursor: pointer; transition: all 0.3s ease;">
+              </div>
+              <div class="indicator" data-slide="3"
+                style="width: 12px; height: 12px; border-radius: 50%; background-color: #D1D5DB; box-shadow: 0 2px 4px rgba(0,0,0,0.2); cursor: pointer; transition: all 0.3s ease;">
+              </div>
+              <div class="indicator" data-slide="4"
+                style="width: 12px; height: 12px; border-radius: 50%; background-color: #D1D5DB; box-shadow: 0 2px 4px rgba(0,0,0,0.2); cursor: pointer; transition: all 0.3s ease;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/51990157878" target="_blank" rel="noopener noreferrer" class="whatsapp-btn"
+    aria-label="Contactar por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.051 3.488" />
+    </svg>
+  </a>
+
+  <style>
+    /* Botón activo (página actual) */
+    .boton-activo {
+      color: #000 !important;
+      background-color: #FFB42F !important;
+      font-weight: 600 !important;
+      padding: 8px 16px !important;
+      border-radius: 6px !important;
+      transition: all 0.3s ease !important;
+    }
+
+    .boton-activo:hover {
+      background-color: #e6a029 !important;
+      transform: translateY(-1px) !important;
+    }
+
+    /* Botón animado para Elenco */
+    .boton-animado {
+      color: #FFB42F !important;
+      font-weight: 600 !important;
+      padding: 8px 16px !important;
+      border-radius: 6px !important;
+      position: relative !important;
+      transition: all 0.3s ease !important;
+      animation: bounceGlow 2s ease-in-out infinite !important;
+      border: 2px solid transparent !important;
+    }
+
+    .boton-animado:hover {
+      color: #000 !important;
+      background-color: #FFB42F !important;
+      animation: none !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 8px 25px rgba(255, 180, 47, 0.4) !important;
+    }
+
+    /* Botón animado para móvil */
+    .boton-animado-mobile {
+      animation: bounceGlow 2s ease-in-out infinite !important;
+      position: relative !important;
+    }
+
+    .boton-animado-mobile:hover {
+      animation: none !important;
+    }
+
+    /* Animaciones */
+    @keyframes bounceGlow {
+
+      0%,
+      100% {
+        text-shadow: 0 0 8px rgba(255, 180, 47, 0.6) !important;
+        transform: scale(1) !important;
+      }
+
+      25% {
+        text-shadow: 0 0 15px rgba(255, 180, 47, 0.8) !important;
+        transform: scale(1.02) !important;
+      }
+
+      50% {
+        text-shadow: 0 0 20px rgba(255, 180, 47, 1) !important;
+        transform: scale(1.05) !important;
+      }
+
+      75% {
+        text-shadow: 0 0 15px rgba(255, 180, 47, 0.8) !important;
+        transform: scale(1.02) !important;
+      }
+    }
+
+    /* Estilo para separar tarjetas en responsive */
+    @media (min-width: 1024px) {
+      .card-container.perspective-1000.px-4[style*="margin-bottom"] {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    /* Sistema de tarjetas flip independientes */
+    .card-container {
+      cursor: pointer;
+    }
+
+    .card-inner {
+      transform-style: preserve-3d;
+    }
+
+    .card-inner.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-container:hover .card-logo {
+      transform: scale(1.1);
+    }
+
+    .card-face {
+      backface-visibility: hidden;
+    }
+
+    .card-face.back {
+      transform: rotateY(180deg);
+    }
+
+    /* Carrusel responsive */
+    .carousel-container {
+      width: 280px;
+      height: 210px;
+    }
+
+    @media (min-width: 640px) {
+      .carousel-container {
+        width: 320px;
+        height: 240px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .carousel-container {
+        width: 400px;
+        height: 300px;
+      }
+    }
+
+    /* Botón WhatsApp flotante */
+    .whatsapp-btn {
+      position: fixed !important;
+      bottom: 24px !important;
+      right: 24px !important;
+      width: 56px !important;
+      height: 56px !important;
+      background-color: #FFB42F !important;
+      border-radius: 50% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+      z-index: 99999 !important;
+      transition: all 0.3s ease !important;
+      text-decoration: none !important;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.1) !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+    }
+
+    .whatsapp-btn svg {
+      width: 32px !important;
+      height: 32px !important;
+      fill: #000 !important;
+    }
+  </style>
   <script>
-        // ====== Utilidades ======
-        const $ = (sel) => document.querySelector(sel);
+    document.addEventListener('DOMContentLoaded', () => {
+      // ====== Utilidades ======
+      const $ = (sel) => document.querySelector(sel);
 
-        // ====== Elementos ======
-        const openMenuBtn = $('#openMenuBtn');
-        const closeMenuBtn = $('#closeMenuBtn');
-        const mobileMenuPanel = $('#mobileMenuPanel');
-        const mobileMenuOverlay = $('#mobileMenuOverlay');
+      // ====== Elementos ======
+      const openMenuBtn = $('#openMenuBtn');
+      const closeMenuBtn = $('#closeMenuBtn');
+      const mobileMenuPanel = $('#mobileMenuPanel');
+      const mobileMenuOverlay = $('#mobileMenuOverlay');
 
-        // Solo configurar el año si el elemento existe
-        const yearElement = $('#year');
-        if (yearElement) {
-            yearElement.textContent = new Date().getFullYear();
-        }
+      // Verificar que todos los elementos existen antes de agregar event listeners
+      if (!openMenuBtn || !closeMenuBtn || !mobileMenuPanel || !mobileMenuOverlay) {
+        console.error('Error: Algunos elementos del menú móvil no fueron encontrados');
+        console.log('openMenuBtn:', openMenuBtn);
+        console.log('closeMenuBtn:', closeMenuBtn);
+        console.log('mobileMenuPanel:', mobileMenuPanel);
+        console.log('mobileMenuOverlay:', mobileMenuOverlay);
+        return;
+      }
 
-        function openMenu() {
-            if (!mobileMenuOverlay || !mobileMenuPanel) return;
-            
-            mobileMenuOverlay.classList.remove('hidden', 'opacity-0');
-            // Forzar reflujo para que la transición de opacidad ocurra
-            void mobileMenuOverlay.offsetWidth;
-            mobileMenuOverlay.classList.add('opacity-100');
+      function openMenu() {
+        if (!mobileMenuOverlay || !mobileMenuPanel || !openMenuBtn) return;
 
-            mobileMenuPanel.classList.remove('translate-x-full');
-            mobileMenuPanel.setAttribute('aria-hidden', 'false');
-            openMenuBtn.setAttribute('aria-expanded', 'true');
+        mobileMenuOverlay.classList.remove('hidden', 'opacity-0');
+        // Forzar reflujo para que la transición de opacidad ocurra
+        void mobileMenuOverlay.offsetWidth;
+        mobileMenuOverlay.classList.add('opacity-100');
 
-            document.body.style.overflow = 'hidden';
-            mobileMenuPanel.focus();
-        }
+        mobileMenuPanel.classList.remove('translate-x-full');
+        mobileMenuPanel.setAttribute('aria-hidden', 'false');
+        openMenuBtn.setAttribute('aria-expanded', 'true');
 
-        function closeMenu() {
-            if (!mobileMenuOverlay || !mobileMenuPanel) return;
-            
-            mobileMenuOverlay.classList.remove('opacity-100');
-            mobileMenuOverlay.classList.add('opacity-0');
-            setTimeout(() => {
-                mobileMenuOverlay.classList.add('hidden');
-            }, 300); // igual a duration-300
+        document.body.style.overflow = 'hidden';
+        mobileMenuPanel.focus();
+      }
 
-            mobileMenuPanel.classList.add('translate-x-full');
-            mobileMenuPanel.setAttribute('aria-hidden', 'true');
-            openMenuBtn.setAttribute('aria-expanded', 'false');
+      function closeMenu() {
+        if (!mobileMenuOverlay || !mobileMenuPanel || !openMenuBtn) return;
 
-            document.body.style.overflow = '';
-            openMenuBtn.focus();
-        }
+        mobileMenuOverlay.classList.remove('opacity-100');
+        mobileMenuOverlay.classList.add('opacity-0');
+        setTimeout(() => {
+          if (mobileMenuOverlay) {
+            mobileMenuOverlay.classList.add('hidden');
+          }
+        }, 300); // igual a duration-300
 
-        // Solo agregar event listeners si los elementos existen
-        if (openMenuBtn) openMenuBtn.addEventListener('click', openMenu);
-        if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMenu);
-        if (mobileMenuOverlay) mobileMenuOverlay.addEventListener('click', closeMenu);
+        mobileMenuPanel.classList.add('translate-x-full');
+        mobileMenuPanel.setAttribute('aria-hidden', 'true');
+        openMenuBtn.setAttribute('aria-expanded', 'false');
 
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && mobileMenuOverlay && !mobileMenuOverlay.classList.contains('hidden')) {
-                closeMenu();
-            }
+        document.body.style.overflow = '';
+        openMenuBtn.focus();
+      }
+
+      openMenuBtn.addEventListener('click', openMenu);
+      closeMenuBtn.addEventListener('click', closeMenu);
+      mobileMenuOverlay.addEventListener('click', closeMenu);
+
+      // Cerrar menú móvil al hacer clic en enlaces internos
+      const mobileMenuLinks = mobileMenuPanel.querySelectorAll('a[href^="#"]');
+      mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          // Solo cerrar si el enlace va a una sección (no es solo "#")
+          if (link.getAttribute('href') !== '#') {
+            closeMenu();
+          }
         });
-    </script>
+      });
 
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenuOverlay && !mobileMenuOverlay.classList.contains('hidden')) {
+          closeMenu();
+        }
+      });
+
+      // Sistema de tarjetas flip independientes
+      const cardContainers = document.querySelectorAll('.card-container');
+
+      cardContainers.forEach(container => {
+        const cardInner = container.querySelector('.card-inner');
+        let isFlipped = false;
+
+        // Función para alternar el estado de la tarjeta
+        const toggleCard = () => {
+          isFlipped = !isFlipped;
+          if (isFlipped) {
+            cardInner.classList.add('flipped');
+          } else {
+            cardInner.classList.remove('flipped');
+          }
+        };
+
+        // Evento de click para alternar
+        container.addEventListener('click', (e) => {
+          e.preventDefault();
+          toggleCard();
+        });
+
+        // Para dispositivos táctiles
+        container.addEventListener('touchstart', (e) => {
+          e.preventDefault();
+          toggleCard();
+        });
+      });
+
+      // Carrusel de galería
+      const slides = document.querySelectorAll('.carousel-slide');
+      const indicators = document.querySelectorAll('.indicator');
+      let currentSlide = 0;
+      let autoSlideInterval;
+
+      function updateIndicators() {
+        indicators.forEach((indicator, i) => {
+          if (i === currentSlide) {
+            indicator.style.backgroundColor = 'var(--color-amarillo)';
+            indicator.classList.add('active');
+          } else {
+            indicator.style.backgroundColor = '#D1D5DB';
+            indicator.classList.remove('active');
+          }
+        });
+      }
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.style.opacity = i === index ? '1' : '0';
+        });
+        updateIndicators();
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      function goToSlide(index) {
+        currentSlide = index;
+        showSlide(currentSlide);
+        resetAutoSlide();
+      }
+
+      function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 3000);
+      }
+
+      function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+      }
+
+      // Agregar eventos click a los indicadores
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => goToSlide(index));
+
+        // Efecto hover
+        indicator.addEventListener('mouseenter', () => {
+          if (!indicator.classList.contains('active')) {
+            indicator.style.backgroundColor = '#F59E0B';
+          }
+        });
+
+        indicator.addEventListener('mouseleave', () => {
+          if (!indicator.classList.contains('active')) {
+            indicator.style.backgroundColor = '#D1D5DB';
+          }
+        });
+      });
+
+      // Inicializar carrusel
+      if (slides.length > 0 && indicators.length > 0) {
+        showSlide(0);
+        startAutoSlide();
+
+        // Pausar autoSlide cuando el mouse está sobre el carrusel
+        const carouselContainer = document.querySelector('.carousel-container');
+        if (carouselContainer) {
+          carouselContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoSlideInterval);
+          });
+
+          carouselContainer.addEventListener('mouseleave', () => {
+            startAutoSlide();
+          });
+        }
+      }
+    });
+  </script>
+
+  <!-- Script para cargar el footer -->
+  <script src="./assets/footer.js"></script>
 </body>
 
 </html>
