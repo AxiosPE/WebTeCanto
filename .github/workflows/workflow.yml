@@ -41,6 +41,7 @@ jobs:
           mkdir -p dist
           cp index.html nosotros.html dist/
           cp -r components/ assets/ dist/
+          cp assets/output.css dist/assets/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
