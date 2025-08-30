@@ -7,10 +7,19 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -27,13 +36,20 @@ jobs:
       - name: Build CSS with Tailwind
         run: pnpm run build
 
-      - name: Prepare dist folder
+      - name: Prepare deployment files
         run: |
-          mkdir dist
-          cp -r index.html nosotros.html components assets dist/
+          mkdir -p dist
+          cp index.html nosotros.html dist/
+          cp -r components/ assets/ dist/
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+        id: deployment
+        uses: actions/deploy-pages@v4
