@@ -14,5 +14,8 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.1.12",
     "tailwindcss": "^4.1.12"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
   }
 }
