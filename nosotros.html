@@ -48,18 +48,16 @@
 
           <!-- Subtítulo más grande -->
           <div class="max-w-5xl mx-auto">
-            <p
-              class="mt-4 text-xl md:text-2xl lg:text-3xl text-gray-200">
+            <p class="mt-4 text-xl md:text-2xl lg:text-3xl text-gray-200">
               Lírico–clásico y música moderna para cada ocasión.
             </p>
             <!-- Descriptor -->
 
           </div>
 
-          <!-- Botones más grandes -->
           <div class="pt-6">
             <div class="flex flex-col sm:flex-row gap-5 justify-center items-center max-w-2xl mx-auto">
-              <a href="#video"
+              <a href="https://www.youtube.com/watch?v=i347xihRKt4" target="_blank" rel="noopener noreferrer"
                 class="group relative w-full sm:w-auto max-w-xs inline-flex items-center justify-center rounded-full px-10 py-4 text-black text-lg font-medium tracking-wide transition-all duration-300 min-h-[60px] focus:outline-none focus:ring-4 focus:ring-yellow-300 focus:ring-opacity-75 hover:scale-105 shadow-2xl backdrop-blur-sm"
                 style="background-color: var(--color-amarillo); box-shadow: 0 10px 40px rgba(255, 211, 0, 0.3);"
                 role="button" aria-label="Ver repertorio clásico">
@@ -94,7 +92,7 @@
 
       <!-- Título de la sección más compacto -->
       <div class="text-center mb-12">
-        <div class="inline-block"> 
+        <div class="inline-block">
           <h2 class="text-4xl md:text-6xl lg:text-8xl font-extrabold mb-6 text-black">Escucha mi música</h2>
           <!-- Línea decorativa más compacta -->
           <div class="w-24 h-0.5 mx-auto mb-8 bg-gradient-to-r from-transparent via-gray-600/60 to-transparent"></div>
@@ -129,7 +127,7 @@
             ¿Te gustó lo que escuchaste?
           </p>
 
-          <a href="https://wa.me/51990157878" target="_blank" rel="noopener noreferrer"
+          <a href="https://wa.me/51982218665" target="_blank" rel="noopener noreferrer"
             class="group relative inline-flex items-center justify-center rounded-full px-10 py-4 text-black text-lg font-medium tracking-wide transition-all duration-300 min-h-[60px] focus:outline-none focus:ring-4 focus:ring-yellow-300 focus:ring-opacity-75 hover:scale-105 shadow-2xl backdrop-blur-sm"
             style="background-color: var(--color-amarillo); box-shadow: 0 10px 40px rgba(255, 211, 0, 0.0);"
             role="button" aria-label="Contactar por WhatsApp para contratar servicios musicales">
@@ -190,7 +188,8 @@
       <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 max-w-5xl mx-auto mt-0">
 
         <!-- Tarjeta Música Lírica -->
-        <div class="card-container perspective-1000 px-4" style="margin-bottom: 4rem;" data-card="clasico">
+        <div class="card-container perspective-1000 px-4" style="margin-bottom: 4rem;" data-card="clasico" tabindex="0"
+          aria-label="Tarjeta Música Clásico" role="button">
           <div class="card-inner relative w-full h-[520px] transition-all duration-700 transform-style-preserve-3d">
 
             <!-- Frente de la tarjeta -->
@@ -272,7 +271,8 @@
         </div>
 
         <!-- Tarjeta Música Moderna -->
-        <div class="card-container perspective-1000 px-4" data-card="moderno">
+        <div class="card-container perspective-1000 px-4" data-card="moderno" tabindex="0"
+          aria-label="Tarjeta Música Moderna" role="button">
           <div class="card-inner relative w-full h-[520px] transition-all duration-700 transform-style-preserve-3d">
 
             <!-- Frente de la tarjeta -->
@@ -445,7 +445,7 @@
               <div class="carousel-slide"
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.7s ease-in-out; z-index: 1;">
                 <img src="./assets/Gallery/2.jpg" alt="Momento especial 2"
-                  style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: center 60%; transform: scale(1.8); display: block;">
               </div>
               <div class="carousel-slide"
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.7s ease-in-out; z-index: 1;">
@@ -454,7 +454,7 @@
               </div>
               <div class="carousel-slide"
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.7s ease-in-out; z-index: 1;">
-                <img src="./assets/Gallery/4.jpg" alt="Momento especial 4"
+                <img src="./assets/Gallery/4.jpeg" alt="Momento especial 4"
                   style="width: 100%; height: 100%; object-fit: cover; display: block;">
               </div>
               <div class="carousel-slide"
@@ -491,7 +491,7 @@
   </section>
 
   <!-- Botón flotante de WhatsApp -->
-  <a href="https://wa.me/51990157878" target="_blank" rel="noopener noreferrer" class="whatsapp-btn"
+  <a href="https://wa.me/51982218665" target="_blank" rel="noopener noreferrer" class="whatsapp-btn"
     aria-label="Contactar por WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <path
@@ -577,21 +577,15 @@
       }
     }
 
-    /* Sistema de tarjetas flip independientes */
+    /* Sistema de tarjetas flip: hover en desktop, tap/click en touch */
     .card-container {
       cursor: pointer;
+      outline: none;
     }
 
     .card-inner {
       transform-style: preserve-3d;
-    }
-
-    .card-inner.flipped {
-      transform: rotateY(180deg);
-    }
-
-    .card-container:hover .card-logo {
-      transform: scale(1.1);
+      transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
     }
 
     .card-face {
@@ -600,6 +594,26 @@
 
     .card-face.back {
       transform: rotateY(180deg);
+    }
+
+    /* Flip por hover solo en dispositivos con mouse */
+    @media (hover: hover) and (pointer: fine) {
+      .card-container:hover .card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .card-container:hover .card-logo {
+        transform: scale(1.1);
+      }
+    }
+
+    /* Flip por clase solo en touch */
+    .card-container.is-flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-container:focus-visible {
+      box-shadow: 0 0 0 3px var(--color-amarillo);
     }
 
     /* Carrusel responsive */
@@ -728,35 +742,25 @@
         }
       });
 
-      // Sistema de tarjetas flip independientes
-      const cardContainers = document.querySelectorAll('.card-container');
-
-      cardContainers.forEach(container => {
-        const cardInner = container.querySelector('.card-inner');
-        let isFlipped = false;
-
-        // Función para alternar el estado de la tarjeta
-        const toggleCard = () => {
-          isFlipped = !isFlipped;
-          if (isFlipped) {
-            cardInner.classList.add('flipped');
-          } else {
-            cardInner.classList.remove('flipped');
-          }
-        };
-
-        // Evento de click para alternar
-        container.addEventListener('click', (e) => {
-          e.preventDefault();
-          toggleCard();
+      // Flip solo en touch: click/tap, en desktop solo hover
+      function isTouchDevice() {
+        return (('ontouchstart' in window) || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0);
+      }
+      if (isTouchDevice()) {
+        const cardContainers = document.querySelectorAll('.card-container');
+        cardContainers.forEach(card => {
+          card.addEventListener('click', function (e) {
+            if (e.target.closest('.card-container') !== card) return;
+            card.classList.toggle('is-flipped');
+          });
+          card.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              card.classList.toggle('is-flipped');
+            }
+          });
         });
-
-        // Para dispositivos táctiles
-        container.addEventListener('touchstart', (e) => {
-          e.preventDefault();
-          toggleCard();
-        });
-      });
+      }
 
       // Carrusel de galería
       const slides = document.querySelectorAll('.carousel-slide');
