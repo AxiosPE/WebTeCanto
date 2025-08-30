@@ -11,138 +11,8 @@
     <title>TeCanto Music · Coro para tus momentos</title>
 </head>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const form = document.getElementById('fs-form');
-        if (!form) return;
-
-        const btn = document.getElementById('fs-submit');
-        const ok = document.getElementById('fs-success');
-        const err = document.getElementById('fs-error');
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            ok.classList.add('hidden');
-            err.classList.add('hidden');
-            btn.disabled = true;
-            btn.textContent = 'Enviando…';
-
-            try {
-                const data = new FormData(form);
-                const res = await fetch('https://formspree.io/f/xnnzkzov', {
-                    method: 'POST',
-                    headers: { 'Accept': 'application/json' },
-                    body: data
-                });
-
-                if (res.ok) {
-                    form.reset();
-                    ok.classList.remove('hidden');
-                } else {
-                    // Opcional: inspeccionar detalles
-                    // const payload = await res.json().catch(() => ({}));
-                    err.textContent = 'No pudimos enviar tu mensaje. Revisa los campos e inténtalo nuevamente.';
-                    err.classList.remove('hidden');
-                }
-            } catch {
-                err.textContent = 'Ocurrió un error de red. Inténtalo de nuevo.';
-                err.classList.remove('hidden');
-            } finally {
-                btn.disabled = false;
-                btn.textContent = 'Enviar mensaje';
-            }
-        });
-    });
-</script>
-
-
-
 <body>
-    <header class="absolute inset-x-0 top-0 z-20">
-        <div class="mx-auto flex h-16 sm:h-20 lg:h-24 items-center gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-6 lg:px-8">
-            <!-- Logo -->
-            <div class="flex items-center gap-2">
-                <a href="#" class="block">
-                    <span class="sr-only">Logo de Te Canto</span>
-                    <img src="./assets/Logo-transparente.png" alt="Logo de Te Canto"
-                        class="h-8 sm:h-10 lg:h-12 xl:h-14" />
-                </a>
-
-            </div>
-
-            <!-- Botones -->
-            <div class="flex flex-1 items-center justify-center">
-                <nav aria-label="Global" class="hidden md:block">
-                    <ul class="flex items-center gap-6 lg:gap-8 xl:gap-12">
-                        <li>
-                            <a href="#" class="boton-header boton-activo">Inicio</a>
-                        </li>
-                        <li>
-                            <a href="#quien-soy" class="boton-header">Quién soy</a>
-                        </li>
-                        <li>
-                            <a href="#momentos" class="boton-header">Servicios Musicales</a>
-                        </li>
-                        <li>
-                            <a href="#contacto" class="boton-header">Contáctanos</a>
-                        </li>
-                        <li>
-                            <a href="nosotros.html" class="boton-header boton-animado">Elenco</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
-            <!-- Menú móvil -->
-            <button id="openMenuBtn"
-                class="block rounded-sm bg-amarillo p-2 sm:p-2.5 text-black transition md:hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amarillo focus:ring-offset-black"
-                aria-label="Abrir menú" aria-controls="mobileMenuPanel" aria-expanded="false">
-                <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </div>
-
-        <!-- Overlay y panel deslizante -->
-        <div id="mobileMenuOverlay"
-            class="fixed inset-0 z-40 bg-black/50 hidden opacity-0 transition-opacity duration-300"></div>
-
-        <aside id="mobileMenuPanel"
-            class="fixed top-0 right-0 h-full w-64 bg-black z-50 shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col"
-            role="dialog" aria-modal="true" aria-label="Menú móvil" aria-hidden="true" tabindex="-1">
-            <div class="flex items-center justify-between p-6 border-b border-gray-700">
-                <span class="font-bold text-xl text-white">Menú</span>
-                <button id="closeMenuBtn"
-                    class="text-white p-2 rounded hover:bg-amarillo hover:text-black transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amarillo focus:ring-offset-black"
-                    aria-label="Cerrar menú">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor" stroke-width="2" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-            <nav class="flex-1 p-6" aria-label="Principal móvil">
-                <ul class="flex flex-col gap-6">
-                    <li><a href="#"
-                            class="text-white text-lg font-semibold hover:text-amarillo transition-colors">Inicio</a>
-                    </li>
-                    <li><a href="#quien-soy"
-                            class="text-white text-lg font-semibold hover:text-amarillo transition-colors">Quién soy</a>
-                    </li>
-                    <li><a href="#momentos"
-                            class="text-white text-lg font-semibold hover:text-amarillo transition-colors">Nuestros
-                            Servicios</a></li>
-                    <li><a href="#contacto"
-                            class="text-white text-lg font-semibold hover:text-amarillo transition-colors">Contáctanos</a>
-                    </li>
-                    <li><a href="nosotros.html"
-                            class="text-white text-lg font-semibold hover:text-amarillo transition-colors boton-animado-mobile">Elenco</a>
-                    </li>
-                </ul>
-            </nav>
-        </aside>
-    </header>
+    <div id="header"></div>
 
     <main id="contenido" class="bg-amarillo">
         <!-- Hero a pantalla completa -->
@@ -216,6 +86,7 @@
         <section id="momentos" aria-labelledby="titulo-momentos" class="bg-amarillo text-slate-900">
             <div class="mx-auto max-w-7xl px-6 lg:px-8 py-20">
                 <div class="text-center">
+                    <h2 class="text-4xl md:text-6xl lg:text-8xl font-extrabold mb-6 text-black">Servicios Musicales</h2>
                     <p class="text-sm font-bold tracking-widest text-black">MOMENTOS QUE HONRAMOS</p>
                     <h2 id="titulo-momentos" class="mt-2 text-3xl md:text-4xl font-bold">
                         Estamos contigo en los días que vivirán en el corazón
@@ -319,7 +190,7 @@
         <section id="contacto" class="bg-black text-white px-8 py-20">
             <div class="mx-auto max-w-3xl text-center">
                 <h2 class="text-3xl font-bold mb-4 md:text-5xl lg:text-6xl xl:text-7xl text-amarillo">Contáctanos</h2>
-                <p class="text-white/80 mb-8 md:text-lg lg:text-xl xl:text-2xl">
+                <p class="text-white mb-8 md:text-lg lg:text-xl xl:text-2xl">
                     Será un honor acompañar tu celebración con nuestra música. Escríbenos y conversemos sobre tu evento.
                 </p>
 
@@ -386,92 +257,6 @@
         </section>
     </main>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // ====== Utilidades ======
-            const $ = (sel) => document.querySelector(sel);
-
-            // ====== Elementos ======
-            const openMenuBtn = $('#openMenuBtn');
-            const closeMenuBtn = $('#closeMenuBtn');
-            const mobileMenuPanel = $('#mobileMenuPanel');
-            const mobileMenuOverlay = $('#mobileMenuOverlay');
-
-            // Verificar que todos los elementos existen antes de agregar event listeners
-            if (!openMenuBtn || !closeMenuBtn || !mobileMenuPanel || !mobileMenuOverlay) {
-                console.error('Error: Algunos elementos del menú móvil no fueron encontrados');
-                console.log('openMenuBtn:', openMenuBtn);
-                console.log('closeMenuBtn:', closeMenuBtn);
-                console.log('mobileMenuPanel:', mobileMenuPanel);
-                console.log('mobileMenuOverlay:', mobileMenuOverlay);
-                return;
-            }
-
-            // Año en footer
-            const yearElement = $('#year');
-            if (yearElement) {
-                yearElement.textContent = new Date().getFullYear();
-            }
-
-            function openMenu() {
-                if (!mobileMenuOverlay || !mobileMenuPanel || !openMenuBtn) return;
-
-                mobileMenuOverlay.classList.remove('hidden', 'opacity-0');
-                // Forzar reflujo para que la transición de opacidad ocurra
-                void mobileMenuOverlay.offsetWidth;
-                mobileMenuOverlay.classList.add('opacity-100');
-
-                mobileMenuPanel.classList.remove('translate-x-full');
-                mobileMenuPanel.setAttribute('aria-hidden', 'false');
-                openMenuBtn.setAttribute('aria-expanded', 'true');
-
-                document.body.style.overflow = 'hidden';
-                mobileMenuPanel.focus();
-            }
-
-            function closeMenu() {
-                if (!mobileMenuOverlay || !mobileMenuPanel || !openMenuBtn) return;
-
-                mobileMenuOverlay.classList.remove('opacity-100');
-                mobileMenuOverlay.classList.add('opacity-0');
-                setTimeout(() => {
-                    if (mobileMenuOverlay) {
-                        mobileMenuOverlay.classList.add('hidden');
-                    }
-                }, 300); // igual a duration-300
-
-                mobileMenuPanel.classList.add('translate-x-full');
-                mobileMenuPanel.setAttribute('aria-hidden', 'true');
-                openMenuBtn.setAttribute('aria-expanded', 'false');
-
-                document.body.style.overflow = '';
-                openMenuBtn.focus();
-            }
-
-            openMenuBtn.addEventListener('click', openMenu);
-            closeMenuBtn.addEventListener('click', closeMenu);
-            mobileMenuOverlay.addEventListener('click', closeMenu);
-
-            // Cerrar menú móvil al hacer clic en enlaces internos
-            const mobileMenuLinks = mobileMenuPanel.querySelectorAll('a[href^="#"]');
-            mobileMenuLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    // Solo cerrar si el enlace va a una sección (no es solo "#")
-                    if (link.getAttribute('href') !== '#') {
-                        closeMenu();
-                    }
-                });
-            });
-
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && mobileMenuOverlay && !mobileMenuOverlay.classList.contains('hidden')) {
-                    closeMenu();
-                }
-            });
-        }); // Cierre del DOMContentLoaded
-    </script>
-
-    <!-- Botón flotante de WhatsApp -->
     <a href="https://wa.me/51990157878" target="_blank" rel="noopener noreferrer" class="whatsapp-btn"
         aria-label="Contactar por WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -581,8 +366,8 @@
         }
     </style>
 
-    <!-- Script para cargar el footer -->
-    <script src="./assets/footer.js"></script>
+    <script src="./assets/Scripts/layout.js"></script>
+    <script src="./assets/Scripts/scripts.js"></script>
 </body>
 
 </html>
