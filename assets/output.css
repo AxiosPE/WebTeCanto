@@ -1569,19 +1569,9 @@
       padding-inline: calc(var(--spacing) * 6);
     }
   }
-  .md\:relative {
+  .md\:absolute {
     @media (width >= 48rem) {
-      position: relative;
-    }
-  }
-  .md\:inset-x-auto {
-    @media (width >= 48rem) {
-      inset-inline: auto;
-    }
-  }
-  .md\:top-auto {
-    @media (width >= 48rem) {
-      top: auto;
+      position: absolute;
     }
   }
   .md\:mx-0 {
