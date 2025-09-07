@@ -207,8 +207,8 @@
                 <div class="bg-black/40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
                     <div class="space-y-6 md:space-y-8">
                         <div class="relative">
-                            <h2 id="hero-title" class="text-4xl md:text-6xl lg:text-8xl font-extrabold mb-6 text-white">
-                                Elenco</h2>
+                            <h2 id="hero-title" class="text-2xl md:text-4xl lg:text-6xl font-extrabold mb-6 text-white">
+                                Elencos TeCanto Music</h2>
                             <div class="w-32 h-1 mx-auto mb-6"
                                 style="background: linear-gradient(90deg, transparent, var(--color-amarillo), transparent); box-shadow: 0 0 30px rgba(255,211,0,.6);">
                             </div>
@@ -639,9 +639,11 @@
                     Será un honor acompañar tu celebración con nuestra música. Escríbenos y conversemos sobre tu evento.
                 </p>
 
-                <form id="fs-form" class="space-y-4 text-left max-w-xl mx-auto">
+                <form id="fs-form" action="https://formspree.io/f/xzzayrev" method="POST"
+                    class="space-y-4 text-left max-w-xl mx-auto" enctype="multipart/form-data">
                     <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
                     <input type="hidden" name="_subject" value="Nuevo mensaje desde TeCanto Music">
+                    <input type="hidden" name="_next" value="http://localhost:8000/#contacto">
 
                     <div>
                         <label class="label-form" for="nombre">Nombre</label>
@@ -657,8 +659,9 @@
                         </div>
                         <div>
                             <label class="label-form" for="telefono">Teléfono</label>
-                            <input id="telefono" name="telefono" type="tel" class="w-full px-4 py-3 rounded-lg bg-white/10 text-white
-                        focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="+51 999 999 999">
+                            <input id="telefono" name="telefono" type="tel" required pattern="[0-9+\-\s()]+" class="w-full px-4 py-3 rounded-lg bg-white/10 text-white
+                        focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="+51 999 999 999"
+                                title="Solo se permiten números, espacios, guiones, paréntesis y el signo +">
                         </div>
                     </div>
 

@@ -8,34 +8,103 @@ document.addEventListener('DOMContentLoaded', () => {
     const err = document.getElementById('fs-error');
 
     form.addEventListener('submit', async (e) => {
-        e.preventDefault();
+        // Limpiar mensajes previos
         ok.classList.add('hidden');
         err.classList.add('hidden');
+
+        // Validación de campos obligatorios
+        const nombre = document.getElementById('nombre').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const telefono = document.getElementById('telefono').value.trim();
+        const tipo = document.getElementById('tipo').value;
+        const fecha = document.getElementById('fecha').value;
+        const mensaje = document.getElementById('mensaje').value.trim();
+
+        // Verificar que todos los campos estén completos
+        if (!nombre) {
+            e.preventDefault();
+            err.textContent = 'Por favor, ingresa tu nombre.';
+            err.classList.remove('hidden');
+            document.getElementById('nombre').focus();
+            return;
+        }
+        
+        if (!email) {
+            e.preventDefault();
+            err.textContent = 'Por favor, ingresa tu correo electrónico.';
+            err.classList.remove('hidden');
+            document.getElementById('email').focus();
+            return;
+        }
+        
+        if (!telefono) {
+            e.preventDefault();
+            err.textContent = 'Por favor, ingresa tu número de teléfono.';
+            err.classList.remove('hidden');
+            document.getElementById('telefono').focus();
+            return;
+        }
+        
+        if (!tipo) {
+            e.preventDefault();
+            err.textContent = 'Por favor, selecciona el tipo de ceremonia.';
+            err.classList.remove('hidden');
+            document.getElementById('tipo').focus();
+            return;
+        }
+        
+        if (!fecha) {
+            e.preventDefault();
+            err.textContent = 'Por favor, selecciona la fecha de tu ceremonia.';
+            err.classList.remove('hidden');
+            document.getElementById('fecha').focus();
+            return;
+        }
+        
+        if (!mensaje) {
+            e.preventDefault();
+            err.textContent = 'Por favor, escribe un mensaje describiendo tu evento.';
+            err.classList.remove('hidden');
+            document.getElementById('mensaje').focus();
+            return;
+        }
+
+        // Validar formato de email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            e.preventDefault();
+            err.textContent = 'Por favor, ingresa un correo electrónico válido.';
+            err.classList.remove('hidden');
+            document.getElementById('email').focus();
+            return;
+        }
+
+        // Validar formato de teléfono (solo números, espacios, guiones, paréntesis y +)
+        const telefonoRegex = /^[0-9+\-\s()]+$/;
+        if (!telefonoRegex.test(telefono)) {
+            e.preventDefault();
+            err.textContent = 'El teléfono solo puede contener números, espacios, guiones, paréntesis y el signo +.';
+            err.classList.remove('hidden');
+            document.getElementById('telefono').focus();
+            return;
+        }
+
+        // Validar que el teléfono tenga al menos 8 dígitos
+        const soloNumeros = telefono.replace(/[^0-9]/g, '');
+        if (soloNumeros.length < 8) {
+            e.preventDefault();
+            err.textContent = 'El teléfono debe tener al menos 8 dígitos.';
+            err.classList.remove('hidden');
+            document.getElementById('telefono').focus();
+            return;
+        }
+
+        // Si llegamos aquí, todo está válido - dejar que el formulario se envíe normalmente
         btn.disabled = true;
         btn.textContent = 'Enviando…';
-
-        try {
-            const data = new FormData(form);
-            const res = await fetch('https://formspree.io/f/xnnzkzov', {
-                method: 'POST',
-                headers: { 'Accept': 'application/json' },
-                body: data
-            });
-
-            if (res.ok) {
-                form.reset();
-                ok.classList.remove('hidden');
-            } else {
-                err.textContent = 'No pudimos enviar tu mensaje. Revisa los campos e inténtalo nuevamente.';
-                err.classList.remove('hidden');
-            }
-        } catch {
-            err.textContent = 'Ocurrió un error de red. Inténtalo de nuevo.';
-            err.classList.remove('hidden');
-        } finally {
-            btn.disabled = false;
-            btn.textContent = 'Enviar mensaje';
-        }
+        
+        // El formulario se enviará automáticamente a Formspree
+        console.log('Formulario válido, enviando a Formspree...');
     });
 });
 
