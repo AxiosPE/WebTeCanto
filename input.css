@@ -32,6 +32,10 @@
   @apply block mb-1 md:text-base lg:text-lg xl:text-xl text-white;
 }
 
+.footer-text {
+  @apply text-white text-base md:text-lg leading-normal;
+}
+
 /* Estilos para las tarjetas flip 3D */
 .perspective-1000 {
   perspective: 1000px;
@@ -100,6 +104,7 @@
   }
   .animate-fade-delayed-zero {
     animation: fadeInDelayed 1.5s ease-out forwards;
+    animation-delay: 0.5s;
   }
 
   @keyframes typing {
