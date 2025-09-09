@@ -57,6 +57,23 @@
   transform: rotateY(180deg);
 }
 
+/* Estilos para listas */
+ul, ol {
+  list-style-position: inside; /* Asegura que los bullet points estén alineados correctamente */
+  margin: 0;
+  padding: 0 1rem; /* Ajusta el padding para alineación */
+}
+
+li {
+  margin-bottom: 0.5rem; /* Espaciado entre elementos de la lista */
+}
+
+@media (min-width: 768px) {
+  ul, ol {
+    padding: 0 2rem; /* Ajusta el padding para pantallas más grandes */
+  }
+}
+
 @layer utilities {
   /* Fade + Scale */
   @keyframes fadeScale {

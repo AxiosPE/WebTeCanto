@@ -38,10 +38,11 @@
 
     <div class="mx-auto max-w-7xl px-6 relative z-10">
 
-            <!-- Redes sociales -->
+      <!-- Redes sociales -->
       <div class="flex justify-center mb-8">
         <div class="space-y-3 flex-col">
-          <h4 class="text-xl font-bold xl:text-2xl" style="color: var(--color-amarillo);">Síguenos en nuestras Redes Sociales</h4>
+          <h4 class="text-xl font-bold xl:text-2xl" style="color: var(--color-amarillo);">Síguenos en nuestras Redes
+            Sociales</h4>
           <div class="flex gap-3 justify-center">
             <a href="https://wa.me/51982218665" target="_blank" rel="noopener noreferrer"
               class="w-12 h-12 bg-gray-800 hover:bg-green-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
@@ -79,29 +80,33 @@
         </div>
       </div>
 
-      <!-- Contenido principal - Cambié a 4 columnas iguales -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12">
+      <!-- Contenido principal - 4 columnas con espaciado uniforme y encabezados alineados a la izquierda -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
 
         <!-- Logo y descripción -->
-        <div>
-          <div class="flex items-center gap-2 mb-2">
-            <img src="./assets/Logo-transparente.png" alt="TeCanto Music" class="w-6 h-6 object-contain">
-            <span class="text-xl font-bold xl:text-2xl" style="color: var(--color-amarillo);">TeCanto Music</span>
+        <div class="flex flex-col items-start text-left">
+          <!-- Encabezado con altura fija y espaciado uniforme -->
+          <div class="h-16 flex items-center mb-4">
+            <div class="flex items-center gap-2">
+              <img src="./assets/Logo-transparente.png" alt="TeCanto Music" class="w-6 h-6 object-contain">
+              <span class="text-xl font-bold xl:text-2xl" style="color: var(--color-amarillo);">TeCanto Music</span>
+            </div>
           </div>
 
-          <p class="footer-text leading-0.2 text-justify">
+          <p class="footer-text leading-relaxed flex-grow">
             Música en vivo que honra tus momentos más especiales. Desde ceremonias íntimas hasta grandes celebraciones,
             creamos la atmósfera perfecta para cada ocasión con un repertorio que va desde lo clásico hasta lo
             contemporáneo.
           </p>
-
-
         </div>
 
         <!-- Enlaces de navegación -->
-        <div>
-          <h3 class="text-xl font-bold xl:text-2xl" style="color: var(--color-amarillo);">Navegación</h3>
-          <div class="">
+        <div class="flex flex-col items-start text-left ml-20">
+          <!-- Encabezado con altura fija y espaciado uniforme -->
+          <div class="h-16 flex items-center mb-4">
+            <h3 class="text-xl font-bold xl:text-2xl" style="color: var(--color-amarillo);">Navegación</h3>
+          </div>
+          <div class="space-y-2 flex-grow">
             <a href="index.html"
               class="block text-white hover:text-yellow-400 transition-colors text-base hover:translate-x-1 duration-300">Inicio</a>
             <a href="index.html#quien-soy"
@@ -117,9 +122,12 @@
         </div>
 
         <!-- Servicios -->
-        <div>
-          <h3 class="text-xl font-bold xl:text-2xl" style="color: var(--color-amarillo);">Nuestros Servicios</h3>
-          <div class="">
+        <div class="flex flex-col items-start text-left">
+          <!-- Encabezado con altura fija y espaciado uniforme -->
+          <div class="h-16 flex items-center mb-4">
+            <h3 class="text-xl font-bold xl:text-2xl" style="color: var(--color-amarillo);">Nuestros Servicios</h3>
+          </div>
+          <div class="space-y-2 flex-grow">
             <div class="flex items-center gap-2">
               <div class="w-1 h-1 rounded-full" style="background-color: var(--color-amarillo);"></div>
               <span class="footer-text">Bodas y ceremonias</span>
@@ -144,9 +152,12 @@
         </div>
 
         <!-- Información de contacto -->
-        <div>
-          <h3 class="text-xl font-bold xl:text-2xl" style="color: var(--color-amarillo);">Contacto</h3>
-          <div class="">
+        <div class="flex flex-col items-start text-left">
+          <!-- Encabezado con altura fija y espaciado uniforme -->
+          <div class="h-16 flex items-center mb-4">
+            <h3 class="text-xl font-bold xl:text-2xl" style="color: var(--color-amarillo);">Contacto</h3>
+          </div>
+          <div class="space-y-3 flex-grow">
             <div class="flex items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0" style="fill: var(--color-amarillo);"
                 viewBox="0 0 24 24">
@@ -162,7 +173,6 @@
                 <path
                   d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
               </svg>
-              <!-- Corrección: Cambié el color del email a text-gray-300 para que sea visible -->
               <span class="footer-text">
                 servimusic@cinthiabenaducci.com
               </span>
@@ -181,7 +191,7 @@
       </div>
 
 
-      
+
     </div>
   </footer>
 
