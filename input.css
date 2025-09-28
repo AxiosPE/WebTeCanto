@@ -1,11 +1,5 @@
 @import "tailwindcss";
-
-@font-face {
-  font-family: 'Cormorant Garamond';
-  src: url('./fonts/CormorantGaramond.woff2') format('woff2');
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @theme {
   /* Colores */
@@ -13,11 +7,11 @@
   --color-plomo: #EEEEEE;
 
   /* Fuentes */
-  --font-sans: 'Cormorant Garamond', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
 }
 
 .boton-header {
-  @apply text-white font-semibold hover:text-amarillo transition-colors text-lg lg:text-xl xl:text-2xl;
+  @apply text-white font-light hover:text-amarillo transition-colors text-lg lg:text-xl xl:text-2xl;
 }
 
 .social-button {
@@ -25,15 +19,15 @@
 }
 
 .card-header {
-  @apply font-semibold text-white text-2xl;
+  @apply font-extralight text-white text-2xl;
 }
 
 .label-form {
-  @apply block mb-1 md:text-base lg:text-lg xl:text-xl text-white;
+  @apply block mb-1 md:text-base lg:text-lg xl:text-xl text-white font-light;
 }
 
 .footer-text {
-  @apply text-white text-base md:text-lg leading-normal;
+  @apply text-white text-base md:text-lg leading-normal font-light;
 }
 
 /* Estilos para las tarjetas flip 3D */

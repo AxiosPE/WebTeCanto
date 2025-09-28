@@ -3,7 +3,7 @@
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --font-sans: 'Cormorant Garamond', ui-sans-serif, system-ui, sans-serif;
+    --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-400: oklch(70.4% 0.191 22.216);
@@ -65,11 +65,12 @@
     --text-7xl--line-height: 1;
     --text-8xl: 6rem;
     --text-8xl--line-height: 1;
+    --font-weight-thin: 100;
+    --font-weight-extralight: 200;
     --font-weight-light: 300;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
-    --font-weight-extrabold: 800;
     --tracking-wide: 0.025em;
     --tracking-widest: 0.1em;
     --leading-normal: 1.5;
@@ -1185,9 +1186,9 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
-  .font-extrabold {
-    --tw-font-weight: var(--font-weight-extrabold);
-    font-weight: var(--font-weight-extrabold);
+  .font-extralight {
+    --tw-font-weight: var(--font-weight-extralight);
+    font-weight: var(--font-weight-extralight);
   }
   .font-light {
     --tw-font-weight: var(--font-weight-light);
@@ -1200,6 +1201,10 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
+  }
+  .font-thin {
+    --tw-font-weight: var(--font-weight-thin);
+    font-weight: var(--font-weight-thin);
   }
   .tracking-\[0\.2em\] {
     --tw-tracking: 0.2em;
@@ -1870,17 +1875,12 @@
     }
   }
 }
-@font-face {
-  font-family: 'Cormorant Garamond';
-  src: url('./fonts/CormorantGaramond.woff2') format('woff2');
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 .boton-header {
   font-size: var(--text-lg);
   line-height: var(--tw-leading, var(--text-lg--line-height));
-  --tw-font-weight: var(--font-weight-semibold);
-  font-weight: var(--font-weight-semibold);
+  --tw-font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-light);
   color: var(--color-white);
   transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
   transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -1922,13 +1922,15 @@
 .card-header {
   font-size: var(--text-2xl);
   line-height: var(--tw-leading, var(--text-2xl--line-height));
-  --tw-font-weight: var(--font-weight-semibold);
-  font-weight: var(--font-weight-semibold);
+  --tw-font-weight: var(--font-weight-extralight);
+  font-weight: var(--font-weight-extralight);
   color: var(--color-white);
 }
 .label-form {
   margin-bottom: calc(var(--spacing) * 1);
   display: block;
+  --tw-font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-light);
   color: var(--color-white);
   @media (width >= 48rem) {
     font-size: var(--text-base);
@@ -1948,6 +1950,8 @@
   line-height: var(--tw-leading, var(--text-base--line-height));
   --tw-leading: var(--leading-normal);
   line-height: var(--leading-normal);
+  --tw-font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-light);
   color: var(--color-white);
   @media (width >= 48rem) {
     font-size: var(--text-lg);
