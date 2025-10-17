@@ -16,23 +16,22 @@
 
     <main id="contenido" class="bg-amarillo">
         <!-- Hero a pantalla completa -->
-        <section class="relative h-screen bg-cover bg-no-repeat text-white flex items-center justify-center hero-cover"
+        <section class="relative flex items-center justify-center h-screen text-white bg-no-repeat bg-cover hero-cover"
             style="background-image:
     linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0) 70%),
     linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%),
     url('./assets/Gallery/3(2).jpg');">
             <div class="relative z-10 text-center transform translate-y-50">
-                <h1 class="karaoke text-6xl md:text-7xl lg:text-8xl font-thin text-white">Cinthia Benaducci Ángeles</h1>
-                <p class="mt-4 text-2xl md:text-3xl lg:text-4xl text-gray-200 opacity-0 animate-fade-delayed">
+                <h1 class="text-6xl font-thin text-white karaoke md:text-7xl lg:text-8xl">Cinthia Benaducci Ángeles</h1>
+                <p class="mt-4 text-2xl text-gray-200 opacity-0 md:text-3xl lg:text-4xl animate-fade-delayed">
                     Música Católica
                 </p>
             </div>
         </section>
 
         <!-- Sección: Quién soy -->
-        <section id="quien-soy" class="bg-black text-white">
-            <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 items-center
-           gap-10 md:gap-16 lg:gap-20 px-6 py-16 md:px-8 md:py-24">
+        <section id="quien-soy" class="text-white bg-black">
+            <div class="grid items-center max-w-6xl grid-cols-1 gap-10 px-6 py-16 mx-auto md:grid-cols-2 md:gap-16 lg:gap-20 md:px-8 md:py-24">
 
                 <!-- Blob -->
                 <div class="relative mx-auto md:mx-0 md:justify-self-start z-0
@@ -65,9 +64,9 @@
                 </div>
 
                 <!-- Texto -->
-                <div class="text-center md:text-left relative z-10 md:pl-6">
-                    <h2 class="text-4xl md:text-6xl lg:text-8xl font-thin mb-6 text-amarillo">Quién soy</h2>
-                    <p class="text-base md:text-lg lg:text-xl leading-relaxed max-w-prose mx-auto md:mx-0 text-justify">
+                <div class="relative z-10 text-center md:text-left md:pl-6">
+                    <h2 class="mb-6 text-4xl font-thin md:text-6xl lg:text-8xl text-amarillo">Quién soy</h2>
+                    <p class="mx-auto text-base leading-relaxed text-justify md:text-lg lg:text-xl max-w-prose md:mx-0">
                         Soy Cinthia Benaducci Angeles, cantante católica, directora y compositora de Lima – Perú. Desde
                         hace más de 25 años me dedico a la música litúrgica con el deseo de transmitir fe y belleza a
                         través del canto. Así nació TeCanto Music, con el propósito de ofrecer música litúrgica elegidas
@@ -81,77 +80,77 @@
 
         <!-- Sección: Momentos / Servicios -->
         <section id="momentos" aria-labelledby="titulo-momentos" class="bg-amarillo text-slate-900">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8 py-20">
+            <div class="px-6 py-20 mx-auto max-w-7xl lg:px-8">
                 <div class="text-center">
-                    <h2 class="text-4xl md:text-6xl lg:text-8xl font-thin mb-6 text-black">Servicios Musicales</h2>
-                    <p class="text-sm font-extralight tracking-widest text-black">MOMENTOS QUE HONRAMOS</p>
-                    <h2 id="titulo-momentos" class="mt-2 text-3xl md:text-4xl font-thin">
+                    <h2 class="mb-6 text-4xl font-thin text-black md:text-6xl lg:text-8xl">Servicios Musicales</h2>
+                    <p class="text-sm tracking-widest text-black font-extralight">MOMENTOS QUE HONRAMOS</p>
+                    <h2 id="titulo-momentos" class="mt-2 text-3xl font-thin md:text-4xl">
                         Estamos contigo en los días que vivirán en el corazón
                     </h2>
                 </div>
 
-                <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="grid grid-cols-1 gap-6 mt-10 sm:grid-cols-2 lg:grid-cols-4">
                     <!-- Card: Bautizos -->
-                    <article class="group overflow-hidden rounded-lg shadow-sm transition hover:shadow-md bg-black">
+                    <article class="overflow-hidden transition bg-black rounded-lg shadow-sm group hover:shadow-md">
                         <!-- Imagen -->
                         <div class="aspect-[16/9] overflow-hidden">
                             <img src="./assets/Bautizos-alt.jpg" alt="Bautizo"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" />
                         </div>
-                        <div class="bg-black text-white p-4 transition-colors group-hover:bg-black/90">
+                        <div class="p-4 text-white transition-colors bg-black group-hover:bg-black/90">
                             <div class="flex items-start justify-between gap-4">
-                                <h3 class="card-header text-lg font-semibold">Bautizos</h3>
+                                <h3 class="text-lg font-semibold card-header">Bautizos</h3>
                                 <svg class="size-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
                                     aria-hidden="true">
                                     <path fill="var(--color-amarillo)"
                                         d="M560 128C573.2 128 580.7 143.1 572.8 153.6L544 192L544 368C544 447.5 479.5 512 400 512L288 512L241.7 558.3C231.3 568.7 215.2 570.7 202.6 563.1L105.5 504.9C88.5 494.7 90.5 469.4 108.9 462L224 416C87.8 375.1 71.5 233.8 86 159.7C89.6 141.9 109.3 135.4 125.3 144.2L384 288L384 208C384 163.8 419.8 128 464 128L560 128zM464 184C450.7 184 440 194.7 440 208C440 221.3 450.7 232 464 232C477.3 232 488 221.3 488 208C488 194.7 477.3 184 464 184zM246.5 54.4C258.9 40.7 279.8 45.5 289 61.5L345.4 159.8C339.6 174.2 336.2 189.9 336 206.3L202.1 132C212.2 100.4 229.1 73.6 246.5 54.4z" />
                                 </svg>
                             </div>
-                            <p class="mt-2 text-md text-white">
+                            <p class="mt-2 text-white text-md">
                                 Cantos llenos de ternura y fe que celebran el inicio de una nueva vida espiritual.
                             </p>
                         </div>
                     </article>
 
                     <!-- Card: Bodas -->
-                    <article class="group overflow-hidden rounded-lg shadow-sm transition hover:shadow-md bg-black">
+                    <article class="overflow-hidden transition bg-black rounded-lg shadow-sm group hover:shadow-md">
                         <!-- Imagen -->
                         <div class="aspect-[16/9] overflow-hidden">
                             <img src="./assets/Boda.jpg" alt="Boda"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" />
                         </div>
-                        <div class="bg-black text-white p-4 transition-colors group-hover:bg-black/90">
+                        <div class="p-4 text-white transition-colors bg-black group-hover:bg-black/90">
                             <div class="flex items-start justify-between gap-4">
-                                <h3 class="card-header text-lg font-semibold">Bodas</h3>
+                                <h3 class="text-lg font-semibold card-header">Bodas</h3>
                                 <svg class="size-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
                                     aria-hidden="true">
                                     <path fill="var(--color-amarillo)"
                                         d="M128 272C128 279.8 132.4 290.7 145.1 302.3C190.5 278.1 252.8 264 320 264C387.2 264 449.5 278.1 494.9 302.3C507.7 290.7 512 279.8 512 272C512 259.7 501.2 240 464.1 221.4C428.9 203.8 378 192 320 192C262 192 211.1 203.8 175.9 221.4C138.8 240 128 259.7 128 272zM320 312C273 312 230.7 319.6 197.1 331.7C230.3 344.1 272.8 352 320 352C367.2 352 409.7 344.2 442.9 331.7C409.3 319.6 367 312 320 312zM64 272C64 222.4 103.4 186.2 147.3 164.2C193.1 141.3 254.3 128 320 128C385.7 128 446.9 141.3 492.7 164.2C536.6 186.2 576 222.4 576 272L576 368C576 417.6 536.6 453.8 492.7 475.8C446.8 498.7 385.7 512 320 512C254.3 512 193.1 498.7 147.3 475.8C103.4 453.8 64 417.6 64 368L64 272z" />
                                 </svg>
                             </div>
-                            <p class="mt-2 text-md text-white">
+                            <p class="mt-2 text-white text-md">
                                 Melodías que acompañan su promesa de amor y hacen inolvidable el día de su boda.
                             </p>
                         </div>
                     </article>
 
                     <!-- Card: Ceremonias Litúrgicas -->
-                    <article class="group overflow-hidden rounded-lg shadow-sm transition hover:shadow-md bg-black">
+                    <article class="overflow-hidden transition bg-black rounded-lg shadow-sm group hover:shadow-md">
                         <!-- Imagen -->
                         <div class="aspect-[16/9] overflow-hidden">
                             <img src="./assets/Ceremonias.jpg" alt="Ceremonias Litúrgicas"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" />
                         </div>
-                        <div class="bg-black text-white p-4 transition-colors group-hover:bg-black/90">
+                        <div class="p-4 text-white transition-colors bg-black group-hover:bg-black/90">
                             <div class="flex items-start justify-between gap-4">
-                                <h3 class="card-header text-lg font-semibold">Ceremonias Litúrgicas</h3>
+                                <h3 class="text-lg font-semibold card-header">Ceremonias Litúrgicas</h3>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="size-10" viewBox="0 0 640 640"
                                     aria-hidden="true">
                                     <path fill="var(--color-amarillo)"
                                         d="M532 71C539.6 77.1 544 86.3 544 96L544 400C544 444.2 501 480 448 480C395 480 352 444.2 352 400C352 355.8 395 320 448 320C459.2 320 470 321.6 480 324.6L480 207.9L256 257.7L256 464C256 508.2 213 544 160 544C107 544 64 508.2 64 464C64 419.8 107 384 160 384C171.2 384 182 385.6 192 388.6L192 160C192 145 202.4 132 217.1 128.8L505.1 64.8C514.6 62.7 524.5 65 532.1 71.1z" />
                                 </svg>
                             </div>
-                            <p class="mt-2 text-md text-white">
+                            <p class="mt-2 text-white text-md">
                                 La música que transforma vigilias, misas y homenajes en momentos sagrados e
                                 inolvidables.
                             </p>
@@ -159,22 +158,22 @@
                     </article>
 
                     <!-- Card: Funerales -->
-                    <article class="group overflow-hidden rounded-lg shadow-sm transition hover:shadow-md bg-black">
+                    <article class="overflow-hidden transition bg-black rounded-lg shadow-sm group hover:shadow-md">
                         <!-- Imagen -->
                         <div class="aspect-[16/9] overflow-hidden">
                             <img src="./assets/Funeral-alt.jpg" alt="Funeral"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" />
                         </div>
-                        <div class="bg-black text-white p-4 transition-colors group-hover:bg-black/90">
+                        <div class="p-4 text-white transition-colors bg-black group-hover:bg-black/90">
                             <div class="flex items-start justify-between gap-4">
-                                <h3 class="card-header text-lg font-semibold">Responso funerario</h3>
+                                <h3 class="text-lg font-semibold card-header">Responso funerario</h3>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="size-10" viewBox="0 0 640 640"
                                     aria-hidden="true">
                                     <path fill="var(--color-amarillo)"
                                         d="M304 64C277.5 64 256 85.5 256 112L256 192L176 192C149.5 192 128 213.5 128 240L128 272C128 298.5 149.5 320 176 320L256 320L256 528C256 554.5 277.5 576 304 576L336 576C362.5 576 384 554.5 384 528L384 320L464 320C490.5 320 512 298.5 512 272L512 240C512 213.5 490.5 192 464 192L384 192L384 112C384 85.5 362.5 64 336 64L304 64z" />
                                 </svg>
                             </div>
-                            <p class="mt-2 text-md text-white">
+                            <p class="mt-2 text-white text-md">
                                 Música que honra la memoria y ofrece consuelo en los momentos de despedida.
                             </p>
                         </div>
@@ -184,7 +183,7 @@
         </section>
 
         <!-- ================= ELENCO - HERO ================= -->
-        <section id="elenco" class="h-screen flex items-center relative overflow-hidden bg-cover bg-center bg-no-repeat"
+        <section id="elenco" class="relative flex items-center h-screen overflow-hidden bg-center bg-no-repeat bg-cover"
             role="banner" aria-labelledby="hero-title" style="background-image: url('./assets/Fondo-inicio.jpg');">
             <!-- Overlays -->
             <div class="absolute inset-0 bg-black/60"></div>
@@ -200,11 +199,11 @@
                 </div>
             </div>
 
-            <div class="mx-auto max-w-7xl px-8 w-full relative z-10 text-center">
-                <!-- <div class="bg-black/40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl"> -->
+            <div class="relative z-10 w-full px-8 mx-auto text-center max-w-7xl">
+                <!-- <div class="p-8 border shadow-2xl bg-black/40 backdrop-blur-md rounded-3xl md:p-12 border-white/20"> -->
                 <div class="space-y-6 md:space-y-8">
                     <div class="relative">
-                        <h2 id="hero-title" class="text-4xl md:text-6xl lg:text-8xl font-thin mb-6 text-white">
+                        <h2 id="hero-title" class="mb-6 text-4xl font-thin text-white md:text-6xl lg:text-8xl">
                             Elencos TeCanto Music</h2>
                         <div class="w-32 h-1 mx-auto mb-6"
                             style="background: linear-gradient(90deg, transparent, var(--color-amarillo), transparent); box-shadow: 0 0 30px rgba(255,211,0,.6);">
@@ -212,13 +211,13 @@
                     </div>
 
                     <div class="max-w-5xl mx-auto">
-                        <p class="mt-4 text-xl md:text-2xl lg:text-3xl text-white">
+                        <p class="mt-4 text-xl text-white md:text-2xl lg:text-3xl">
                             Lírico–clásico y música moderna para cada ocasión.
                         </p>
                     </div>
 
                     <div class="pt-6">
-                        <div class="flex flex-col sm:flex-row gap-5 justify-center items-center max-w-2xl mx-auto">
+                        <div class="flex flex-col items-center justify-center max-w-2xl gap-5 mx-auto sm:flex-row">
                             <a href="https://www.youtube.com/watch?v=i347xihRKt4" target="_blank"
                                 rel="noopener noreferrer"
                                 class="group relative w-full sm:w-auto max-w-xs inline-flex items-center justify-center rounded-full px-10 py-4 text-black text-lg font-medium tracking-wide transition-all duration-300 min-h-[60px] focus:outline-none focus:ring-4 focus:ring-yellow-300 focus:ring-opacity-75 hover:scale-105 shadow-2xl backdrop-blur-sm"
@@ -241,7 +240,7 @@
         </section>
 
         <!-- ================= VIDEO ================= -->
-        <section id="video" class="scroll-mt-24 relative overflow-hidden bg-white" role="main"
+        <section id="video" class="relative overflow-hidden bg-white scroll-mt-24" role="main"
             aria-labelledby="video-title">
             <div class="absolute inset-0" aria-hidden="true">
                 <div
@@ -252,26 +251,26 @@
                 </div>
             </div>
 
-            <div class="mx-auto max-w-7xl px-8 py-16 md:py-20 relative z-10">
-                <div class="text-center mb-12">
+            <div class="relative z-10 px-8 py-16 mx-auto max-w-7xl md:py-20">
+                <div class="mb-12 text-center">
                     <div class="inline-block">
-                        <h2 id="video-title" class="text-4xl md:text-6xl lg:text-8xl font-thin mb-6 text-black">
+                        <h2 id="video-title" class="mb-6 text-4xl font-thin text-black md:text-6xl lg:text-8xl">
                             Escucha mi música</h2>
                         <div
                             class="w-24 h-0.5 mx-auto mb-8 bg-gradient-to-r from-transparent via-gray-600/60 to-transparent">
                         </div>
                     </div>
 
-                    <p class="text-black mb-8 md:text-lg lg:text-xl xl:text-2xl">
+                    <p class="mb-8 text-black md:text-lg lg:text-xl xl:text-2xl">
                         Descubre mi repertorio de música cristiana católica, desde clásicos hasta composiciones
                         contemporáneas.
                         Este video es solo una muestra de la experiencia que podrás vivir.
                     </p>
                 </div>
 
-                <div class="mx-auto max-w-5xl">
+                <div class="max-w-5xl mx-auto">
                     <div class="relative group">
-                        <div class="relative w-full overflow-hidden rounded-xl shadow-xl ring-1 ring-gray-400/50 bg-white"
+                        <div class="relative w-full overflow-hidden bg-white shadow-xl rounded-xl ring-1 ring-gray-400/50"
                             style="padding-bottom: 56.25%;">
                             <iframe class="absolute inset-0 w-full h-full rounded-xl"
                                 src="https://www.youtube-nocookie.com/embed/LuSRKoksyhs?rel=0&modestbranding=1&color=white&showinfo=0"
@@ -283,9 +282,9 @@
                     </div>
                 </div>
 
-                <div class="text-center mt-8">
+                <div class="mt-8 text-center">
                     <div class="max-w-2xl mx-auto">
-                        <p class="text-black mb-8 md:text-lg lg:text-xl xl:text-2xl">¿Te gustó lo que escuchaste?</p>
+                        <p class="mb-8 text-black md:text-lg lg:text-xl xl:text-2xl">¿Te gustó lo que escuchaste?</p>
                         <a href="https://wa.me/51982218665" target="_blank" rel="noopener noreferrer"
                             class="group relative inline-flex items-center justify-center rounded-full px-10 py-4 text-black text-lg font-medium tracking-wide transition-all duration-300 min-h-[60px] focus:outline-none focus:ring-4 focus:ring-yellow-300 focus:ring-opacity-75 hover:scale-105 shadow-2xl backdrop-blur-sm"
                             style="background-color: var(--color-amarillo); box-shadow: 0 10px 40px rgba(255,211,0,0);"
@@ -298,7 +297,7 @@
         </section>
 
         <!-- ================= SERVICIOS MUSICALES DETALLADOS ================= -->
-        <section class="py-20 md:py-24 relative overflow-hidden bg-amarillo">
+        <section class="relative py-20 overflow-hidden md:py-24 bg-amarillo">
             <div class="absolute inset-0">
                 <div
                     class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent">
@@ -306,33 +305,33 @@
                 <div
                     class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent">
                 </div>
-                <div class="absolute top-24 left-16 w-2 h-2 bg-gray-500/15 rounded-full animate-pulse"></div>
+                <div class="absolute w-2 h-2 rounded-full top-24 left-16 bg-gray-500/15 animate-pulse"></div>
                 <div class="absolute top-60 right-20 w-1.5 h-1.5 bg-gray-500/20 rounded-full animate-pulse"
                     style="animation-delay: 1.5s;"></div>
-                <div class="absolute bottom-40 left-12 w-1 h-1 bg-gray-500/25 rounded-full animate-pulse"
+                <div class="absolute w-1 h-1 rounded-full bottom-40 left-12 bg-gray-500/25 animate-pulse"
                     style="animation-delay: 3s;"></div>
-                <div class="absolute bottom-20 right-16 w-2 h-2 bg-gray-500/10 rounded-full animate-pulse"
+                <div class="absolute w-2 h-2 rounded-full bottom-20 right-16 bg-gray-500/10 animate-pulse"
                     style="animation-delay: 2s;"></div>
-                <div class="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-gray-200/30 opacity-50">
+                <div class="absolute inset-0 opacity-50 bg-gradient-to-br from-white/20 via-transparent to-gray-200/30">
                 </div>
             </div>
 
-            <div class="mx-auto max-w-7xl px-6 relative z-10">
-                <div class="text-center mb-12">
+            <div class="relative z-10 px-6 mx-auto max-w-7xl">
+                <div class="mb-12 text-center">
                     <div class="inline-block">
-                        <h2 class="text-4xl md:text-6xl lg:text-8xl font-thin mb-6 text-black">Nuestros Servicios
+                        <h2 class="mb-6 text-4xl font-thin text-black md:text-6xl lg:text-8xl">Nuestros Servicios
                         </h2>
                         <div class="relative mb-4">
                             <div class="w-32 h-px mx-auto"
                                 style="background: linear-gradient(90deg, transparent, var(--color-amarillo), transparent);">
                             </div>
-                            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full"
+                            <div class="absolute w-2 h-2 transform -translate-x-1/2 -translate-y-1/2 rounded-full left-1/2 top-1/2"
                                 style="background-color: var(--color-amarillo);"></div>
                         </div>
                     </div>
 
                     <div class="max-w-4xl mx-auto space-y-6">
-                        <p class="text-black mb-8 md:text-lg lg:text-xl xl:text-2xl">
+                        <p class="mb-8 text-black md:text-lg lg:text-xl xl:text-2xl">
                             Dos experiencias musicales distintivas, cada una diseñada para crear momentos inolvidables
                             en tu celebración
                             especial.
@@ -340,34 +339,34 @@
                     </div>
                 </div>
 
-                <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 max-w-5xl mx-auto mt-0">
+                <div class="grid max-w-5xl gap-16 mx-auto mt-0 lg:grid-cols-2 lg:gap-24">
                     <!-- Tarjeta Música Lírica (CLÁSICO) -->
-                    <div class="card-container perspective-1000 px-4" style="margin-bottom: 4rem;" data-card="clasico"
+                    <div class="px-4 card-container perspective-1000" style="margin-bottom: 4rem;" data-card="clasico"
                         tabindex="0" aria-label="Tarjeta Música Clásico" role="button">
                         <div
                             class="card-inner relative w-full h-[520px] transition-all duration-700 transform-style-preserve-3d">
                             <!-- Frente -->
                             <div
-                                class="card-face absolute inset-0 w-full h-full backface-hidden rounded-2xl shadow-2xl border border-gray-800/50 overflow-hidden backdrop-blur-sm bg-black">
+                                class="absolute inset-0 w-full h-full overflow-hidden bg-black border shadow-2xl card-face backface-hidden rounded-2xl border-gray-800/50 backdrop-blur-sm">
                                 <div
                                     class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent">
                                 </div>
-                                <div class="relative h-full flex flex-col items-center justify-center p-12">
-                                    <div class="card-logo mb-8 transform transition-transform duration-500">
+                                <div class="relative flex flex-col items-center justify-center h-full p-12">
+                                    <div class="mb-8 transition-transform duration-500 transform card-logo">
                                         <img src="./assets/Logo-transparente.png" alt="Logo Voces de Fe"
-                                            class="w-32 h-32 md:w-36 md:h-36 object-contain opacity-90 filter brightness-110">
+                                            class="object-contain w-32 h-32 md:w-36 md:h-36 opacity-90 filter brightness-110">
                                     </div>
-                                    <div class="text-center space-y-6">
+                                    <div class="space-y-6 text-center">
                                         <h3 class="text-2xl md:text-3xl font-light text-white tracking-[0.2em] mb-4">
                                             CLÁSICO</h3>
                                         <div class="w-16 h-px mx-auto"
                                             style="background: linear-gradient(90deg, transparent, #FFD300, transparent);">
                                         </div>
-                                        <p class="text-lg text-gray-300 font-light tracking-wide opacity-90">Tradición •
+                                        <p class="text-lg font-light tracking-wide text-gray-300 opacity-90">Tradición •
                                             Elegancia •
                                             Espiritualidad</p>
                                     </div>
-                                    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-60">
+                                    <div class="absolute transform -translate-x-1/2 bottom-8 left-1/2 opacity-60">
                                         <div class="flex items-center space-x-1.5">
                                             <div class="w-1.5 h-1.5 bg-white/40 rounded-full animate-pulse"></div>
                                             <div class="w-1.5 h-1.5 bg-white/40 rounded-full animate-pulse"
@@ -380,37 +379,37 @@
                             </div>
                             <!-- Dorso -->
                             <div
-                                class="card-face back absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl shadow-2xl border border-gray-800/50 p-10 backdrop-blur-sm bg-black">
+                                class="absolute inset-0 w-full h-full p-10 bg-black border shadow-2xl card-face back backface-hidden rotate-y-180 rounded-2xl border-gray-800/50 backdrop-blur-sm">
                                 <div
                                     class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent">
                                 </div>
-                                <div class="h-full flex flex-col justify-center">
-                                    <div class="text-center mb-10">
-                                        <h3 class="text-2xl md:text-3xl font-light text-white mb-6 tracking-wide">Música
+                                <div class="flex flex-col justify-center h-full">
+                                    <div class="mb-10 text-center">
+                                        <h3 class="mb-6 text-2xl font-light tracking-wide text-white md:text-3xl">Música
                                             Lírica</h3>
                                         <div class="w-20 h-px mx-auto mb-8"
                                             style="background: linear-gradient(90deg, transparent, #FFD300, transparent);">
                                         </div>
                                     </div>
                                     <p
-                                        class="text-xl md:text-2xl text-gray-200 leading-relaxed mb-10 font-light text-center">
+                                        class="mb-10 text-xl font-light leading-relaxed text-center text-gray-200 md:text-2xl">
                                         Interpretaciones clásicas y corales que elevan cada ceremonia a un momento
                                         memorable y espiritual.
                                     </p>
                                     <div class="space-y-5">
-                                        <div class="flex items-center justify-start text-gray-300 group/item ml-6">
-                                            <div class="w-2 h-2 rounded-full mr-5 transition-all duration-300 group-hover/item:scale-125"
+                                        <div class="flex items-center justify-start ml-6 text-gray-300 group/item">
+                                            <div class="w-2 h-2 mr-5 transition-all duration-300 rounded-full group-hover/item:scale-125"
                                                 style="background-color: var(--color-amarillo);"></div>
                                             <span class="text-lg font-light tracking-wide">Repertorio sacro y
                                                 clásico</span>
                                         </div>
-                                        <div class="flex items-center justify-start text-gray-300 group/item ml-6">
-                                            <div class="w-2 h-2 rounded-full mr-5 transition-all duration-300 group-hover/item:scale-125"
+                                        <div class="flex items-center justify-start ml-6 text-gray-300 group/item">
+                                            <div class="w-2 h-2 mr-5 transition-all duration-300 rounded-full group-hover/item:scale-125"
                                                 style="background-color: var(--color-amarillo);"></div>
                                             <span class="text-lg font-light tracking-wide">Ceremonias religiosas</span>
                                         </div>
-                                        <div class="flex items-center justify-start text-gray-300 group/item ml-6">
-                                            <div class="w-2 h-2 rounded-full mr-5 transition-all duration-300 group-hover/item:scale-125"
+                                        <div class="flex items-center justify-start ml-6 text-gray-300 group/item">
+                                            <div class="w-2 h-2 mr-5 transition-all duration-300 rounded-full group-hover/item:scale-125"
                                                 style="background-color: var(--color-amarillo);"></div>
                                             <span class="text-lg font-light tracking-wide">Eventos formales</span>
                                         </div>
@@ -421,35 +420,35 @@
                     </div>
 
                     <!-- Tarjeta Música Moderna -->
-                    <div class="card-container perspective-1000 px-4" data-card="moderno" tabindex="0"
+                    <div class="px-4 card-container perspective-1000" data-card="moderno" tabindex="0"
                         aria-label="Tarjeta Música Moderna" role="button">
                         <div
                             class="card-inner relative w-full h-[520px] transition-all duration-700 transform-style-preserve-3d">
                             <!-- Frente -->
-                            <div class="card-face absolute inset-0 w-full h-full backface-hidden rounded-2xl shadow-xl border border-amber-200/60 overflow-hidden backdrop-blur-sm"
+                            <div class="absolute inset-0 w-full h-full overflow-hidden border shadow-xl card-face backface-hidden rounded-2xl border-amber-200/60 backdrop-blur-sm"
                                 style="background: linear-gradient(135deg, #fefcf3, #f9f7f4, #ffffff);">
                                 <div
-                                    class="absolute inset-0 bg-gradient-to-br from-amber-50/30 via-transparent to-amber-100/20 opacity-50">
+                                    class="absolute inset-0 opacity-50 bg-gradient-to-br from-amber-50/30 via-transparent to-amber-100/20">
                                 </div>
                                 <div
                                     class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-300/30 to-transparent">
                                 </div>
-                                <div class="relative h-full flex flex-col items-center justify-center p-12">
-                                    <div class="card-logo mb-8 transform transition-transform duration-500">
+                                <div class="relative flex flex-col items-center justify-center h-full p-12">
+                                    <div class="mb-8 transition-transform duration-500 transform card-logo">
                                         <img src="./assets/Logo-transparente.png" alt="Logo Voces de Fe"
-                                            class="w-32 h-32 md:w-36 md:h-36 object-contain opacity-75 filter contrast-110">
+                                            class="object-contain w-32 h-32 opacity-75 md:w-36 md:h-36 filter contrast-110">
                                     </div>
-                                    <div class="text-center space-y-6">
+                                    <div class="space-y-6 text-center">
                                         <h3 class="text-2xl md:text-3xl font-light text-gray-800 tracking-[0.2em] mb-4">
                                             MODERNO</h3>
                                         <div class="w-16 h-px mx-auto"
                                             style="background: linear-gradient(90deg, transparent, #FFD300, transparent);">
                                         </div>
-                                        <p class="text-lg text-gray-600 font-light tracking-wide opacity-90">
+                                        <p class="text-lg font-light tracking-wide text-gray-600 opacity-90">
                                             Contemporáneo • Fresco •
                                             Celebración</p>
                                     </div>
-                                    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-60">
+                                    <div class="absolute transform -translate-x-1/2 bottom-8 left-1/2 opacity-60">
                                         <div class="flex items-center space-x-1.5">
                                             <div class="w-1.5 h-1.5 bg-amber-600/40 rounded-full animate-pulse"></div>
                                             <div class="w-1.5 h-1.5 bg-amber-600/40 rounded-full animate-pulse"
@@ -463,42 +462,42 @@
                                 </div>
                             </div>
                             <!-- Dorso -->
-                            <div class="card-face back absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl shadow-xl border border-amber-200/60 p-10 backdrop-blur-sm"
+                            <div class="absolute inset-0 w-full h-full p-10 border shadow-xl card-face back backface-hidden rotate-y-180 rounded-2xl border-amber-200/60 backdrop-blur-sm"
                                 style="background: linear-gradient(135deg, #fefcf3, #f9f7f4, #ffffff);">
                                 <div
-                                    class="absolute inset-0 bg-gradient-to-br from-amber-50/30 via-transparent to-amber-100/20 opacity-50">
+                                    class="absolute inset-0 opacity-50 bg-gradient-to-br from-amber-50/30 via-transparent to-amber-100/20">
                                 </div>
                                 <div
                                     class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-300/30 to-transparent">
                                 </div>
-                                <div class="h-full flex flex-col justify-center">
-                                    <div class="text-center mb-10">
-                                        <h3 class="text-2xl md:text-3xl font-light text-gray-800 mb-6 tracking-wide">
+                                <div class="flex flex-col justify-center h-full">
+                                    <div class="mb-10 text-center">
+                                        <h3 class="mb-6 text-2xl font-light tracking-wide text-gray-800 md:text-3xl">
                                             Música Moderna</h3>
                                         <div class="w-20 h-px mx-auto mb-8"
                                             style="background: linear-gradient(90deg, transparent, #FFD300, transparent);">
                                         </div>
                                     </div>
                                     <p
-                                        class="text-xl md:text-2xl text-gray-700 leading-relaxed mb-10 font-light text-center">
+                                        class="mb-10 text-xl font-light leading-relaxed text-center text-gray-700 md:text-2xl">
                                         Repertorio contemporáneo con arreglos frescos, ideal para bodas, bautizos y
                                         celebraciones especiales.
                                     </p>
                                     <div class="space-y-5">
-                                        <div class="flex items-center justify-start text-gray-600 group/item ml-6">
-                                            <div class="w-2 h-2 rounded-full mr-5 transition-all duration-300 group-hover/item:scale-125"
+                                        <div class="flex items-center justify-start ml-6 text-gray-600 group/item">
+                                            <div class="w-2 h-2 mr-5 transition-all duration-300 rounded-full group-hover/item:scale-125"
                                                 style="background-color: var(--color-amarillo);"></div>
                                             <span class="text-lg font-light tracking-wide">Música católica
                                                 contemporánea</span>
                                         </div>
-                                        <div class="flex items-center justify-start text-gray-600 group/item ml-6">
-                                            <div class="w-2 h-2 rounded-full mr-5 transition-all duration-300 group-hover/item:scale-125"
+                                        <div class="flex items-center justify-start ml-6 text-gray-600 group/item">
+                                            <div class="w-2 h-2 mr-5 transition-all duration-300 rounded-full group-hover/item:scale-125"
                                                 style="background-color: var(--color-amarillo);"></div>
                                             <span class="text-lg font-light tracking-wide">Bodas y celebraciones
                                                 litúrgicas</span>
                                         </div>
-                                        <div class="flex items-center justify-start text-gray-600 group/item ml-6">
-                                            <div class="w-2 h-2 rounded-full mr-5 transition-all duration-300 group-hover/item:scale-125"
+                                        <div class="flex items-center justify-start ml-6 text-gray-600 group/item">
+                                            <div class="w-2 h-2 mr-5 transition-all duration-300 rounded-full group-hover/item:scale-125"
                                                 style="background-color: var(--color-amarillo);"></div>
                                             <span class="text-lg font-light tracking-wide">Eventos sociales</span>
                                         </div>
@@ -513,7 +512,7 @@
         </section>
 
         <!-- ================= GALERÍA ================= -->
-        <section id="galeria" class="relative py-20 md:py-32 bg-black overflow-hidden">
+        <section id="galeria" class="relative py-20 overflow-hidden bg-black md:py-32">
             <div class="absolute inset-0" aria-hidden="true">
                 <div
                     class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-yellow-500/40 to-transparent">
@@ -521,27 +520,27 @@
                 <div
                     class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-yellow-500/40 to-transparent">
                 </div>
-                <div class="absolute top-20 left-10 w-3 h-3 bg-yellow-400/20 rounded-full animate-pulse"></div>
-                <div class="absolute top-40 right-16 w-2 h-2 bg-yellow-400/25 rounded-full animate-pulse"
+                <div class="absolute w-3 h-3 rounded-full top-20 left-10 bg-yellow-400/20 animate-pulse"></div>
+                <div class="absolute w-2 h-2 rounded-full top-40 right-16 bg-yellow-400/25 animate-pulse"
                     style="animation-delay: 1s;"></div>
                 <div class="absolute bottom-32 left-20 w-1.5 h-1.5 bg-yellow-400/30 rounded-full animate-pulse"
                     style="animation-delay: 2s;"></div>
-                <div class="absolute bottom-16 right-12 w-4 h-4 bg-yellow-400/15 rounded-full animate-pulse"
+                <div class="absolute w-4 h-4 rounded-full bottom-16 right-12 bg-yellow-400/15 animate-pulse"
                     style="animation-delay: 3s;"></div>
                 <div
-                    class="absolute inset-0 bg-gradient-to-br from-yellow-500/10 via-transparent to-yellow-400/5 opacity-50">
+                    class="absolute inset-0 opacity-50 bg-gradient-to-br from-yellow-500/10 via-transparent to-yellow-400/5">
                 </div>
             </div>
 
-            <div class="mx-auto max-w-7xl px-6 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+            <div class="relative z-10 px-6 mx-auto max-w-7xl">
+                <div class="grid items-center grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-20">
                     <!-- Texto -->
-                    <div class="space-y-8 order-2 lg:order-1">
+                    <div class="order-2 space-y-8 lg:order-1">
                         <div class="relative text-center">
                             <div>
-                                <h2 class="text-4xl md:text-6xl lg:text-8xl font-thin mb-2 text-white">Momentos
+                                <h2 class="mb-2 text-4xl font-thin text-white md:text-6xl lg:text-8xl">Momentos
                                 </h2>
-                                <h2 class="text-4xl md:text-6xl lg:text-8xl font-thin mb-6 text-amarillo">
+                                <h2 class="mb-6 text-4xl font-thin md:text-6xl lg:text-8xl text-amarillo">
                                     Capturados</h2>
                             </div>
                             <div class="relative mb-8">
@@ -549,22 +548,22 @@
                                     class="w-24 h-0.5 bg-gradient-to-r from-yellow-500 via-yellow-400 to-transparent mx-auto">
                                 </div>
                                 <div
-                                    class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-yellow-500 rounded-full shadow-lg">
+                                    class="absolute w-2 h-2 transform -translate-x-1/2 -translate-y-1/2 bg-yellow-500 rounded-full shadow-lg left-1/2 top-1/2">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="space-y-6 flex flex-col items-center">
-                            <p class="text-white mb-8 md:text-lg lg:text-xl xl:text-2xl">Cada presentación es única y
+                        <div class="flex flex-col items-center space-y-6">
+                            <p class="mb-8 text-white md:text-lg lg:text-xl xl:text-2xl">Cada presentación es única y
                                 especial.</p>
                             <p
-                                class="text-base text-center text-white md:text-lg lg:text-xl leading-relaxed max-w-prose mx-auto md:mx-0">
+                                class="mx-auto text-base leading-relaxed text-center text-white md:text-lg lg:text-xl max-w-prose md:mx-0">
                                 Aquí puedes ver algunos de los momentos más memorables de nuestras actuaciones en
                                 diferentes eventos y
                                 ceremonias sagradas.
                             </p>
                             <p
-                                class="text-base text-center text-white md:text-lg lg:text-xl leading-relaxed max-w-prose mx-auto md:mx-0">
+                                class="mx-auto text-base leading-relaxed text-center text-white md:text-lg lg:text-xl max-w-prose md:mx-0">
                                 Desde ceremonias íntimas hasta grandes celebraciones, nuestra música ha sido parte de
                                 momentos
                                 inolvidables.
@@ -573,14 +572,14 @@
                     </div>
 
                     <!-- Carrusel -->
-                    <div class="relative flex justify-center items-center order-2 lg:order-2 mt-8 lg:mt-0">
+                    <div class="relative flex items-center justify-center order-2 mt-8 lg:order-2 lg:mt-0">
                         <div class="relative">
                             <div class="carousel-container"
                                 style="position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,.2); border: 3px solid var(--color-amarillo);">
                                 <div class="carousel-slide"
                                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 1; transition: opacity .7s ease-in-out; z-index: 1;">
                                     <img src="./assets/Gallery/1.jpg" alt="Imagen 1"
-                                        class="w-full h-full block rounded-xl"
+                                        class="block w-full h-full rounded-xl"
                                         style="object-fit: cover; object-position: 50% 30%;">
                                 </div>
                                 <div class="carousel-slide"
@@ -631,44 +630,40 @@
         </section>
 
         <!-- Sección: Contáctanos (Formspree con AJAX) -->
-        <section id="contacto" class="bg-black text-white px-8 py-20">
-            <div class="mx-auto max-w-3xl text-center">
-                <h2 class="text-3xl font-thin mb-4 md:text-5xl lg:text-6xl xl:text-7xl text-amarillo">Contáctanos</h2>
-                <p class="text-white mb-8 md:text-lg lg:text-xl xl:text-2xl">
+        <section id="contacto" class="px-8 py-20 text-white bg-black">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="mb-4 text-3xl font-thin md:text-5xl lg:text-6xl xl:text-7xl text-amarillo">Contáctanos</h2>
+                <p class="mb-8 text-white md:text-lg lg:text-xl xl:text-2xl">
                     Será un honor acompañar tu celebración con nuestra música. Escríbenos y conversemos sobre tu evento.
                 </p>
 
                 <form id="fs-form" action="https://formspree.io/f/xovnpgbl" method="POST"
-                    class="space-y-4 text-left max-w-xl mx-auto" enctype="multipart/form-data">
+                    class="max-w-xl mx-auto space-y-4 text-left" enctype="multipart/form-data">
                     <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
                     <input type="hidden" name="_subject" value="Nuevo mensaje desde TeCanto Music">
                     <input type="hidden" name="_next" value="http://localhost:8000/#contacto">
 
                     <div>
                         <label class="label-form" for="nombre">Nombre</label>
-                        <input id="nombre" name="nombre" type="text" required class="w-full px-4 py-3 rounded-lg bg-white/10 text-white
-                      focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Tu nombre">
+                        <input id="nombre" name="nombre" type="text" required class="w-full px-4 py-3 text-white rounded-lg bg-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Tu nombre">
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                         <div>
                             <label class="label-form" for="email">Correo</label>
-                            <input id="email" name="email" type="email" required class="w-full px-4 py-3 rounded-lg bg-white/10 text-white
-                        focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="tu@correo.com">
+                            <input id="email" name="email" type="email" required class="w-full px-4 py-3 text-white rounded-lg bg-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="tu@correo.com">
                         </div>
                         <div>
                             <label class="label-form" for="telefono">Teléfono</label>
-                            <input id="telefono" name="telefono" type="tel" required pattern="[0-9+\-\s()]+" class="w-full px-4 py-3 rounded-lg bg-white/10 text-white
-                        focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="+51 999 999 999"
+                            <input id="telefono" name="telefono" type="tel" required pattern="[0-9+\-\s()]+" class="w-full px-4 py-3 text-white rounded-lg bg-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="+51 999 999 999"
                                 title="Solo se permiten números, espacios, guiones, paréntesis y el signo +">
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                         <div>
                             <label class="label-form" for="tipo">Tipo de ceremonia</label>
-                            <select id="tipo" name="tipo" class="w-full px-4 py-3 rounded-lg bg-white/10 text-white
-                        focus:outline-none focus:ring-2 focus:ring-yellow-400 appearance-none cursor-pointer">
+                            <select id="tipo" name="tipo" class="w-full px-4 py-3 text-white rounded-lg appearance-none cursor-pointer bg-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400">
                                 <option value="" disabled selected class="text-gray-400">Selecciona el tipo de ceremonia
                                 </option>
                                 <option value="Misa" class="text-black">Misa</option>
@@ -683,20 +678,17 @@
                         </div>
                         <div>
                             <label class="label-form" for="fecha">Fecha de tu ceremonia</label>
-                            <input id="fecha" name="fecha" type="date" class="w-full px-4 py-3 rounded-lg bg-white/10 text-white
-                        focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                            <input id="fecha" name="fecha" type="date" class="w-full px-4 py-3 text-white rounded-lg bg-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400">
                         </div>
                     </div>
 
                     <div>
                         <label class="label-form" for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="message" rows="4" required class="w-full px-4 py-3 rounded-lg bg-white/10 text-white
-                         focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                        <textarea id="mensaje" name="message" rows="4" required class="w-full px-4 py-3 text-white rounded-lg bg-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                             placeholder="Cuéntanos sobre tu celebración (lugar, horario, repertorio, etc.)"></textarea>
                     </div>
 
-                    <button id="fs-submit" type="submit" class="w-full bg-yellow-400 text-black font-light py-3 rounded-lg
-                     hover:bg-yellow-300 transition md:text-lg  lg:text-xl xl:text-2xl">
+                    <button id="fs-submit" type="submit" class="w-full py-3 font-light text-black transition bg-yellow-400 rounded-lg hover:bg-yellow-300 md:text-lg lg:text-xl xl:text-2xl">
                         Enviar mensaje
                     </button>
 
