@@ -1,0 +1,180 @@
+/* Safari 15.6.1 Desktop Force Fixes */
+
+/* Force desktop viewport behavior */
+html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    zoom: 1; /* Force proper zoom level */
+}
+
+/* Force desktop layout for Safari 15.6.1 */
+@media screen and (min-width: 768px) {
+    /* Ensure desktop styles are applied */
+    .hero-cover {
+        background-position: 100% 40% !important;
+    }
+    
+    /* Force grid layouts to desktop mode */
+    .grid.md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+    
+    .grid.lg\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    }
+    
+    .grid.lg\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+    
+    /* Force text sizes to desktop */
+    .md\:text-6xl {
+        font-size: 3.75rem !important;
+        line-height: 1 !important;
+    }
+    
+    .lg\:text-8xl {
+        font-size: 6rem !important;
+        line-height: 1 !important;
+    }
+    
+    .md\:text-3xl {
+        font-size: 1.875rem !important;
+        line-height: 2.25rem !important;
+    }
+    
+    .lg\:text-4xl {
+        font-size: 2.25rem !important;
+        line-height: 2.5rem !important;
+    }
+    
+    /* Force padding and margins to desktop */
+    .md\:px-8 {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+    
+    .md\:py-24 {
+        padding-top: 6rem !important;
+        padding-bottom: 6rem !important;
+    }
+    
+    .md\:gap-16 {
+        gap: 4rem !important;
+    }
+    
+    .lg\:gap-20 {
+        gap: 5rem !important;
+    }
+    
+    /* Force flex direction to row for desktop */
+    .sm\:flex-row {
+        flex-direction: row !important;
+    }
+    
+    /* Fix carousel container size */
+    .carousel-container {
+        width: 550px !important;
+        height: 410px !important;
+    }
+    
+    /* Force card layouts */
+    .card-container {
+        max-width: none !important;
+    }
+    
+    /* Force aspect ratios */
+    .aspect-\[16\/9\] {
+        aspect-ratio: 16/9 !important;
+    }
+}
+
+/* Specific Safari 15.6.1 fixes */
+@supports (-webkit-appearance: none) {
+    /* Force minimum widths for Safari */
+    .max-w-6xl {
+        min-width: 72rem;
+        max-width: 72rem;
+    }
+    
+    .max-w-7xl {
+        min-width: 80rem;
+        max-width: 80rem;
+    }
+    
+    /* Override Safari's automatic text sizing */
+    body {
+        -webkit-text-size-adjust: none !important;
+        text-size-adjust: none !important;
+    }
+}
+
+/* Force desktop behavior for specific viewport sizes */
+@media screen and (min-width: 1024px) {
+    /* Ensure all desktop styles are forced */
+    body {
+        min-width: 1024px !important;
+    }
+    
+    .container, .max-w-7xl, .max-w-6xl, .max-w-5xl {
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    /* Force card grid to 2 columns */
+    .grid.lg\:grid-cols-2 > * {
+        width: calc(50% - 3rem) !important;
+        flex: 0 0 auto !important;
+    }
+}
+
+/* Override touch device detection */
+@media (hover: hover) and (pointer: fine) {
+    /* Force desktop interaction styles */
+    .group:hover .group-hover\:scale-105 {
+        transform: scale(1.05) !important;
+    }
+    
+    .hover\:scale-105:hover {
+        transform: scale(1.05) !important;
+    }
+    
+    .hover\:shadow-md:hover {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+    }
+}
+
+/* Force specific element behaviors */
+.hero-cover {
+    min-height: 100vh !important;
+}
+
+/* Fix flex layouts */
+.flex.items-center {
+    align-items: center !important;
+}
+
+.flex.justify-center {
+    justify-content: center !important;
+}
+
+/* Force button styles */
+button, .group {
+    cursor: pointer !important;
+}
+
+/* Safari-specific typography fixes */
+h1, h2, h3, h4, h5, h6 {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Force proper spacing */
+.space-y-6 > * + * {
+    margin-top: 1.5rem !important;
+}
+
+.space-y-8 > * + * {
+    margin-top: 2rem !important;
+}
