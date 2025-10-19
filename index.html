@@ -1444,6 +1444,58 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // ====== Safari 15.6.1 Responsive Header Fix ======
+            function fixHeaderResponsiveness() {
+                const nav = document.querySelector('nav[aria-label="Global"]');
+                const menuBtn = document.getElementById('openMenuBtn');
+                
+                if (!nav || !menuBtn) return;
+                
+                function updateHeaderDisplay() {
+                    const isMobile = window.innerWidth < 768;
+                    
+                    if (isMobile) {
+                        // Mobile: show hamburger, hide navigation
+                        nav.style.display = 'none';
+                        menuBtn.style.display = 'block';
+                    } else {
+                        // Desktop: show navigation, hide hamburger
+                        nav.style.display = 'block';
+                        menuBtn.style.display = 'none';
+                    }
+                }
+                
+                // Run on load
+                updateHeaderDisplay();
+                
+                // Run on resize with debouncing
+                let resizeTimeout;
+                window.addEventListener('resize', () => {
+                    clearTimeout(resizeTimeout);
+                    resizeTimeout = setTimeout(updateHeaderDisplay, 100);
+                });
+                
+                // Safari-specific fix: force recalculation after header loads
+                setTimeout(updateHeaderDisplay, 500);
+            }
+            
+            // Initialize header fix
+            fixHeaderResponsiveness();
+            
+            // Re-run the fix when header is dynamically loaded
+            const headerObserver = new MutationObserver(() => {
+                const nav = document.querySelector('nav[aria-label="Global"]');
+                if (nav) {
+                    fixHeaderResponsiveness();
+                    headerObserver.disconnect();
+                }
+            });
+            
+            const headerContainer = document.getElementById('header');
+            if (headerContainer) {
+                headerObserver.observe(headerContainer, { childList: true, subtree: true });
+            }
+            
             // ====== Utilidades ======
             const $ = (sel) => document.querySelector(sel);
 
