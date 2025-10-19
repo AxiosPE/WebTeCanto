@@ -10,7 +10,7 @@
     <meta name="description"
         content="TeCanto Music · Coro para bodas, bautizos, funerales y ceremonias. Música en vivo que honra tus momentos." />
     <link rel="stylesheet" href="./assets/output.css" />
-    <link rel="stylesheet" href="./assets/safari-desktop-fixes.css" />
+    <link rel="stylesheet" href="./assets/main-responsive.css" />
     <link rel="icon" type="image/png" href="./assets/Logo-transparente.png" />
     <title>TeCanto Music · Coro para tus momentos</title>
 </head>
@@ -20,164 +20,148 @@
 
     <main id="contenido" class="bg-amarillo">
         <!-- Hero a pantalla completa -->
-        <section class="relative flex items-center justify-center h-screen text-white bg-no-repeat bg-cover hero-cover"
+        <section class="relative flex items-end justify-center h-screen text-white bg-no-repeat bg-cover hero-cover"
             style="background-image:
     linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0) 70%),
     linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%),
     url('./assets/Gallery/3(2).jpg');">
-            <div class="relative z-10 text-center transform translate-y-50">
-                <h1 class="text-6xl font-thin text-white karaoke md:text-7xl lg:text-8xl">Cinthia Benaducci Ángeles</h1>
-                <p class="mt-4 text-2xl text-gray-200 opacity-0 md:text-3xl lg:text-4xl animate-fade-delayed">
+            <div class="relative z-10 text-center mb-32">
+                <h1 class="hero-title karaoke">Cinthia Benaducci Ángeles</h1>
+                <p class="hero-subtitle" style="margin-top: 0.5rem;">
                     Música Católica
                 </p>
             </div>
         </section>
 
         <!-- Sección: Quién soy -->
-        <section id="quien-soy" class="text-white bg-black">
-            <div class="grid items-center max-w-6xl grid-cols-1 gap-10 px-6 py-16 mx-auto md:grid-cols-2 md:gap-16 lg:gap-20 md:px-8 md:py-24">
+        <section id="quien-soy" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <!-- Blob -->
+                    <div class="about-image">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="blob-svg">
+                            <defs>
+                                <linearGradient id="ring" x1="0" x2="1" y1="0" y2="1">
+                                    <stop offset="0%" stop-color="#ffcf52" />
+                                    <stop offset="100%" stop-color="#ff990c" />
+                                </linearGradient>
+                                <clipPath id="blobClip">
+                                    <path
+                                        d="M46.9,-59.1C60.1,-44.8,69.7,-29.4,74.3,-11.8C78.9,5.7,78.5,25.4,69.9,40.4C61.3,55.4,44.5,65.7,25.9,73.4C7.4,81,-12.9,86.1,-30.2,80.8C-47.5,75.4,-61.8,59.7,-72.1,41.7C-82.4,23.7,-88.6,3.5,-84.1,-13.6C-79.7,-30.8,-64.6,-44.9,-48.8,-58.7C-33,-72.6,-16.5,-86.2,0.2,-86.4C16.8,-86.6,33.7,-73.4,46.9,-59.1Z"
+                                        transform="translate(100 100)"></path>
+                                </clipPath>
+                            </defs>
 
-                <!-- Blob -->
-                <div class="relative mx-auto md:mx-0 md:justify-self-start z-0
-                w-56 h-56 sm:w-72 sm:h-72 md:w-[380px] md:h-[380px] lg:w-[460px] lg:h-[460px]
-                md:pr-4">
-                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
-                        class="w-full h-full animate-float drop-glow">
-                        <defs>
-                            <linearGradient id="ring" x1="0" x2="1" y1="0" y2="1">
-                                <stop offset="0%" stop-color="#ffcf52" />
-                                <stop offset="100%" stop-color="#ff990c" />
-                            </linearGradient>
-                            <clipPath id="blobClip">
-                                <path
-                                    d="M46.9,-59.1C60.1,-44.8,69.7,-29.4,74.3,-11.8C78.9,5.7,78.5,25.4,69.9,40.4C61.3,55.4,44.5,65.7,25.9,73.4C7.4,81,-12.9,86.1,-30.2,80.8C-47.5,75.4,-61.8,59.7,-72.1,41.7C-82.4,23.7,-88.6,3.5,-84.1,-13.6C-79.7,-30.8,-64.6,-44.9,-48.8,-58.7C-33,-72.6,-16.5,-86.2,0.2,-86.4C16.8,-86.6,33.7,-73.4,46.9,-59.1Z"
-                                    transform="translate(100 100)"></path>
-                            </clipPath>
-                        </defs>
+                            <!-- Anillo -->
+                            <path
+                                d="M46.9,-59.1C60.1,-44.8,69.7,-29.4,74.3,-11.8C78.9,5.7,78.5,25.4,69.9,40.4C61.3,55.4,44.5,65.7,25.9,73.4C7.4,81,-12.9,86.1,-30.2,80.8C-47.5,75.4,-61.8,59.7,-72.1,41.7C-82.4,23.7,-88.6,3.5,-84.1,-13.6C-79.7,-30.8,-64.6,-44.9,-48.8,-58.7C-33,-72.6,-16.5,-86.2,0.2,-86.4C16.8,-86.6,33.7,-73.4,46.9,-59.1Z"
+                                transform="translate(100 100)" fill="none" stroke="url(#ring)" stroke-width="3"
+                                opacity="0.7" />
 
-                        <!-- Anillo -->
-                        <path
-                            d="M46.9,-59.1C60.1,-44.8,69.7,-29.4,74.3,-11.8C78.9,5.7,78.5,25.4,69.9,40.4C61.3,55.4,44.5,65.7,25.9,73.4C7.4,81,-12.9,86.1,-30.2,80.8C-47.5,75.4,-61.8,59.7,-72.1,41.7C-82.4,23.7,-88.6,3.5,-84.1,-13.6C-79.7,-30.8,-64.6,-44.9,-48.8,-58.7C-33,-72.6,-16.5,-86.2,0.2,-86.4C16.8,-86.6,33.7,-73.4,46.9,-59.1Z"
-                            transform="translate(100 100)" fill="none" stroke="url(#ring)" stroke-width="3"
-                            opacity="0.7" />
+                            <!-- Imagen -->
+                            <image href="./assets/Foto-BLOB.jpg" width="100%" height="100%" clip-path="url(#blobClip)"
+                                preserveAspectRatio="xMidYMid slice" />
+                        </svg>
+                    </div>
 
-                        <!-- Imagen -->
-                        <image href="./assets/Foto-BLOB.jpg" width="100%" height="100%" clip-path="url(#blobClip)"
-                            preserveAspectRatio="xMidYMid slice" />
-                    </svg>
+                    <!-- Texto -->
+                    <div class="about-text">
+                        <h2 class="section-title section-title-accent">Quién soy</h2>
+                        <p class="about-description">
+                            Soy Cinthia Benaducci Angeles, cantante católica, directora y compositora de Lima – Perú. Desde
+                            hace más de 25 años me dedico a la música litúrgica con el deseo de transmitir fe y belleza a
+                            través del canto. Así nació TeCanto Music, con el propósito de ofrecer música litúrgica elegidas
+                            cuidadosamente para cada sacramento, reuniendo a músicos y cantantes profesionales que
+                            acompañan con devoción cada celebración ofrecida.
+                        </p>
+                    </div>
                 </div>
-
-                <!-- Texto -->
-                <div class="relative z-10 text-center md:text-left md:pl-6">
-                    <h2 class="mb-6 text-4xl font-thin md:text-6xl lg:text-8xl text-amarillo">Quién soy</h2>
-                    <p class="mx-auto text-base leading-relaxed text-justify md:text-lg lg:text-xl max-w-prose md:mx-0">
-                        Soy Cinthia Benaducci Angeles, cantante católica, directora y compositora de Lima – Perú. Desde
-                        hace más de 25 años me dedico a la música litúrgica con el deseo de transmitir fe y belleza a
-                        través del canto. Así nació TeCanto Music, con el propósito de ofrecer música litúrgica elegidas
-                        cuidadosamente para cada sacramento, reuniendo a músicos y cantantes profesionales que
-                        acompañan con devoción cada celebración ofrecida.
-                    </p>
-                </div>
-
             </div>
         </section>
 
         <!-- Sección: Momentos / Servicios -->
-        <section id="momentos" aria-labelledby="titulo-momentos" class="bg-amarillo text-slate-900">
-            <div class="px-6 py-20 mx-auto max-w-7xl lg:px-8">
-                <div class="text-center">
-                    <h2 class="mb-6 text-4xl font-thin text-black md:text-6xl lg:text-8xl">Servicios Musicales</h2>
-                    <p class="text-sm tracking-widest text-black font-extralight">MOMENTOS QUE HONRAMOS</p>
-                    <h2 id="titulo-momentos" class="mt-2 text-3xl font-thin md:text-4xl">
+        <section id="momentos" class="section bg-amarillo text-black" aria-labelledby="titulo-momentos">
+            <div class="container section-content">
+                <div class="text-center mb-xl">
+                    <h2 class="heading-hero text-black mb-md">Servicios Musicales</h2>
+                    <p class="text-small text-black mb-sm" style="letter-spacing: 0.2em; font-weight: 300;">MOMENTOS QUE HONRAMOS</p>
+                    <p id="titulo-momentos" class="text-large text-black">
                         Estamos contigo en los días que vivirán en el corazón
-                    </h2>
+                    </p>
                 </div>
 
-                <div class="grid grid-cols-1 gap-6 mt-10 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="grid grid-4 gap-lg">
                     <!-- Card: Bautizos -->
-                    <article class="overflow-hidden transition bg-black rounded-lg shadow-sm group hover:shadow-md">
-                        <!-- Imagen -->
-                        <div class="aspect-[16/9] overflow-hidden">
-                            <img src="./assets/Bautizos-alt.jpg" alt="Bautizo"
-                                class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" />
+                    <article class="card card-dark">
+                        <div class="card-image">
+                            <img src="./assets/Bautizos-alt.jpg" alt="Bautizo" />
                         </div>
-                        <div class="p-4 text-white transition-colors bg-black group-hover:bg-black/90">
-                            <div class="flex items-start justify-between gap-4">
-                                <h3 class="text-lg font-semibold card-header">Bautizos</h3>
-                                <svg class="size-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
-                                    aria-hidden="true">
+                        <div class="card-content">
+                            <div class="flex flex-between mb-md">
+                                <h3 class="heading-card">Bautizos</h3>
+                                <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
                                     <path fill="var(--color-amarillo)"
                                         d="M560 128C573.2 128 580.7 143.1 572.8 153.6L544 192L544 368C544 447.5 479.5 512 400 512L288 512L241.7 558.3C231.3 568.7 215.2 570.7 202.6 563.1L105.5 504.9C88.5 494.7 90.5 469.4 108.9 462L224 416C87.8 375.1 71.5 233.8 86 159.7C89.6 141.9 109.3 135.4 125.3 144.2L384 288L384 208C384 163.8 419.8 128 464 128L560 128zM464 184C450.7 184 440 194.7 440 208C440 221.3 450.7 232 464 232C477.3 232 488 221.3 488 208C488 194.7 477.3 184 464 184zM246.5 54.4C258.9 40.7 279.8 45.5 289 61.5L345.4 159.8C339.6 174.2 336.2 189.9 336 206.3L202.1 132C212.2 100.4 229.1 73.6 246.5 54.4z" />
                                 </svg>
                             </div>
-                            <p class="mt-2 text-white text-md">
+                            <p class="text-body">
                                 Cantos llenos de ternura y fe que celebran el inicio de una nueva vida espiritual.
                             </p>
                         </div>
                     </article>
 
                     <!-- Card: Bodas -->
-                    <article class="overflow-hidden transition bg-black rounded-lg shadow-sm group hover:shadow-md">
-                        <!-- Imagen -->
-                        <div class="aspect-[16/9] overflow-hidden">
-                            <img src="./assets/Boda.jpg" alt="Boda"
-                                class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" />
+                    <article class="card card-dark">
+                        <div class="card-image">
+                            <img src="./assets/Boda.jpg" alt="Boda" />
                         </div>
-                        <div class="p-4 text-white transition-colors bg-black group-hover:bg-black/90">
-                            <div class="flex items-start justify-between gap-4">
-                                <h3 class="text-lg font-semibold card-header">Bodas</h3>
-                                <svg class="size-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
-                                    aria-hidden="true">
+                        <div class="card-content">
+                            <div class="flex flex-between mb-md">
+                                <h3 class="heading-card">Bodas</h3>
+                                <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
                                     <path fill="var(--color-amarillo)"
                                         d="M128 272C128 279.8 132.4 290.7 145.1 302.3C190.5 278.1 252.8 264 320 264C387.2 264 449.5 278.1 494.9 302.3C507.7 290.7 512 279.8 512 272C512 259.7 501.2 240 464.1 221.4C428.9 203.8 378 192 320 192C262 192 211.1 203.8 175.9 221.4C138.8 240 128 259.7 128 272zM320 312C273 312 230.7 319.6 197.1 331.7C230.3 344.1 272.8 352 320 352C367.2 352 409.7 344.2 442.9 331.7C409.3 319.6 367 312 320 312zM64 272C64 222.4 103.4 186.2 147.3 164.2C193.1 141.3 254.3 128 320 128C385.7 128 446.9 141.3 492.7 164.2C536.6 186.2 576 222.4 576 272L576 368C576 417.6 536.6 453.8 492.7 475.8C446.8 498.7 385.7 512 320 512C254.3 512 193.1 498.7 147.3 475.8C103.4 453.8 64 417.6 64 368L64 272z" />
                                 </svg>
                             </div>
-                            <p class="mt-2 text-white text-md">
+                            <p class="text-body">
                                 Melodías que acompañan su promesa de amor y hacen inolvidable el día de su boda.
                             </p>
                         </div>
                     </article>
 
                     <!-- Card: Ceremonias Litúrgicas -->
-                    <article class="overflow-hidden transition bg-black rounded-lg shadow-sm group hover:shadow-md">
-                        <!-- Imagen -->
-                        <div class="aspect-[16/9] overflow-hidden">
-                            <img src="./assets/Ceremonias.jpg" alt="Ceremonias Litúrgicas"
-                                class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" />
+                    <article class="card card-dark">
+                        <div class="card-image">
+                            <img src="./assets/Ceremonias.jpg" alt="Ceremonias Litúrgicas" />
                         </div>
-                        <div class="p-4 text-white transition-colors bg-black group-hover:bg-black/90">
-                            <div class="flex items-start justify-between gap-4">
-                                <h3 class="text-lg font-semibold card-header">Ceremonias Litúrgicas</h3>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="size-10" viewBox="0 0 640 640"
-                                    aria-hidden="true">
+                        <div class="card-content">
+                            <div class="flex flex-between mb-md">
+                                <h3 class="heading-card">Ceremonias Litúrgicas</h3>
+                                <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
                                     <path fill="var(--color-amarillo)"
                                         d="M532 71C539.6 77.1 544 86.3 544 96L544 400C544 444.2 501 480 448 480C395 480 352 444.2 352 400C352 355.8 395 320 448 320C459.2 320 470 321.6 480 324.6L480 207.9L256 257.7L256 464C256 508.2 213 544 160 544C107 544 64 508.2 64 464C64 419.8 107 384 160 384C171.2 384 182 385.6 192 388.6L192 160C192 145 202.4 132 217.1 128.8L505.1 64.8C514.6 62.7 524.5 65 532.1 71.1z" />
                                 </svg>
                             </div>
-                            <p class="mt-2 text-white text-md">
-                                La música que transforma vigilias, misas y homenajes en momentos sagrados e
-                                inolvidables.
+                            <p class="text-body">
+                                La música que transforma vigilias, misas y homenajes en momentos sagrados e inolvidables.
                             </p>
                         </div>
                     </article>
 
                     <!-- Card: Funerales -->
-                    <article class="overflow-hidden transition bg-black rounded-lg shadow-sm group hover:shadow-md">
-                        <!-- Imagen -->
-                        <div class="aspect-[16/9] overflow-hidden">
-                            <img src="./assets/Funeral-alt.jpg" alt="Funeral"
-                                class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" />
+                    <article class="card card-dark">
+                        <div class="card-image">
+                            <img src="./assets/Funeral-alt.jpg" alt="Funeral" />
                         </div>
-                        <div class="p-4 text-white transition-colors bg-black group-hover:bg-black/90">
-                            <div class="flex items-start justify-between gap-4">
-                                <h3 class="text-lg font-semibold card-header">Responso funerario</h3>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="size-10" viewBox="0 0 640 640"
-                                    aria-hidden="true">
+                        <div class="card-content">
+                            <div class="flex flex-between mb-md">
+                                <h3 class="heading-card">Responso funerario</h3>
+                                <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
                                     <path fill="var(--color-amarillo)"
                                         d="M304 64C277.5 64 256 85.5 256 112L256 192L176 192C149.5 192 128 213.5 128 240L128 272C128 298.5 149.5 320 176 320L256 320L256 528C256 554.5 277.5 576 304 576L336 576C362.5 576 384 554.5 384 528L384 320L464 320C490.5 320 512 298.5 512 272L512 240C512 213.5 490.5 192 464 192L384 192L384 112C384 85.5 362.5 64 336 64L304 64z" />
                                 </svg>
                             </div>
-                            <p class="mt-2 text-white text-md">
+                            <p class="text-body">
                                 Música que honra la memoria y ofrece consuelo en los momentos de despedida.
                             </p>
                         </div>
@@ -187,525 +171,313 @@
         </section>
 
         <!-- ================= ELENCO - HERO ================= -->
-        <section id="elenco" class="relative flex items-center h-screen overflow-hidden bg-center bg-no-repeat bg-cover"
-            role="banner" aria-labelledby="hero-title" style="background-image: url('./assets/Fondo-inicio.jpg');">
+        <section id="elenco" class="section section-hero text-white text-center" 
+            style="background-image: url('./assets/Fondo-inicio.jpg');" 
+            role="banner" aria-labelledby="hero-title">
+            
             <!-- Overlays -->
-            <div class="absolute inset-0 bg-black/60"></div>
-            <div class="absolute inset-0 bg-gradient-to-br from-black/30 via-black/20 to-black/30"></div>
+            <div class="overlay"></div>
+            <div class="gradient-overlay"></div>
 
-            <!-- Líneas decorativas -->
-            <div class="absolute inset-0" aria-hidden="true">
-                <div
-                    class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FFD300]/50 to-transparent">
+            <div class="container section-content">
+                <div class="mb-xl">
+                    <h2 id="hero-title" class="heading-hero text-white mb-lg">
+                        Elencos TeCanto Music
+                    </h2>
+                    <div class="mb-lg" style="width: 8rem; height: 4px; margin: 0 auto; background: linear-gradient(90deg, transparent, var(--color-amarillo), transparent); box-shadow: 0 0 30px rgba(255,211,0,.6);"></div>
+                    <p class="text-large text-white">
+                        Lírico–clásico y música moderna para cada ocasión.
+                    </p>
                 </div>
-                <div
-                    class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FFD300]/50 to-transparent">
+
+                <div class="flex btn-group flex-center">
+                    <a href="https://www.youtube.com/watch?v=i347xihRKt4" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-primary" aria-label="Ver repertorio clásico">
+                        Clásico
+                    </a>
+                    <a href="#video" class="btn btn-secondary" aria-label="Ver repertorio moderno">
+                        Moderno
+                    </a>
                 </div>
-            </div>
-
-            <div class="relative z-10 w-full px-8 mx-auto text-center max-w-7xl">
-                <!-- <div class="p-8 border shadow-2xl bg-black/40 backdrop-blur-md rounded-3xl md:p-12 border-white/20"> -->
-                <div class="space-y-6 md:space-y-8">
-                    <div class="relative">
-                        <h2 id="hero-title" class="mb-6 text-4xl font-thin text-white md:text-6xl lg:text-8xl">
-                            Elencos TeCanto Music</h2>
-                        <div class="w-32 h-1 mx-auto mb-6"
-                            style="background: linear-gradient(90deg, transparent, var(--color-amarillo), transparent); box-shadow: 0 0 30px rgba(255,211,0,.6);">
-                        </div>
-                    </div>
-
-                    <div class="max-w-5xl mx-auto">
-                        <p class="mt-4 text-xl text-white md:text-2xl lg:text-3xl">
-                            Lírico–clásico y música moderna para cada ocasión.
-                        </p>
-                    </div>
-
-                    <div class="pt-6">
-                        <div class="flex flex-col items-center justify-center max-w-2xl gap-5 mx-auto sm:flex-row">
-                            <a href="https://www.youtube.com/watch?v=i347xihRKt4" target="_blank"
-                                rel="noopener noreferrer"
-                                class="group relative w-full sm:w-auto max-w-xs inline-flex items-center justify-center rounded-full px-10 py-4 text-black text-lg font-medium tracking-wide transition-all duration-300 min-h-[60px] focus:outline-none focus:ring-4 focus:ring-yellow-300 focus:ring-opacity-75 hover:scale-105 shadow-2xl backdrop-blur-sm"
-                                style="background-color: var(--color-amarillo); box-shadow: 0 10px 40px rgba(255,211,0,.3);"
-                                role="button" aria-label="Ver repertorio clásico">
-                                <span class="relative z-10 text-xl font-light">Clásico</span>
-                            </a>
-
-                            <a href="#video"
-                                class="group relative w-full sm:w-auto max-w-xs inline-flex items-center justify-center rounded-full bg-white/90 backdrop-blur-sm px-10 py-4 text-black text-lg font-medium tracking-wide transition-all duration-300 min-h-[60px] border-2 border-white/50 hover:border-white hover:bg-white hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/50 shadow-2xl"
-                                role="button" aria-label="Ver repertorio moderno">
-                                <span class="relative z-10 text-xl font-light">Moderno</span>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- </div> -->
             </div>
         </section>
 
         <!-- ================= VIDEO ================= -->
-        <section id="video" class="relative overflow-hidden bg-white scroll-mt-24" role="main"
-            aria-labelledby="video-title">
-            <div class="absolute inset-0" aria-hidden="true">
-                <div
-                    class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-300/30 to-transparent">
-                </div>
-                <div
-                    class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-300/30 to-transparent">
-                </div>
-            </div>
-
-            <div class="relative z-10 px-8 py-16 mx-auto max-w-7xl md:py-20">
-                <div class="mb-12 text-center">
-                    <div class="inline-block">
-                        <h2 id="video-title" class="mb-6 text-4xl font-thin text-black md:text-6xl lg:text-8xl">
-                            Escucha mi música</h2>
-                        <div
-                            class="w-24 h-0.5 mx-auto mb-8 bg-gradient-to-r from-transparent via-gray-600/60 to-transparent">
-                        </div>
-                    </div>
-
-                    <p class="mb-8 text-black md:text-lg lg:text-xl xl:text-2xl">
-                        Descubre mi repertorio de música cristiana católica, desde clásicos hasta composiciones
-                        contemporáneas.
+        <section id="video" class="section bg-white text-black" aria-labelledby="video-title">
+            <div class="container section-content">
+                <div class="text-center mb-xl">
+                    <h2 id="video-title" class="heading-hero text-black mb-md">
+                        Escucha mi música
+                    </h2>
+                    <div class="mb-lg" style="width: 6rem; height: 2px; margin: 0 auto; background: linear-gradient(90deg, transparent, #6b7280, transparent);"></div>
+                    <p class="text-large text-black mb-lg">
+                        Descubre mi repertorio de música cristiana católica, desde clásicos hasta composiciones contemporáneas.
                         Este video es solo una muestra de la experiencia que podrás vivir.
                     </p>
                 </div>
 
-                <div class="max-w-5xl mx-auto">
-                    <div class="relative group">
-                        <div class="relative w-full overflow-hidden bg-white shadow-xl rounded-xl ring-1 ring-gray-400/50"
-                            style="padding-bottom: 56.25%;">
-                            <iframe class="absolute inset-0 w-full h-full rounded-xl"
-                                src="https://www.youtube-nocookie.com/embed/LuSRKoksyhs?rel=0&modestbranding=1&color=white&showinfo=0"
-                                title="Voces de fe - Música cristiana y repertorio completo" loading="lazy"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen
-                                aria-label="Video musical de Voces de fe mostrando repertorio cristiano"></iframe>
-                        </div>
+                <div class="video-container mb-lg">
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube-nocookie.com/embed/LuSRKoksyhs?rel=0&modestbranding=1&color=white&showinfo=0"
+                            title="Voces de fe - Música cristiana y repertorio completo" 
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            aria-label="Video musical de Voces de fe mostrando repertorio cristiano">
+                        </iframe>
                     </div>
                 </div>
 
-                <div class="mt-8 text-center">
-                    <div class="max-w-2xl mx-auto">
-                        <p class="mb-8 text-black md:text-lg lg:text-xl xl:text-2xl">¿Te gustó lo que escuchaste?</p>
-                        <a href="https://wa.me/51982218665" target="_blank" rel="noopener noreferrer"
-                            class="group relative inline-flex items-center justify-center rounded-full px-10 py-4 text-black text-lg font-medium tracking-wide transition-all duration-300 min-h-[60px] focus:outline-none focus:ring-4 focus:ring-yellow-300 focus:ring-opacity-75 hover:scale-105 shadow-2xl backdrop-blur-sm"
-                            style="background-color: var(--color-amarillo); box-shadow: 0 10px 40px rgba(255,211,0,0);"
-                            role="button" aria-label="Contactar por WhatsApp para contratar servicios musicales">
-                            <span class="relative z-10">Contáctame</span>
-                        </a>
-                    </div>
+                <div class="text-center">
+                    <p class="text-large text-black mb-lg">¿Te gustó lo que escuchaste?</p>
+                    <a href="https://wa.me/51982218665" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-primary" aria-label="Contactar por WhatsApp para contratar servicios musicales">
+                        Contáctame
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- ================= SERVICIOS MUSICALES DETALLADOS ================= -->
-        <section class="relative py-20 overflow-hidden md:py-24 bg-amarillo">
-            <div class="absolute inset-0">
-                <div
-                    class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent">
+        <section class="section bg-amarillo text-black">
+            <div class="container section-content">
+                <div class="text-center mb-xl">
+                    <h2 class="heading-hero text-black mb-md">Nuestros Servicios</h2>
+                    <div class="mb-lg" style="width: 8rem; height: 2px; margin: 0 auto; background: linear-gradient(90deg, transparent, var(--color-amarillo), transparent); position: relative;">
+                        <div style="position: absolute; width: 8px; height: 8px; background-color: var(--color-amarillo); border-radius: 50%; left: 50%; top: 50%; transform: translate(-50%, -50%);"></div>
+                    </div>
+                    <p class="text-large text-black">
+                        Dos experiencias musicales distintivas, cada una diseñada para crear momentos inolvidables en tu celebración especial.
+                    </p>
                 </div>
-                <div
-                    class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent">
-                </div>
-                <div class="absolute w-2 h-2 rounded-full top-24 left-16 bg-gray-500/15 animate-pulse"></div>
-                <div class="absolute top-60 right-20 w-1.5 h-1.5 bg-gray-500/20 rounded-full animate-pulse"
-                    style="animation-delay: 1.5s;"></div>
-                <div class="absolute w-1 h-1 rounded-full bottom-40 left-12 bg-gray-500/25 animate-pulse"
-                    style="animation-delay: 3s;"></div>
-                <div class="absolute w-2 h-2 rounded-full bottom-20 right-16 bg-gray-500/10 animate-pulse"
-                    style="animation-delay: 2s;"></div>
-                <div class="absolute inset-0 opacity-50 bg-gradient-to-br from-white/20 via-transparent to-gray-200/30">
+
+                <div class="grid grid-2 gap-xl">
+                    <!-- Card 1: Clásico -->
+                    <div class="flip-card flip-card-classic">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="text-center">
+                                    <img src="./assets/Logo-transparente.png" alt="Logo TeCanto Music" style="width: 40px; height: 40px; margin: 0 auto 1.5rem; opacity: 0.9;">
+                                    <h3 class="heading-card">CLÁSICO</h3>
+                                    <div style="width: 4rem; height: 1px; background: linear-gradient(90deg, transparent, #FFB42F, transparent); margin: 0 auto 1rem;"></div>
+                                    <p class="text-body">Tradición • Elegancia • Espiritualidad</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="text-center">
+                                    <h4 class="heading-card">Música Lírica</h4>
+                                    <div style="width: 5rem; height: 1px; background: linear-gradient(90deg, transparent, #FFB42F, transparent); margin: 0 auto 2rem;"></div>
+                                    <p class="text-body mb-lg">
+                                        Interpretaciones clásicas y corales que elevan cada ceremonia a un momento memorable y espiritual.
+                                    </p>
+                                    <ul style="list-style: none; padding: 0; text-align: left;">
+                                        <li class="flex mb-sm" style="align-items: center;">
+                                            <span style="width: 8px; height: 8px; background-color: #FFB42F; border-radius: 50%; margin-right: 1rem; flex-shrink: 0;"></span>
+                                            <span>Repertorio sacro y clásico</span>
+                                        </li>
+                                        <li class="flex mb-sm" style="align-items: center;">
+                                            <span style="width: 8px; height: 8px; background-color: #FFB42F; border-radius: 50%; margin-right: 1rem; flex-shrink: 0;"></span>
+                                            <span>Ceremonias religiosas</span>
+                                        </li>
+                                        <li class="flex mb-sm" style="align-items: center;">
+                                            <span style="width: 8px; height: 8px; background-color: #FFB42F; border-radius: 50%; margin-right: 1rem; flex-shrink: 0;"></span>
+                                            <span>Eventos formales</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Moderno -->
+                    <div class="flip-card flip-card-modern">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="text-center">
+                                    <img src="./assets/Logo-transparente.png" alt="Logo TeCanto Music" style="width: 40px; height: 40px; margin: 0 auto 1.5rem; opacity: 0.9;">
+                                    <h3 class="heading-card">MODERNO</h3>
+                                    <div style="width: 4rem; height: 1px; background: linear-gradient(90deg, transparent, #FFB42F, transparent); margin: 0 auto 1rem;"></div>
+                                    <p class="text-body">Contemporáneo • Fresco • Celebración</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="text-center">
+                                    <h4 class="heading-card">Música Moderna</h4>
+                                    <div style="width: 5rem; height: 1px; background: linear-gradient(90deg, transparent, #FFB42F, transparent); margin: 0 auto 2rem;"></div>
+                                    <p class="text-body mb-lg">
+                                        Repertorio contemporáneo con arreglos frescos, ideal para bodas, bautizos y celebraciones especiales.
+                                    </p>
+                                    <ul style="list-style: none; padding: 0; text-align: left;">
+                                        <li class="flex mb-sm" style="align-items: center;">
+                                            <span style="width: 8px; height: 8px; background-color: #FFB42F; border-radius: 50%; margin-right: 1rem; flex-shrink: 0;"></span>
+                                            <span>Música católica contemporánea</span>
+                                        </li>
+                                        <li class="flex mb-sm" style="align-items: center;">
+                                            <span style="width: 8px; height: 8px; background-color: #FFB42F; border-radius: 50%; margin-right: 1rem; flex-shrink: 0;"></span>
+                                            <span>Bodas y celebraciones litúrgicas</span>
+                                        </li>
+                                        <li class="flex mb-sm" style="align-items: center;">
+                                            <span style="width: 8px; height: 8px; background-color: #FFB42F; border-radius: 50%; margin-right: 1rem; flex-shrink: 0;"></span>
+                                            <span>Eventos sociales</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="relative z-10 px-6 mx-auto max-w-7xl">
-                <div class="mb-12 text-center">
-                    <div class="inline-block">
-                        <h2 class="mb-6 text-4xl font-thin text-black md:text-6xl lg:text-8xl">Nuestros Servicios
-                        </h2>
-                        <div class="relative mb-4">
-                            <div class="w-32 h-px mx-auto"
-                                style="background: linear-gradient(90deg, transparent, var(--color-amarillo), transparent);">
-                            </div>
-                            <div class="absolute w-2 h-2 transform -translate-x-1/2 -translate-y-1/2 rounded-full left-1/2 top-1/2"
-                                style="background-color: var(--color-amarillo);"></div>
-                        </div>
-                    </div>
-
-                    <div class="max-w-4xl mx-auto space-y-6">
-                        <p class="mb-8 text-black md:text-lg lg:text-xl xl:text-2xl">
-                            Dos experiencias musicales distintivas, cada una diseñada para crear momentos inolvidables
-                            en tu celebración
-                            especial.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="grid max-w-5xl gap-16 mx-auto mt-0 lg:grid-cols-2 lg:gap-24">
-                    <!-- Tarjeta Música Lírica (CLÁSICO) -->
-                    <div class="px-4 card-container perspective-1000" style="margin-bottom: 4rem;" data-card="clasico"
-                        tabindex="0" aria-label="Tarjeta Música Clásico" role="button">
-                        <div
-                            class="card-inner relative w-full h-[520px] transition-all duration-700 transform-style-preserve-3d">
-                            <!-- Frente -->
-                            <div
-                                class="absolute inset-0 w-full h-full overflow-hidden bg-black border shadow-2xl card-face backface-hidden rounded-2xl border-gray-800/50 backdrop-blur-sm">
-                                <div
-                                    class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent">
-                                </div>
-                                <div class="relative flex flex-col items-center justify-center h-full p-12">
-                                    <div class="mb-8 transition-transform duration-500 transform card-logo">
-                                        <img src="./assets/Logo-transparente.png" alt="Logo Voces de Fe"
-                                            class="object-contain w-32 h-32 md:w-36 md:h-36 opacity-90 filter brightness-110">
-                                    </div>
-                                    <div class="space-y-6 text-center">
-                                        <h3 class="text-2xl md:text-3xl font-light text-white tracking-[0.2em] mb-4">
-                                            CLÁSICO</h3>
-                                        <div class="w-16 h-px mx-auto"
-                                            style="background: linear-gradient(90deg, transparent, #FFD300, transparent);">
-                                        </div>
-                                        <p class="text-lg font-light tracking-wide text-gray-300 opacity-90">Tradición •
-                                            Elegancia •
-                                            Espiritualidad</p>
-                                    </div>
-                                    <div class="absolute transform -translate-x-1/2 bottom-8 left-1/2 opacity-60">
-                                        <div class="flex items-center space-x-1.5">
-                                            <div class="w-1.5 h-1.5 bg-white/40 rounded-full animate-pulse"></div>
-                                            <div class="w-1.5 h-1.5 bg-white/40 rounded-full animate-pulse"
-                                                style="animation-delay: .2s;"></div>
-                                            <div class="w-1.5 h-1.5 bg-white/40 rounded-full animate-pulse"
-                                                style="animation-delay: .4s;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Dorso -->
-                            <div
-                                class="absolute inset-0 w-full h-full p-10 bg-black border shadow-2xl card-face back backface-hidden rotate-y-180 rounded-2xl border-gray-800/50 backdrop-blur-sm">
-                                <div
-                                    class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent">
-                                </div>
-                                <div class="flex flex-col justify-center h-full">
-                                    <div class="mb-10 text-center">
-                                        <h3 class="mb-6 text-2xl font-light tracking-wide text-white md:text-3xl">Música
-                                            Lírica</h3>
-                                        <div class="w-20 h-px mx-auto mb-8"
-                                            style="background: linear-gradient(90deg, transparent, #FFD300, transparent);">
-                                        </div>
-                                    </div>
-                                    <p
-                                        class="mb-10 text-xl font-light leading-relaxed text-center text-gray-200 md:text-2xl">
-                                        Interpretaciones clásicas y corales que elevan cada ceremonia a un momento
-                                        memorable y espiritual.
-                                    </p>
-                                    <div class="space-y-5">
-                                        <div class="flex items-center justify-start ml-6 text-gray-300 group/item">
-                                            <div class="w-2 h-2 mr-5 transition-all duration-300 rounded-full group-hover/item:scale-125"
-                                                style="background-color: var(--color-amarillo);"></div>
-                                            <span class="text-lg font-light tracking-wide">Repertorio sacro y
-                                                clásico</span>
-                                        </div>
-                                        <div class="flex items-center justify-start ml-6 text-gray-300 group/item">
-                                            <div class="w-2 h-2 mr-5 transition-all duration-300 rounded-full group-hover/item:scale-125"
-                                                style="background-color: var(--color-amarillo);"></div>
-                                            <span class="text-lg font-light tracking-wide">Ceremonias religiosas</span>
-                                        </div>
-                                        <div class="flex items-center justify-start ml-6 text-gray-300 group/item">
-                                            <div class="w-2 h-2 mr-5 transition-all duration-300 rounded-full group-hover/item:scale-125"
-                                                style="background-color: var(--color-amarillo);"></div>
-                                            <span class="text-lg font-light tracking-wide">Eventos formales</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tarjeta Música Moderna -->
-                    <div class="px-4 card-container perspective-1000" data-card="moderno" tabindex="0"
-                        aria-label="Tarjeta Música Moderna" role="button">
-                        <div
-                            class="card-inner relative w-full h-[520px] transition-all duration-700 transform-style-preserve-3d">
-                            <!-- Frente -->
-                            <div class="absolute inset-0 w-full h-full overflow-hidden border shadow-xl card-face backface-hidden rounded-2xl border-amber-200/60 backdrop-blur-sm"
-                                style="background: linear-gradient(135deg, #fefcf3, #f9f7f4, #ffffff);">
-                                <div
-                                    class="absolute inset-0 opacity-50 bg-gradient-to-br from-amber-50/30 via-transparent to-amber-100/20">
-                                </div>
-                                <div
-                                    class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-300/30 to-transparent">
-                                </div>
-                                <div class="relative flex flex-col items-center justify-center h-full p-12">
-                                    <div class="mb-8 transition-transform duration-500 transform card-logo">
-                                        <img src="./assets/Logo-transparente.png" alt="Logo Voces de Fe"
-                                            class="object-contain w-32 h-32 opacity-75 md:w-36 md:h-36 filter contrast-110">
-                                    </div>
-                                    <div class="space-y-6 text-center">
-                                        <h3 class="text-2xl md:text-3xl font-light text-gray-800 tracking-[0.2em] mb-4">
-                                            MODERNO</h3>
-                                        <div class="w-16 h-px mx-auto"
-                                            style="background: linear-gradient(90deg, transparent, #FFD300, transparent);">
-                                        </div>
-                                        <p class="text-lg font-light tracking-wide text-gray-600 opacity-90">
-                                            Contemporáneo • Fresco •
-                                            Celebración</p>
-                                    </div>
-                                    <div class="absolute transform -translate-x-1/2 bottom-8 left-1/2 opacity-60">
-                                        <div class="flex items-center space-x-1.5">
-                                            <div class="w-1.5 h-1.5 bg-amber-600/40 rounded-full animate-pulse"></div>
-                                            <div class="w-1.5 h-1.5 bg-amber-600/40 rounded-full animate-pulse"
-                                                style="animation-delay: .2s;">
-                                            </div>
-                                            <div class="w-1.5 h-1.5 bg-amber-600/40 rounded-full animate-pulse"
-                                                style="animation-delay: .4s;">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Dorso -->
-                            <div class="absolute inset-0 w-full h-full p-10 border shadow-xl card-face back backface-hidden rotate-y-180 rounded-2xl border-amber-200/60 backdrop-blur-sm"
-                                style="background: linear-gradient(135deg, #fefcf3, #f9f7f4, #ffffff);">
-                                <div
-                                    class="absolute inset-0 opacity-50 bg-gradient-to-br from-amber-50/30 via-transparent to-amber-100/20">
-                                </div>
-                                <div
-                                    class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-300/30 to-transparent">
-                                </div>
-                                <div class="flex flex-col justify-center h-full">
-                                    <div class="mb-10 text-center">
-                                        <h3 class="mb-6 text-2xl font-light tracking-wide text-gray-800 md:text-3xl">
-                                            Música Moderna</h3>
-                                        <div class="w-20 h-px mx-auto mb-8"
-                                            style="background: linear-gradient(90deg, transparent, #FFD300, transparent);">
-                                        </div>
-                                    </div>
-                                    <p
-                                        class="mb-10 text-xl font-light leading-relaxed text-center text-gray-700 md:text-2xl">
-                                        Repertorio contemporáneo con arreglos frescos, ideal para bodas, bautizos y
-                                        celebraciones especiales.
-                                    </p>
-                                    <div class="space-y-5">
-                                        <div class="flex items-center justify-start ml-6 text-gray-600 group/item">
-                                            <div class="w-2 h-2 mr-5 transition-all duration-300 rounded-full group-hover/item:scale-125"
-                                                style="background-color: var(--color-amarillo);"></div>
-                                            <span class="text-lg font-light tracking-wide">Música católica
-                                                contemporánea</span>
-                                        </div>
-                                        <div class="flex items-center justify-start ml-6 text-gray-600 group/item">
-                                            <div class="w-2 h-2 mr-5 transition-all duration-300 rounded-full group-hover/item:scale-125"
-                                                style="background-color: var(--color-amarillo);"></div>
-                                            <span class="text-lg font-light tracking-wide">Bodas y celebraciones
-                                                litúrgicas</span>
-                                        </div>
-                                        <div class="flex items-center justify-start ml-6 text-gray-600 group/item">
-                                            <div class="w-2 h-2 mr-5 transition-all duration-300 rounded-full group-hover/item:scale-125"
-                                                style="background-color: var(--color-amarillo);"></div>
-                                            <span class="text-lg font-light tracking-wide">Eventos sociales</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div> <!-- grid -->
-            </div> <!-- container -->
         </section>
 
         <!-- ================= GALERÍA ================= -->
-        <section id="galeria" class="relative py-20 overflow-hidden bg-black md:py-32">
-            <div class="absolute inset-0" aria-hidden="true">
-                <div
-                    class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-yellow-500/40 to-transparent">
-                </div>
-                <div
-                    class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-yellow-500/40 to-transparent">
-                </div>
-                <div class="absolute w-3 h-3 rounded-full top-20 left-10 bg-yellow-400/20 animate-pulse"></div>
-                <div class="absolute w-2 h-2 rounded-full top-40 right-16 bg-yellow-400/25 animate-pulse"
-                    style="animation-delay: 1s;"></div>
-                <div class="absolute bottom-32 left-20 w-1.5 h-1.5 bg-yellow-400/30 rounded-full animate-pulse"
-                    style="animation-delay: 2s;"></div>
-                <div class="absolute w-4 h-4 rounded-full bottom-16 right-12 bg-yellow-400/15 animate-pulse"
-                    style="animation-delay: 3s;"></div>
-                <div
-                    class="absolute inset-0 opacity-50 bg-gradient-to-br from-yellow-500/10 via-transparent to-yellow-400/5">
-                </div>
+        <section id="galeria" class="gallery-section">
+            <div class="gallery-background">
+                <div class="gallery-gradient-top"></div>
+                <div class="gallery-gradient-bottom"></div>
+                <div class="gallery-particle gallery-particle-1"></div>
+                <div class="gallery-particle gallery-particle-2"></div>
+                <div class="gallery-particle gallery-particle-3"></div>
+                <div class="gallery-particle gallery-particle-4"></div>
+                <div class="gallery-overlay"></div>
             </div>
 
-            <div class="relative z-10 px-6 mx-auto max-w-7xl">
-                <div class="grid items-center grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-20">
+            <div class="container">
+                <div class="gallery-content">
                     <!-- Texto -->
-                    <div class="order-2 space-y-8 lg:order-1">
-                        <div class="relative text-center">
-                            <div>
-                                <h2 class="mb-2 text-4xl font-thin text-white md:text-6xl lg:text-8xl">Momentos
-                                </h2>
-                                <h2 class="mb-6 text-4xl font-thin md:text-6xl lg:text-8xl text-amarillo">
-                                    Capturados</h2>
-                            </div>
-                            <div class="relative mb-8">
-                                <div
-                                    class="w-24 h-0.5 bg-gradient-to-r from-yellow-500 via-yellow-400 to-transparent mx-auto">
-                                </div>
-                                <div
-                                    class="absolute w-2 h-2 transform -translate-x-1/2 -translate-y-1/2 bg-yellow-500 rounded-full shadow-lg left-1/2 top-1/2">
-                                </div>
+                    <div class="gallery-text">
+                        <div class="gallery-header">
+                            <h2 class="section-title">Momentos</h2>
+                            <h2 class="section-title-accent">Capturados</h2>
+                            <div class="gallery-divider">
+                                <div class="gallery-line"></div>
+                                <div class="gallery-dot"></div>
                             </div>
                         </div>
 
-                        <div class="flex flex-col items-center space-y-6">
-                            <p class="mb-8 text-white md:text-lg lg:text-xl xl:text-2xl">Cada presentación es única y
-                                especial.</p>
-                            <p
-                                class="mx-auto text-base leading-relaxed text-center text-white md:text-lg lg:text-xl max-w-prose md:mx-0">
+                        <div class="gallery-description">
+                            <p class="gallery-intro">Cada presentación es única y especial.</p>
+                            <p class="gallery-paragraph">
                                 Aquí puedes ver algunos de los momentos más memorables de nuestras actuaciones en
-                                diferentes eventos y
-                                ceremonias sagradas.
+                                diferentes eventos y ceremonias sagradas.
                             </p>
-                            <p
-                                class="mx-auto text-base leading-relaxed text-center text-white md:text-lg lg:text-xl max-w-prose md:mx-0">
+                            <p class="gallery-paragraph">
                                 Desde ceremonias íntimas hasta grandes celebraciones, nuestra música ha sido parte de
-                                momentos
-                                inolvidables.
+                                momentos inolvidables.
                             </p>
                         </div>
                     </div>
 
                     <!-- Carrusel -->
-                    <div class="relative flex items-center justify-center order-2 mt-8 lg:order-2 lg:mt-0">
-                        <div class="relative">
-                            <div class="carousel-container"
-                                style="position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,.2); border: 3px solid var(--color-amarillo);">
-                                <div class="carousel-slide"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 1; transition: opacity .7s ease-in-out; z-index: 1;">
-                                    <img src="./assets/Gallery/1.jpg" alt="Imagen 1"
-                                        class="block w-full h-full rounded-xl"
-                                        style="object-fit: cover; object-position: 50% 30%;">
+                    <div class="gallery-carousel">
+                        <div class="carousel-wrapper">
+                            <div class="carousel-container">
+                                <div class="carousel-slide active">
+                                    <img src="./assets/Gallery/1.jpg" alt="Momento especial 1" class="carousel-image">
                                 </div>
-                                <div class="carousel-slide"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .7s ease-in-out; z-index: 1;">
-                                    <img src="./assets/Gallery/2.jpg" alt="Momento especial 2"
-                                        style="width: 100%; height: 100%; object-fit: cover; object-position: center 60%; transform: scale(1.8); display: block;">
+                                <div class="carousel-slide">
+                                    <img src="./assets/Gallery/2.jpg" alt="Momento especial 2" class="carousel-image carousel-image-scaled">
                                 </div>
-                                <div class="carousel-slide"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .7s ease-in-out; z-index: 1;">
-                                    <img src="./assets/Gallery/3.jpg" alt="Momento especial 3"
-                                        style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                                <div class="carousel-slide">
+                                    <img src="./assets/Gallery/3.jpg" alt="Momento especial 3" class="carousel-image">
                                 </div>
-                                <div class="carousel-slide"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .7s ease-in-out; z-index: 1;">
-                                    <img src="./assets/Gallery/4.jpg" alt="Momento especial 4"
-                                        style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                                <div class="carousel-slide">
+                                    <img src="./assets/Gallery/4.jpg" alt="Momento especial 4" class="carousel-image">
                                 </div>
-                                <div class="carousel-slide"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .7s ease-in-out; z-index: 1;">
-                                    <img src="./assets/Gallery/5.jpg" alt="Momento especial 5"
-                                        style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                                <div class="carousel-slide">
+                                    <img src="./assets/Gallery/5.jpg" alt="Momento especial 5" class="carousel-image">
                                 </div>
                             </div>
 
-                            <div class="carousel-indicators"
-                                style="display: flex; justify-content: center; gap: 12px; margin-top: 24px;">
-                                <div class="indicator active" data-slide="0"
-                                    style="width: 12px; height: 12px; border-radius: 50%; background-color: var(--color-amarillo); box-shadow: 0 2px 4px rgba(0,0,0,.2); cursor: pointer; transition: all .3s ease;">
-                                </div>
-                                <div class="indicator" data-slide="1"
-                                    style="width: 12px; height: 12px; border-radius: 50%; background-color: #D1D5DB; box-shadow: 0 2px 4px rgba(0,0,0,.2); cursor: pointer; transition: all .3s ease;">
-                                </div>
-                                <div class="indicator" data-slide="2"
-                                    style="width: 12px; height: 12px; border-radius: 50%; background-color: #D1D5DB; box-shadow: 0 2px 4px rgba(0,0,0,.2); cursor: pointer; transition: all .3s ease;">
-                                </div>
-                                <div class="indicator" data-slide="3"
-                                    style="width: 12px; height: 12px; border-radius: 50%; background-color: #D1D5DB; box-shadow: 0 2px 4px rgba(0,0,0,.2); cursor: pointer; transition: all .3s ease;">
-                                </div>
-                                <div class="indicator" data-slide="4"
-                                    style="width: 12px; height: 12px; border-radius: 50%; background-color: #D1D5DB; box-shadow: 0 2px 4px rgba(0,0,0,.2); cursor: pointer; transition: all .3s ease;">
-                                </div>
+                            <div class="carousel-indicators">
+                                <div class="indicator active" data-slide="0"></div>
+                                <div class="indicator" data-slide="1"></div>
+                                <div class="indicator" data-slide="2"></div>
+                                <div class="indicator" data-slide="3"></div>
+                                <div class="indicator" data-slide="4"></div>
                             </div>
                         </div>
                     </div>
 
-                </div> <!-- grid -->
+                </div> <!-- gallery-content -->
             </div> <!-- container -->
         </section>
 
-        <!-- Sección: Contáctanos (Formspree con AJAX) -->
-        <section id="contacto" class="px-8 py-20 text-white bg-black">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="mb-4 text-3xl font-thin md:text-5xl lg:text-6xl xl:text-7xl text-amarillo">Contáctanos</h2>
-                <p class="mb-8 text-white md:text-lg lg:text-xl xl:text-2xl">
-                    Será un honor acompañar tu celebración con nuestra música. Escríbenos y conversemos sobre tu evento.
-                </p>
+        <!-- Sección: Contáctanos - Optimizada para Safari 15.6.1 -->
+        <section id="contacto" class="contact-section">
+            <div class="contact-container">
+                <div class="contact-header">
+                    <h2 class="contact-title">Contáctanos</h2>
+                    <p class="contact-description">
+                        Será un honor acompañar tu celebración con nuestra música. Escríbenos y conversemos sobre tu evento.
+                    </p>
+                </div>
 
-                <form id="fs-form" action="https://formspree.io/f/xovnpgbl" method="POST"
-                    class="max-w-xl mx-auto space-y-4 text-left" enctype="multipart/form-data">
-                    <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
+                <form id="fs-form" action="https://formspree.io/f/xovnpgbl" method="POST" class="contact-form" enctype="multipart/form-data">
+                    <input type="text" name="_gotcha" class="hidden-field" tabindex="-1" autocomplete="off">
                     <input type="hidden" name="_subject" value="Nuevo mensaje desde TeCanto Music">
-                    <input type="hidden" name="_next" value="http://localhost:8000/#contacto">
+                    <input type="hidden" name="_next" value="/#contacto">
 
-                    <div>
-                        <label class="label-form" for="nombre">Nombre</label>
-                        <input id="nombre" name="nombre" type="text" required class="w-full px-4 py-3 text-white rounded-lg bg-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Tu nombre">
+                    <!-- Nombre -->
+                    <div class="form-group full-width">
+                        <label class="form-label" for="nombre">Nombre</label>
+                        <input id="nombre" name="nombre" type="text" required class="form-input" placeholder="Tu nombre">
                     </div>
 
-                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                        <div>
-                            <label class="label-form" for="email">Correo</label>
-                            <input id="email" name="email" type="email" required class="w-full px-4 py-3 text-white rounded-lg bg-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="tu@correo.com">
+                    <!-- Email y Teléfono -->
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label class="form-label" for="email">Correo</label>
+                            <input id="email" name="email" type="email" required class="form-input" placeholder="tu@correo.com">
                         </div>
-                        <div>
-                            <label class="label-form" for="telefono">Teléfono</label>
-                            <input id="telefono" name="telefono" type="tel" required pattern="[0-9+\-\s()]+" class="w-full px-4 py-3 text-white rounded-lg bg-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="+51 999 999 999"
-                                title="Solo se permiten números, espacios, guiones, paréntesis y el signo +">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                        <div>
-                            <label class="label-form" for="tipo">Tipo de ceremonia</label>
-                            <select id="tipo" name="tipo" class="w-full px-4 py-3 text-white rounded-lg appearance-none cursor-pointer bg-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400">
-                                <option value="" disabled selected class="text-gray-400">Selecciona el tipo de ceremonia
-                                </option>
-                                <option value="Misa" class="text-black">Misa</option>
-                                <option value="Matrimonio" class="text-black">Matrimonio</option>
-                                <option value="Bautizo" class="text-black">Bautizo</option>
-                                <option value="Primera comunión" class="text-black">Primera comunión</option>
-                                <option value="Sacramento de la Confirmación" class="text-black">Sacramento de la
-                                    Confirmación</option>
-                                <option value="Romería" class="text-black">Romería</option>
-                                <option value="Velorios" class="text-black">Velorios</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="label-form" for="fecha">Fecha de tu ceremonia</label>
-                            <input id="fecha" name="fecha" type="date" class="w-full px-4 py-3 text-white rounded-lg bg-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                        <div class="form-group half-width">
+                            <label class="form-label" for="telefono">Teléfono</label>
+                            <input id="telefono" name="telefono" type="tel" required pattern="[0-9+\-\s()]+" class="form-input" placeholder="+51 999 999 999" title="Solo se permiten números, espacios, guiones, paréntesis y el signo +">
                         </div>
                     </div>
 
-                    <div>
-                        <label class="label-form" for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="message" rows="4" required class="w-full px-4 py-3 text-white rounded-lg bg-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                            placeholder="Cuéntanos sobre tu celebración (lugar, horario, repertorio, etc.)"></textarea>
+                    <!-- Tipo de ceremonia y Fecha -->
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label class="form-label" for="tipo">Tipo de ceremonia</label>
+                            <div class="select-wrapper">
+                                <select id="tipo" name="tipo" class="form-select" required>
+                                    <option value="" disabled selected>Selecciona el tipo de ceremonia</option>
+                                    <option value="Misa">Misa</option>
+                                    <option value="Matrimonio">Matrimonio</option>
+                                    <option value="Bautizo">Bautizo</option>
+                                    <option value="Primera comunión">Primera comunión</option>
+                                    <option value="Sacramento de la Confirmación">Sacramento de la Confirmación</option>
+                                    <option value="Romería">Romería</option>
+                                    <option value="Velorios">Velorios</option>
+                                </select>
+                                <div class="select-arrow"></div>
+                            </div>
+                        </div>
+                        <div class="form-group half-width">
+                            <label class="form-label" for="fecha">Fecha de tu ceremonia</label>
+                            <input id="fecha" name="fecha" type="date" class="form-input date-input">
+                        </div>
                     </div>
 
-                    <button id="fs-submit" type="submit" class="w-full py-3 font-light text-black transition bg-yellow-400 rounded-lg hover:bg-yellow-300 md:text-lg lg:text-xl xl:text-2xl">
+                    <!-- Mensaje -->
+                    <div class="form-group full-width">
+                        <label class="form-label" for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="message" rows="4" required class="form-textarea" placeholder="Cuéntanos sobre tu celebración (lugar, horario, repertorio, etc.)"></textarea>
+                    </div>
+
+                    <!-- Botón de envío -->
+                    <button id="fs-submit" type="submit" class="form-submit">
                         Enviar mensaje
                     </button>
 
                     <!-- Mensajes -->
-                    <p id="fs-success" class="hidden mt-4 text-green-400 animate-fade-delayed-zero" role="status"
-                        aria-live="polite">
+                    <p id="fs-success" class="form-message success-message" role="status" aria-live="polite">
                         ¡Gracias! Hemos recibido tu mensaje y te responderemos pronto.
                     </p>
-                    <p id="fs-error" class="hidden mt-4 text-red-400 animate-fade-delayed-zero" role="status"
-                        aria-live="polite">
+                    <p id="fs-error" class="form-message error-message" role="status" aria-live="polite">
                         Ocurrió un error al enviar. Inténtalo de nuevo.
                     </p>
-
                 </form>
             </div>
         </section>
@@ -819,6 +591,780 @@
             fill: #000 !important;
         }
 
+        /* Responsive Cards Layout - Windows Optimized */
+        .cards-container {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            gap: 2rem !important;
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            padding: 0 1rem !important;
+            justify-content: center !important;
+            align-items: stretch !important;
+        }
+
+        .service-card {
+            flex: 1 1 calc(50% - 1rem) !important;
+            max-width: 500px !important;
+            min-width: 280px !important;
+            height: 480px !important;
+            perspective: 1000px !important;
+            cursor: pointer !important;
+        }
+
+        .card-content {
+            position: relative !important;
+            width: 100% !important;
+            height: 100% !important;
+            transition: transform 0.8s ease-in-out !important;
+            transform-style: preserve-3d !important;
+        }
+
+        .service-card:hover .card-content {
+            transform: rotateY(180deg) !important;
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute !important;
+            width: 100% !important;
+            height: 100% !important;
+            backface-visibility: hidden !important;
+            border-radius: 1rem !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 2rem !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+        }
+
+        /* Classic Card (Black) */
+        .classic-card .card-front {
+            background: linear-gradient(135deg, #000000, #1a1a1a) !important;
+            border: 1px solid rgba(255, 180, 47, 0.3) !important;
+        }
+
+        .classic-card .card-back {
+            background: linear-gradient(135deg, #000000, #1a1a1a) !important;
+            border: 1px solid rgba(255, 180, 47, 0.3) !important;
+            transform: rotateY(180deg) !important;
+        }
+
+        /* Modern Card (Light) */
+        .modern-card .card-front {
+            background: linear-gradient(135deg, #fefcf3, #f9f7f4, #ffffff) !important;
+            border: 1px solid rgba(255, 180, 47, 0.4) !important;
+        }
+
+        .modern-card .card-back {
+            background: linear-gradient(135deg, #fefcf3, #f9f7f4, #ffffff) !important;
+            border: 1px solid rgba(255, 180, 47, 0.4) !important;
+            transform: rotateY(180deg) !important;
+        }
+
+        /* Card Content */
+        .card-header {
+            text-align: center !important;
+            color: white !important;
+        }
+
+        .modern-card .card-header {
+            color: #1f2937 !important;
+        }
+
+        .card-logo {
+            width: 80px !important;
+            height: 80px !important;
+            object-fit: contain !important;
+            margin: 0 auto 2rem auto !important;
+            opacity: 0.9 !important;
+            transition: transform 0.3s ease !important;
+        }
+
+        .service-card:hover .card-logo {
+            transform: scale(1.1) !important;
+        }
+
+        .card-title {
+            font-size: 2rem !important;
+            font-weight: 300 !important;
+            letter-spacing: 0.2em !important;
+            margin-bottom: 1rem !important;
+        }
+
+        .card-divider {
+            width: 4rem !important;
+            height: 1px !important;
+            background: linear-gradient(90deg, transparent, #FFB42F, transparent) !important;
+            margin: 0 auto 1rem auto !important;
+        }
+
+        .card-subtitle {
+            font-size: 1rem !important;
+            font-weight: 300 !important;
+            letter-spacing: 0.05em !important;
+            opacity: 0.9 !important;
+        }
+
+        /* Card Back */
+        .card-back-content {
+            text-align: center !important;
+            color: white !important;
+            width: 100% !important;
+        }
+
+        .modern-card .card-back-content {
+            color: #1f2937 !important;
+        }
+
+        .card-back-title {
+            font-size: 1.5rem !important;
+            font-weight: 300 !important;
+            margin-bottom: 1rem !important;
+        }
+
+        .card-back-divider {
+            width: 5rem !important;
+            height: 1px !important;
+            background: linear-gradient(90deg, transparent, #FFB42F, transparent) !important;
+            margin: 0 auto 2rem auto !important;
+        }
+
+        .card-back-description {
+            font-size: 1.1rem !important;
+            font-weight: 300 !important;
+            line-height: 1.6 !important;
+            margin-bottom: 2rem !important;
+        }
+
+        .card-features {
+            list-style: none !important;
+            padding: 0 !important;
+            text-align: left !important;
+        }
+
+        .card-features li {
+            display: flex !important;
+            align-items: center !important;
+            margin-bottom: 1rem !important;
+            font-size: 1rem !important;
+            font-weight: 300 !important;
+        }
+
+        .feature-dot {
+            width: 8px !important;
+            height: 8px !important;
+            background-color: #FFB42F !important;
+            border-radius: 50% !important;
+            margin-right: 1rem !important;
+            flex-shrink: 0 !important;
+        }
+
+        /* Responsive breakpoints for Windows */
+        @media (max-width: 580px) {
+            .cards-container {
+                flex-direction: column !important;
+                gap: 1.5rem !important;
+                padding: 0 0.5rem !important;
+            }
+
+            .service-card {
+                flex: 1 1 100% !important;
+                min-width: 260px !important;
+                height: 350px !important;
+                max-width: 100% !important;
+            }
+
+            .card-front, .card-back {
+                padding: 1.5rem !important;
+            }
+
+            .card-title {
+                font-size: 1.5rem !important;
+            }
+
+            .card-back-description {
+                font-size: 0.95rem !important;
+            }
+        }
+
+        /* Tablet responsive */
+        @media (min-width: 581px) and (max-width: 1024px) {
+            .cards-container {
+                flex-direction: column !important;
+                gap: 2rem !important;
+                padding: 0 1rem !important;
+            }
+
+            .service-card {
+                flex: 1 1 100% !important;
+                max-width: 400px !important;
+                min-width: 320px !important;
+                height: 420px !important;
+                margin: 0 auto !important;
+            }
+        }
+
+        /* Desktop responsive - Windows optimized */
+        @media (min-width: 1025px) {
+            .cards-container {
+                flex-direction: row !important;
+                gap: 3rem !important;
+                padding: 0 2rem !important;
+            }
+
+            .service-card {
+                flex: 1 1 calc(50% - 1.5rem) !important;
+                max-width: 480px !important;
+                min-width: 360px !important;
+                height: 500px !important;
+            }
+        }
+
+        /* Large desktop */
+        @media (min-width: 1400px) {
+            .cards-container {
+                gap: 4rem !important;
+            }
+
+            .service-card {
+                max-width: 520px !important;
+                height: 540px !important;
+            }
+        }
+
+        /* Force desktop layout for Safari 15.6.1 */
+        @media screen and (min-width: 768px) {
+            .cards-container {
+                flex-direction: row !important;
+                gap: 4rem !important;
+            }
+        }
+
+        /* Contact Form Styles - Optimized for Safari 15.6.1 */
+        .contact-section {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+            padding: 5rem 2rem !important;
+            text-align: center !important;
+        }
+
+        .contact-container {
+            max-width: 800px !important;
+            margin: 0 auto !important;
+        }
+
+        .contact-header {
+            margin-bottom: 3rem !important;
+        }
+
+        .contact-title {
+            font-size: 3rem !important;
+            font-weight: 300 !important;
+            color: #FFB42F !important;
+            margin-bottom: 1rem !important;
+            line-height: 1.2 !important;
+        }
+
+        .contact-description {
+            font-size: 1.25rem !important;
+            color: #ffffff !important;
+            line-height: 1.6 !important;
+            margin-bottom: 0 !important;
+        }
+
+        .contact-form {
+            text-align: left !important;
+            max-width: 600px !important;
+            margin: 0 auto !important;
+        }
+
+        /* Form Layout */
+        .form-group {
+            margin-bottom: 1.5rem !important;
+        }
+
+        .form-row {
+            display: flex !important;
+            gap: 1rem !important;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .full-width {
+            width: 100% !important;
+        }
+
+        .half-width {
+            flex: 1 !important;
+            min-width: 200px !important;
+        }
+
+        /* Form Elements */
+        .form-label {
+            display: block !important;
+            font-size: 1rem !important;
+            font-weight: 500 !important;
+            color: #ffffff !important;
+            margin-bottom: 0.5rem !important;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100% !important;
+            padding: 0.75rem 1rem !important;
+            font-size: 1rem !important;
+            color: #ffffff !important;
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            border-radius: 0.5rem !important;
+            outline: none !important;
+            transition: all 0.3s ease !important;
+            box-sizing: border-box !important;
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+            appearance: none !important;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            border-color: #FFB42F !important;
+            box-shadow: 0 0 0 2px rgba(255, 180, 47, 0.3) !important;
+            background-color: rgba(255, 255, 255, 0.15) !important;
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: #9CA3AF !important;
+            opacity: 1 !important;
+        }
+
+        /* Select Styling */
+        .select-wrapper {
+            position: relative !important;
+        }
+
+        .form-select {
+            width: 100% !important;
+            padding: 0.75rem 2.5rem 0.75rem 1rem !important;
+            font-size: 1rem !important;
+            color: #ffffff !important;
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            border-radius: 0.5rem !important;
+            outline: none !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            box-sizing: border-box !important;
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+            appearance: none !important;
+        }
+
+        .form-select:focus {
+            border-color: #FFB42F !important;
+            box-shadow: 0 0 0 2px rgba(255, 180, 47, 0.3) !important;
+            background-color: rgba(255, 255, 255, 0.15) !important;
+        }
+
+        .form-select option {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+            padding: 0.5rem !important;
+        }
+
+        .form-select option:checked {
+            background-color: #FFB42F !important;
+            color: #000000 !important;
+        }
+
+        .form-select option[disabled] {
+            color: #9CA3AF !important;
+        }
+
+        .select-arrow {
+            position: absolute !important;
+            top: 50% !important;
+            right: 1rem !important;
+            transform: translateY(-50%) !important;
+            width: 0 !important;
+            height: 0 !important;
+            border-left: 6px solid transparent !important;
+            border-right: 6px solid transparent !important;
+            border-top: 6px solid #FFB42F !important;
+            pointer-events: none !important;
+        }
+
+        /* Date Input - Safari specific fixes */
+        .date-input {
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+            appearance: none !important;
+        }
+
+        .date-input::-webkit-calendar-picker-indicator {
+            background-color: #FFB42F !important;
+            border-radius: 3px !important;
+            cursor: pointer !important;
+        }
+
+        /* Submit Button */
+        .form-submit {
+            width: 100% !important;
+            padding: 1rem 2rem !important;
+            font-size: 1.125rem !important;
+            font-weight: 400 !important;
+            color: #000000 !important;
+            background-color: #FFB42F !important;
+            border: none !important;
+            border-radius: 0.5rem !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            margin-top: 1rem !important;
+        }
+
+        .form-submit:hover {
+            background-color: #e6a029 !important;
+            transform: translateY(-1px) !important;
+            box-shadow: 0 4px 12px rgba(255, 180, 47, 0.3) !important;
+        }
+
+        .form-submit:active {
+            transform: translateY(0) !important;
+        }
+
+        /* Form Messages */
+        .form-message {
+            margin-top: 1rem !important;
+            padding: 0.75rem 1rem !important;
+            border-radius: 0.5rem !important;
+            font-size: 1rem !important;
+            display: none !important;
+        }
+
+        .success-message {
+            background-color: rgba(34, 197, 94, 0.1) !important;
+            border: 1px solid #22c55e !important;
+            color: #22c55e !important;
+        }
+
+        .error-message {
+            background-color: rgba(239, 68, 68, 0.1) !important;
+            border: 1px solid #ef4444 !important;
+            color: #ef4444 !important;
+        }
+
+        .form-message.show {
+            display: block !important;
+        }
+
+        /* Hidden field */
+        .hidden-field {
+            display: none !important;
+            visibility: hidden !important;
+            position: absolute !important;
+            left: -9999px !important;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .contact-section {
+                padding: 3rem 1rem !important;
+            }
+
+            .contact-title {
+                font-size: 2rem !important;
+            }
+
+            .contact-description {
+                font-size: 1rem !important;
+            }
+
+            .form-row {
+                flex-direction: column !important;
+                gap: 0 !important;
+            }
+
+            .half-width {
+                min-width: 100% !important;
+                margin-bottom: 1.5rem !important;
+            }
+
+            .form-row .half-width:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        /* Force desktop layout for Safari 15.6.1 */
+        @media screen and (min-width: 768px) {
+            .contact-title {
+                font-size: 4rem !important;
+            }
+
+            .contact-description {
+                font-size: 1.5rem !important;
+            }
+
+            .form-row {
+                display: flex !important;
+                flex-direction: row !important;
+                gap: 1rem !important;
+            }
+
+            .half-width {
+                flex: 1 !important;
+                min-width: 200px !important;
+            }
+        }
+
+        /* Footer Styles - Optimized for Safari 15.6.1 */
+        .footer-section {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+            padding: 3rem 0 !important;
+            position: relative !important;
+            overflow: hidden !important;
+        }
+
+        .footer-decorations {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            z-index: 1 !important;
+            pointer-events: none !important;
+        }
+
+        .decoration-line {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 1px !important;
+            background: linear-gradient(90deg, transparent, rgba(255, 180, 47, 0.3), transparent) !important;
+        }
+
+        .decoration-dot {
+            position: absolute !important;
+            border-radius: 50% !important;
+            background-color: rgba(255, 180, 47, 0.2) !important;
+            animation: pulse 2s infinite !important;
+        }
+
+        .dot-1 { top: 2rem; left: 2rem; width: 4px; height: 4px; }
+        .dot-2 { top: 5rem; right: 3rem; width: 6px; height: 6px; animation-delay: 1s; }
+        .dot-3 { bottom: 4rem; left: 4rem; width: 4px; height: 4px; animation-delay: 2s; }
+        .dot-4 { bottom: 2rem; right: 2rem; width: 8px; height: 8px; animation-delay: 3s; }
+
+        .footer-container {
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            padding: 0 2rem !important;
+            position: relative !important;
+            z-index: 2 !important;
+        }
+
+        /* Social Media Section */
+        .social-section {
+            text-align: center !important;
+            margin-bottom: 3rem !important;
+        }
+
+        .social-title {
+            font-size: 1.5rem !important;
+            font-weight: 700 !important;
+            color: #FFB42F !important;
+            margin-bottom: 1rem !important;
+        }
+
+        .social-icons {
+            display: flex !important;
+            justify-content: center !important;
+            gap: 1rem !important;
+            flex-wrap: wrap !important;
+        }
+
+        .social-icon {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 48px !important;
+            height: 48px !important;
+            background-color: #333333 !important;
+            border-radius: 50% !important;
+            transition: all 0.3s ease !important;
+            text-decoration: none !important;
+        }
+
+        .social-icon svg {
+            width: 24px !important;
+            height: 24px !important;
+            fill: #ffffff !important;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1) !important;
+        }
+
+        .whatsapp-icon:hover { background-color: #25d366 !important; }
+        .facebook-icon:hover { background-color: #1877f2 !important; }
+        .instagram-icon:hover { background-color: #e4405f !important; }
+        .youtube-icon:hover { background-color: #ff0000 !important; }
+
+        /* Footer Grid */
+        .footer-grid {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            gap: 2rem !important;
+            justify-content: space-between !important;
+        }
+
+        .footer-column {
+            flex: 1 !important;
+            min-width: 250px !important;
+            margin-bottom: 2rem !important;
+        }
+
+        .column-header {
+            display: flex !important;
+            align-items: center !important;
+            gap: 0.5rem !important;
+            margin-bottom: 1.5rem !important;
+            min-height: 64px !important;
+        }
+
+        .footer-logo {
+            width: 24px !important;
+            height: 24px !important;
+            object-fit: contain !important;
+        }
+
+        .column-title {
+            font-size: 1.25rem !important;
+            font-weight: 700 !important;
+            color: #FFB42F !important;
+            margin: 0 !important;
+        }
+
+        .footer-text {
+            color: #cccccc !important;
+            line-height: 1.6 !important;
+            font-size: 0.95rem !important;
+        }
+
+        /* Navigation Links */
+        .footer-links {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 0.75rem !important;
+        }
+
+        .footer-link {
+            color: #ffffff !important;
+            text-decoration: none !important;
+            font-size: 1rem !important;
+            transition: all 0.3s ease !important;
+            display: block !important;
+        }
+
+        .footer-link:hover {
+            color: #FFB42F !important;
+            transform: translateX(4px) !important;
+        }
+
+        /* Services */
+        .footer-services {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 0.75rem !important;
+        }
+
+        .service-item {
+            display: flex !important;
+            align-items: center !important;
+            gap: 0.75rem !important;
+        }
+
+        .service-dot {
+            width: 6px !important;
+            height: 6px !important;
+            background-color: #FFB42F !important;
+            border-radius: 50% !important;
+            flex-shrink: 0 !important;
+        }
+
+        /* Contact */
+        .footer-contact {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 1rem !important;
+        }
+
+        .contact-item {
+            display: flex !important;
+            align-items: center !important;
+            gap: 0.75rem !important;
+        }
+
+        .contact-icon {
+            width: 20px !important;
+            height: 20px !important;
+            fill: #FFB42F !important;
+            flex-shrink: 0 !important;
+        }
+
+        .contact-text {
+            color: #ffffff !important;
+            font-size: 1rem !important;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .footer-grid {
+                flex-direction: column !important;
+                gap: 2rem !important;
+            }
+
+            .footer-column {
+                min-width: 100% !important;
+                text-align: center !important;
+            }
+
+            .column-header {
+                justify-content: center !important;
+            }
+
+            .footer-links,
+            .footer-services,
+            .footer-contact {
+                align-items: center !important;
+            }
+
+            .social-title {
+                font-size: 1.25rem !important;
+            }
+
+            .footer-container {
+                padding: 0 1rem !important;
+            }
+        }
+
+        /* Force desktop layout for Safari 15.6.1 */
+        @media screen and (min-width: 768px) {
+            .footer-grid {
+                display: flex !important;
+                flex-direction: row !important;
+                flex-wrap: wrap !important;
+                gap: 2rem !important;
+            }
+
+            .footer-column {
+                flex: 1 !important;
+                min-width: 250px !important;
+                max-width: 300px !important;
+            }
+        }
+
         /* Tarjetas flip */
         .card-container {
             cursor: pointer;
@@ -881,60 +1427,6 @@
                 height: 410px;
             }
         }
-
-        /* Estilos para el select del formulario */
-        select {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23FFB42F' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
-            background-position: right 0.75rem center;
-            background-repeat: no-repeat;
-            background-size: 1.5em 1.5em;
-            padding-right: 2.5rem;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-        }
-
-        select option {
-            background-color: #ffffff;
-            color: #000000;
-            padding: 8px 12px;
-        }
-
-        select option:checked {
-            background-color: #FFB42F;
-            color: #000000;
-        }
-
-        /* Estilos para placeholders consistentes */
-        input::placeholder,
-        textarea::placeholder {
-            color: #9CA3AF !important;
-            opacity: 1;
-        }
-
-        select option[disabled] {
-            color: #9CA3AF !important;
-        }
-
-        /* Asegurar que todos los placeholders usen el mismo color que el select */
-        #nombre::placeholder,
-        #email::placeholder,
-        #telefono::placeholder,
-        #mensaje::placeholder {
-            color: #9CA3AF !important;
-        }
-
-        /* Posición por defecto (desktop/tablet) */
-        .hero-cover {
-            background-position: 100% 40%;
-        }
-
-        /* En mobile, empuja un poco más a la derecha */
-        @media (max-width: 640px) {
-            .hero-cover {
-                background-position: 45% 40%;
-            }
-        }
     </style>
 
     <script src="./assets/Scripts/safari-desktop-fix.js"></script>
@@ -945,23 +1437,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             // ====== Utilidades ======
             const $ = (sel) => document.querySelector(sel);
-
-            // ====== Flip tarjetas: tap en touch, hover en desktop ======
-            const isTouch = (('ontouchstart' in window) || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0);
-            if (isTouch) {
-                document.querySelectorAll('.card-container').forEach(card => {
-                    card.addEventListener('click', (e) => {
-                        if (e.target.closest('.card-container') !== card) return;
-                        card.classList.toggle('is-flipped');
-                    });
-                    card.addEventListener('keydown', (e) => {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                            e.preventDefault();
-                            card.classList.toggle('is-flipped');
-                        }
-                    });
-                });
-            }
 
             // ====== Carrusel Galería ======
             const slides = document.querySelectorAll('.carousel-slide');
@@ -1026,6 +1501,56 @@
                     carouselContainer.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
                     carouselContainer.addEventListener('mouseleave', () => startAutoSlide());
                 }
+            }
+        });
+
+        // ====== Form Handling - Optimized for Safari 15.6.1 ======
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('fs-form');
+            const submitButton = document.getElementById('fs-submit');
+            const successMessage = document.getElementById('fs-success');
+            const errorMessage = document.getElementById('fs-error');
+
+            if (form) {
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    
+                    // Disable submit button
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Enviando...';
+                    
+                    // Hide previous messages
+                    successMessage.classList.remove('show');
+                    errorMessage.classList.remove('show');
+                    
+                    try {
+                        const formData = new FormData(form);
+                        
+                        const response = await fetch(form.action, {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+                        
+                        if (response.ok) {
+                            // Success
+                            successMessage.classList.add('show');
+                            form.reset();
+                        } else {
+                            // Error
+                            throw new Error('Network response was not ok');
+                        }
+                    } catch (error) {
+                        console.error('Form submission error:', error);
+                        errorMessage.classList.add('show');
+                    } finally {
+                        // Re-enable submit button
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Enviar mensaje';
+                    }
+                });
             }
         });
     </script>

@@ -5,204 +5,390 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TeCanto Music Footer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root {
-      --color-amarillo: #fbbf24;
+    /* Footer Styles - Optimized for Safari 15.6.1 */
+    .footer-section {
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        padding: 3rem 0 !important;
+        position: relative !important;
+        overflow: hidden !important;
     }
 
-    footer img {
-      max-width: 100%;
-      height: auto;
-      display: f;
+    .footer-decorations {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 1 !important;
+        pointer-events: none !important;
+    }
+
+    .decoration-line {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 1px !important;
+        background: linear-gradient(90deg, transparent, rgba(255, 180, 47, 0.3), transparent) !important;
+    }
+
+    .decoration-dot {
+        position: absolute !important;
+        border-radius: 50% !important;
+        background-color: rgba(255, 180, 47, 0.2) !important;
+        animation: pulse 2s infinite !important;
+    }
+
+    .dot-1 { top: 2rem; left: 2rem; width: 4px; height: 4px; }
+    .dot-2 { top: 5rem; right: 3rem; width: 6px; height: 6px; animation-delay: 1s; }
+    .dot-3 { bottom: 4rem; left: 4rem; width: 4px; height: 4px; animation-delay: 2s; }
+    .dot-4 { bottom: 2rem; right: 2rem; width: 8px; height: 8px; animation-delay: 3s; }
+
+    .footer-container {
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        padding: 0 2rem !important;
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+    /* Social Media Section */
+    .social-section {
+        text-align: center !important;
+        margin-bottom: 3rem !important;
+    }
+
+    .social-title {
+        font-size: 1.5rem !important;
+        font-weight: 700 !important;
+        color: #FFB42F !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .social-icons {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 1rem !important;
+        flex-wrap: wrap !important;
+    }
+
+    .social-icon {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 48px !important;
+        height: 48px !important;
+        background-color: #333333 !important;
+        border-radius: 50% !important;
+        transition: all 0.3s ease !important;
+        text-decoration: none !important;
+    }
+
+    .social-icon svg {
+        width: 24px !important;
+        height: 24px !important;
+        fill: #ffffff !important;
+    }
+
+    .social-icon:hover {
+        transform: scale(1.1) !important;
+    }
+
+    .whatsapp-icon:hover { background-color: #25d366 !important; }
+    .facebook-icon:hover { background-color: #1877f2 !important; }
+    .instagram-icon:hover { background-color: #e4405f !important; }
+    .youtube-icon:hover { background-color: #ff0000 !important; }
+
+    /* Footer Grid */
+    .footer-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 2rem !important;
+        justify-content: space-between !important;
+    }
+
+    .footer-column {
+        flex: 1 !important;
+        min-width: 250px !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .column-header {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+        margin-bottom: 1.5rem !important;
+        min-height: 64px !important;
+    }
+
+    .footer-logo {
+        width: 24px !important;
+        height: 24px !important;
+        object-fit: contain !important;
+    }
+
+    .column-title {
+        font-size: 1.25rem !important;
+        font-weight: 700 !important;
+        color: #FFB42F !important;
+        margin: 0 !important;
+    }
+
+    .footer-text {
+        color: #cccccc !important;
+        line-height: 1.6 !important;
+        font-size: 0.95rem !important;
+    }
+
+    /* Navigation Links */
+    .footer-links {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+    }
+
+    .footer-link {
+        color: #ffffff !important;
+        text-decoration: none !important;
+        font-size: 1rem !important;
+        transition: all 0.3s ease !important;
+        display: block !important;
+    }
+
+    .footer-link:hover {
+        color: #FFB42F !important;
+        transform: translateX(4px) !important;
+    }
+
+    /* Services */
+    .footer-services {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+    }
+
+    .service-item {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+    }
+
+    .service-dot {
+        width: 6px !important;
+        height: 6px !important;
+        background-color: #FFB42F !important;
+        border-radius: 50% !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Contact */
+    .footer-contact {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+
+    .contact-item {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+    }
+
+    .contact-icon {
+        width: 20px !important;
+        height: 20px !important;
+        fill: #FFB42F !important;
+        flex-shrink: 0 !important;
+    }
+
+    .contact-text {
+        color: #ffffff !important;
+        font-size: 1rem !important;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .footer-grid {
+            flex-direction: column !important;
+            gap: 2rem !important;
+        }
+
+        .footer-column {
+            min-width: 100% !important;
+            text-align: center !important;
+        }
+
+        .column-header {
+            justify-content: center !important;
+        }
+
+        .footer-links,
+        .footer-services,
+        .footer-contact {
+            align-items: center !important;
+        }
+
+        .social-title {
+            font-size: 1.25rem !important;
+        }
+
+        .footer-container {
+            padding: 0 1rem !important;
+        }
+    }
+
+    /* Force desktop layout for Safari 15.6.1 */
+    @media screen and (min-width: 768px) {
+        .footer-grid {
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: wrap !important;
+            gap: 2rem !important;
+        }
+
+        .footer-column {
+            flex: 1 !important;
+            min-width: 250px !important;
+            max-width: 300px !important;
+        }
     }
   </style>
 </head>
 
-<body class="bg-gray-900">
-  <!-- Footer -->
-  <footer class="bg-black text-white py-8 relative overflow-hidden">
-    <!-- Elementos decorativos de fondo -->
-    <div class="absolute inset-0" aria-hidden="true">
-      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-yellow-500/30 to-transparent">
-      </div>
-      <!-- Patrones geométricos sutiles -->
-      <div class="absolute top-8 left-8 w-1 h-1 bg-yellow-400/20 rounded-full animate-pulse"></div>
-      <div class="absolute top-20 right-12 w-1.5 h-1.5 bg-yellow-400/15 rounded-full animate-pulse"
-        style="animation-delay: 1s;"></div>
-      <div class="absolute bottom-16 left-16 w-1 h-1 bg-yellow-400/25 rounded-full animate-pulse"
-        style="animation-delay: 2s;"></div>
-      <div class="absolute bottom-8 right-8 w-2 h-2 bg-yellow-400/10 rounded-full animate-pulse"
-        style="animation-delay: 3s;"></div>
+<body>
+  <!-- Footer optimized for Safari 15.6.1 -->
+  <footer class="footer-section">
+    <!-- Decorative elements -->
+    <div class="footer-decorations">
+      <div class="decoration-line"></div>
+      <div class="decoration-dot dot-1"></div>
+      <div class="decoration-dot dot-2"></div>
+      <div class="decoration-dot dot-3"></div>
+      <div class="decoration-dot dot-4"></div>
     </div>
 
-    <div class="mx-auto max-w-7xl px-6 relative z-10">
+    <div class="footer-container">
       
-      <!-- Comentario -->
-      <!-- Redes sociales -->
-      <div class="flex justify-center mb-8">
-        <div class="space-y-3 flex-col">
-          <h4 class="text-xl font-bold xl:text-2xl" style="color: var(--color-amarillo);">Síguenos en nuestras Redes
-            Sociales</h4>
-          <div class="flex gap-3 justify-center">
-            <a href="https://wa.me/51982218665" target="_blank" rel="noopener noreferrer"
-              class="w-12 h-12 bg-gray-800 hover:bg-green-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-              aria-label="Contactar por WhatsApp">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                <path
-                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.051 3.488" />
-              </svg>
-            </a>
-            <a href="https://www.facebook.com/tecanto.musica/?locale=es_LA"
-              class="w-12 h-12 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-              aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                <path
-                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-              </svg>
-            </a>
-            <a href="https://www.instagram.com/tecanto_music/?hl=es-la"
-              class="w-12 h-12 bg-gray-800 hover:bg-pink-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-              aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                <path
-                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-              </svg>
-            </a>
-            <a href="https://www.youtube.com/@tecantomusic2607"
-              class="w-12 h-12 bg-gray-800 hover:bg-red-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-              aria-label="YouTube">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                <path
-                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-              </svg>
-            </a>
-          </div>
+      <!-- Social Media Section -->
+      <div class="social-section">
+        <h4 class="social-title">Síguenos en nuestras Redes Sociales</h4>
+        <div class="social-icons">
+          <a href="https://wa.me/51982218665" target="_blank" rel="noopener noreferrer" class="social-icon whatsapp-icon" aria-label="Contactar por WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.051 3.488"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/tecanto.musica/?locale=es_LA" class="social-icon facebook-icon" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/tecanto_music/?hl=es-la" class="social-icon instagram-icon" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@tecantomusic2607" class="social-icon youtube-icon" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
         </div>
       </div>
 
-      <!-- Contenido principal - 4 columnas con espaciado uniforme y encabezados alineados a la izquierda -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-
-        <!-- Logo y descripción -->
-        <div class="flex flex-col items-start text-left">
-          <!-- Encabezado con altura fija y espaciado uniforme -->
-          <div class="h-16 flex items-center mb-4">
-            <div class="flex items-center gap-2">
-              <img src="./assets/Logo-transparente.png" alt="TeCanto Music" class="w-6 h-6 object-contain">
-              <span class="text-xl font-bold xl:text-2xl" style="color: var(--color-amarillo);">TeCanto Music</span>
-            </div>
+      <!-- Main Footer Content -->
+      <div class="footer-grid">
+        
+        <!-- Logo and Description -->
+        <div class="footer-column">
+          <div class="column-header">
+            <img src="./assets/Logo-transparente.png" alt="TeCanto Music" class="footer-logo">
+            <span class="column-title">TeCanto Music</span>
           </div>
-
-          <p class="footer-text leading-relaxed flex-grow">
-            Música en vivo que honra tus momentos más especiales. Desde ceremonias íntimas hasta grandes celebraciones,
-            creamos la atmósfera perfecta para cada ocasión con un repertorio que va desde lo clásico hasta lo
-            contemporáneo.
+          <p class="footer-text">
+            Música en vivo que honra tus momentos más especiales. Desde ceremonias íntimas hasta grandes celebraciones, creamos la atmósfera perfecta para cada ocasión con un repertorio que va desde lo clásico hasta lo contemporáneo.
           </p>
         </div>
 
-        <!-- Enlaces de navegación -->
-        <div class="flex flex-col items-start text-left ml-20">
-          <!-- Encabezado con altura fija y espaciado uniforme -->
-          <div class="h-16 flex items-center mb-4">
-            <h3 class="text-xl font-bold xl:text-2xl" style="color: var(--color-amarillo);">Navegación</h3>
+        <!-- Navigation -->
+        <div class="footer-column">
+          <div class="column-header">
+            <h3 class="column-title">Navegación</h3>
           </div>
-          <div class="space-y-2 flex-grow">
-            <a href="index.html"
-              class="block text-white hover:text-yellow-400 transition-colors text-base hover:translate-x-1 duration-300">Inicio</a>
-            <a href="index.html#quien-soy"
-              class="block text-white hover:text-yellow-400 transition-colors text-base hover:translate-x-1 duration-300">Quién
-              soy</a>
-            <a href="index.html#momentos"
-              class="block text-white hover:text-yellow-400 transition-colors text-base hover:translate-x-1 duration-300">Servicios</a>
-            <a href="nosotros.html"
-              class="block text-white hover:text-yellow-400 transition-colors text-base hover:translate-x-1 duration-300">Elenco</a>
-            <a href="index.html#contacto"
-              class="block text-white hover:text-yellow-400 transition-colors text-base hover:translate-x-1 duration-300">Contacto</a>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Inicio</a>
+            <a href="index.html#quien-soy" class="footer-link">Quién soy</a>
+            <a href="index.html#momentos" class="footer-link">Servicios</a>
+            <a href="index.html#elenco" class="footer-link">Elenco</a>
+            <a href="index.html#contacto" class="footer-link">Contacto</a>
           </div>
         </div>
 
-        <!-- Servicios -->
-        <div class="flex flex-col items-start text-left">
-          <!-- Encabezado con altura fija y espaciado uniforme -->
-          <div class="h-16 flex items-center mb-4">
-            <h3 class="text-xl font-bold xl:text-2xl" style="color: var(--color-amarillo);">Nuestros Servicios</h3>
+        <!-- Services -->
+        <div class="footer-column">
+          <div class="column-header">
+            <h3 class="column-title">Nuestros Servicios</h3>
           </div>
-          <div class="space-y-2 flex-grow">
-            <div class="flex items-center gap-2">
-              <div class="w-1 h-1 rounded-full" style="background-color: var(--color-amarillo);"></div>
+          <div class="footer-services">
+            <div class="service-item">
+              <span class="service-dot"></span>
               <span class="footer-text">Bodas y ceremonias</span>
             </div>
-            <div class="flex items-center gap-2">
-              <div class="w-1 h-1 rounded-full" style="background-color: var(--color-amarillo);"></div>
+            <div class="service-item">
+              <span class="service-dot"></span>
               <span class="footer-text">Bautizos y primeras comuniones</span>
             </div>
-            <div class="flex items-center gap-2">
-              <div class="w-1 h-1 rounded-full" style="background-color: var(--color-amarillo);"></div>
+            <div class="service-item">
+              <span class="service-dot"></span>
               <span class="footer-text">Funerales y misas</span>
             </div>
-            <div class="flex items-center gap-2">
-              <div class="w-1 h-1 rounded-full" style="background-color: var(--color-amarillo);"></div>
+            <div class="service-item">
+              <span class="service-dot"></span>
               <span class="footer-text">Eventos corporativos</span>
             </div>
-            <div class="flex items-center gap-2">
-              <div class="w-1 h-1 rounded-full" style="background-color: var(--color-amarillo);"></div>
+            <div class="service-item">
+              <span class="service-dot"></span>
               <span class="footer-text">Conciertos privados</span>
             </div>
           </div>
         </div>
 
-        <!-- Información de contacto -->
-        <div class="flex flex-col items-start text-left">
-          <!-- Encabezado con altura fija y espaciado uniforme -->
-          <div class="h-16 flex items-center mb-4">
-            <h3 class="text-xl font-bold xl:text-2xl" style="color: var(--color-amarillo);">Contacto</h3>
+        <!-- Contact -->
+        <div class="footer-column">
+          <div class="column-header">
+            <h3 class="column-title">Contacto</h3>
           </div>
-          <div class="space-y-3 flex-grow">
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0" style="fill: var(--color-amarillo);"
-                viewBox="0 0 24 24">
-                <path
-                  d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+          <div class="footer-contact">
+            <div class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
               </svg>
-              <span class="text-xl">+51 982 218 665</span>
+              <span class="contact-text">+51 982 218 665</span>
             </div>
-
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0" style="fill: var(--color-amarillo);"
-                viewBox="0 0 24 24">
-                <path
-                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            <div class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
               </svg>
-              <span class="footer-text">
-                tecantomusic@gmail.com
-              </span>
+              <span class="contact-text">tecantomusic@gmail.com</span>
             </div>
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0" style="fill: var(--color-amarillo);"
-                viewBox="0 0 24 24">
-                <path
-                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            <div class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
               </svg>
-              <span class="footer-text">
-                servimusic@cinthiabenaducci.com
-              </span>
+              <span class="contact-text">servimusic@cinthiabenaducci.com</span>
             </div>
-
-            <div class="flex items-start gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 mt-0.5"
-                style="fill: var(--color-amarillo);" viewBox="0 0 24 24">
-                <path
-                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+            <div class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
               </svg>
-              <span class="footer-text">Lima, Perú</span>
+              <span class="contact-text">Lima, Perú</span>
             </div>
           </div>
         </div>
+
       </div>
-
-
-
     </div>
   </footer>
 
