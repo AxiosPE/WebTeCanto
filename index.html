@@ -616,8 +616,17 @@
             position: relative !important;
             width: 100% !important;
             height: 100% !important;
-            transition: transform 0.8s ease-in-out !important;
+            transition: transform 0.5s ease-in-out !important;
             transform-style: preserve-3d !important;
+        }
+
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px) scale(1.01) !important;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
         }
 
         .service-card:hover .card-content {
