@@ -107,6 +107,174 @@ img {
 }
 
 /* ============ HEADER & LOGO FIXES ============ */
+/* Header Navigation - Cross-browser responsive fix */
+/* Force correct responsive behavior for header navigation */
+header nav[aria-label="Global"] {
+    display: none !important;
+}
+
+header button#openMenuBtn {
+    display: block !important;
+}
+
+@media (min-width: 768px) {
+    header nav[aria-label="Global"] {
+        display: block !important;
+    }
+    
+    header button#openMenuBtn {
+        display: none !important;
+    }
+}
+
+/* Additional safety for mobile - override any Tailwind hidden classes */
+@media (max-width: 767px) {
+    header nav[aria-label="Global"] {
+        display: none !important;
+    }
+    
+    header button#openMenuBtn {
+        display: block !important;
+    }
+    
+    /* Override any .hidden class that might be applied by Tailwind */
+    header nav[aria-label="Global"].hidden {
+        display: none !important;
+    }
+}
+
+/* Specific override for Tailwind's md:block class behavior in Safari 15.6.1 */
+/* Target the exact navigation structure */
+header .hidden.md\:block {
+    display: none !important;
+}
+
+@media (min-width: 768px) {
+    header .hidden.md\:block {
+        display: block !important;
+    }
+}
+
+/* Additional fallback for any remaining issues */
+header div.flex-1 nav {
+    display: none !important;
+}
+
+@media (min-width: 768px) {
+    header div.flex-1 nav {
+        display: block !important;
+    }
+}
+
+/* Mobile Menu Styling - Enhanced Design */
+#mobileMenuPanel {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%) !important;
+    border-left: 3px solid var(--color-amarillo) !important;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Menu header styling */
+#mobileMenuPanel .flex.items-center.justify-between {
+    justify-content: center !important;
+    position: relative;
+    background: linear-gradient(90deg, rgba(255, 180, 47, 0.1) 0%, rgba(255, 180, 47, 0.05) 50%, rgba(255, 180, 47, 0.1) 100%);
+    border-bottom: 1px solid rgba(255, 180, 47, 0.3) !important;
+    padding: 1.5rem !important;
+}
+
+#mobileMenuPanel .flex.items-center.justify-between #closeMenuBtn {
+    position: absolute;
+    right: 1.5rem;
+    background: rgba(255, 180, 47, 0.1) !important;
+    border: 1px solid rgba(255, 180, 47, 0.3) !important;
+    border-radius: 8px !important;
+    padding: 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+#mobileMenuPanel .flex.items-center.justify-between #closeMenuBtn:hover {
+    background: var(--color-amarillo) !important;
+    color: black !important;
+    transform: scale(1.05) !important;
+    border-color: var(--color-amarillo) !important;
+}
+
+#mobileMenuPanel .flex.items-center.justify-between span {
+    text-align: center;
+    flex: 1;
+    font-size: 1.5rem !important;
+    font-weight: 300 !important;
+    color: var(--color-amarillo) !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+}
+
+/* Menu navigation styling */
+#mobileMenuPanel nav {
+    padding: 2rem 1.5rem !important;
+}
+
+#mobileMenuPanel nav ul {
+    gap: 1.5rem !important;
+}
+
+#mobileMenuPanel nav ul li a {
+    position: relative !important;
+    padding: 1rem 1.5rem !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid transparent !important;
+    display: block !important;
+    font-weight: 400 !important;
+    font-size: 1.125rem !important;
+}
+
+#mobileMenuPanel nav ul li a:before {
+    content: '' !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 4px !important;
+    height: 0 !important;
+    background: var(--color-amarillo) !important;
+    transition: height 0.3s ease !important;
+    border-radius: 2px !important;
+}
+
+#mobileMenuPanel nav ul li a:hover {
+    background: rgba(255, 180, 47, 0.1) !important;
+    border-color: rgba(255, 180, 47, 0.3) !important;
+    transform: translateX(8px) !important;
+    color: var(--color-amarillo) !important;
+}
+
+#mobileMenuPanel nav ul li a:hover:before {
+    height: 100% !important;
+}
+
+/* Add subtle animation to menu items */
+#mobileMenuPanel nav ul li {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideInFromLeft 0.3s ease forwards;
+}
+
+#mobileMenuPanel nav ul li:nth-child(1) { animation-delay: 0.1s; }
+#mobileMenuPanel nav ul li:nth-child(2) { animation-delay: 0.15s; }
+#mobileMenuPanel nav ul li:nth-child(3) { animation-delay: 0.2s; }
+#mobileMenuPanel nav ul li:nth-child(4) { animation-delay: 0.25s; }
+#mobileMenuPanel nav ul li:nth-child(5) { animation-delay: 0.3s; }
+#mobileMenuPanel nav ul li:nth-child(6) { animation-delay: 0.35s; }
+#mobileMenuPanel nav ul li:nth-child(7) { animation-delay: 0.4s; }
+
+@keyframes slideInFromLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 header img[alt="Logo de Te Canto"] {
     height: 2rem; /* 32px */
     width: auto;
@@ -475,7 +643,7 @@ header img[alt="Logo de Te Canto"] {
 
 /* Make Servicios Musicales cards wider */
 #momentos .grid-4 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-xl);
 }
 
@@ -1183,7 +1351,34 @@ header img[alt="Logo de Te Canto"] {
 }
 
 /* ============ SAFARI 15.6.1 SPECIFIC FIXES ============ */
+/* Header Navigation - Safari 15.6.1 Responsive Fix */
 @supports (-webkit-appearance: none) {
+    /* Force correct responsive behavior for Safari 15.6.1 */
+    nav[aria-label="Global"] {
+        display: none !important;
+    }
+    
+    @media (min-width: 768px) {
+        nav[aria-label="Global"] {
+            display: block !important;
+        }
+        
+        #openMenuBtn {
+            display: none !important;
+        }
+    }
+    
+    /* Ensure mobile menu button shows only on mobile in Safari */
+    @media (max-width: 767px) {
+        nav[aria-label="Global"] {
+            display: none !important;
+        }
+        
+        #openMenuBtn {
+            display: block !important;
+        }
+    }
+    
     /* Safari 15.6.1 perspective and 3D support */
     .flip-card {
         -webkit-perspective: 1000px;
