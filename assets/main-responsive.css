@@ -163,16 +163,29 @@ header button#openMenuBtn {
     }
 }
 
-/* Safari-specific fixes using feature detection */
+/* Enhanced Safari-specific fixes using multiple detection methods */
 @supports (-webkit-appearance: none) {
-    /* Additional Safari-only overrides for all Tailwind responsive classes */
-    @media screen and (min-width: 768px) {
-        .hidden.md\:block {
+    /* Safari viewport and rendering fixes */
+    html {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+    
+    /* Additional Safari-only overrides with multiple media query formats */
+    @media screen and (min-width: 768px), 
+           only screen and (min-device-width: 768px),
+           (min-width: 48em) {
+        .hidden.md\:block,
+        nav[aria-label="Global"].hidden.md\:block {
             display: block !important;
+            visibility: visible !important;
         }
         
-        .md\:hidden {
+        .md\:hidden,
+        button.md\:hidden,
+        #openMenuBtn.md\:hidden {
             display: none !important;
+            visibility: hidden !important;
         }
         
         .block.md\:hidden {
@@ -180,17 +193,37 @@ header button#openMenuBtn {
         }
     }
     
-    @media screen and (max-width: 767px) {
-        .hidden.md\:block {
+    @media screen and (max-width: 767px),
+           only screen and (max-device-width: 767px),
+           (max-width: 47.9375em) {
+        .hidden.md\:block,
+        nav[aria-label="Global"].hidden.md\:block {
             display: none !important;
+            visibility: hidden !important;
         }
         
-        .md\:hidden {
-            display: none !important;
+        .md\:hidden,
+        button.md\:hidden,
+        #openMenuBtn.md\:hidden {
+            display: block !important;
+            visibility: visible !important;
         }
         
         .block.md\:hidden {
             display: block !important;
+        }
+    }
+    
+    /* iOS Safari specific fixes */
+    @media only screen and (-webkit-min-device-pixel-ratio: 1) {
+        nav[aria-label="Global"] {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+        
+        #openMenuBtn {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
         }
     }
 }
@@ -1475,6 +1508,32 @@ header img[alt="Logo de Te Canto"] {
         will-change: transform;
     }
     
+    /* Ultimate Safari responsive fix - override everything */
+    nav[aria-label="Global"] {
+        display: none !important;
+    }
+    
+    @media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+        nav[aria-label="Global"] {
+            display: block !important;
+        }
+        
+        #openMenuBtn {
+            display: none !important;
+        }
+    }
+    
+    @media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+        nav[aria-label="Global"] {
+            display: none !important;
+        }
+        
+        #openMenuBtn {
+            display: block !important;
+        }
+    }
+}
+    
     /* Fix viewport and text rendering issues */
     body {
         -webkit-text-size-adjust: 100%;
@@ -1502,6 +1561,51 @@ header img[alt="Logo de Te Canto"] {
             opacity: 1;
             -webkit-transform: translateY(0);
             transform: translateY(0);
+        }
+    }
+}
+
+/* ============ CROSS-BROWSER RESPONSIVE GUARANTEE ============ */
+/* Final failsafe that works on ALL browsers including Safari and Windows */
+
+/* Force correct display regardless of browser */
+@media (max-width: 767.98px) {
+    nav[aria-label="Global"],
+    .hidden.md\:block {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    
+    #openMenuBtn,
+    .md\:hidden {
+        display: block !important;
+        visibility: visible !important;
+    }
+}
+
+@media (min-width: 768px) {
+    nav[aria-label="Global"],
+    .hidden.md\:block {
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    #openMenuBtn,
+    .md\:hidden {
+        display: none !important;
+        visibility: hidden !important;
+    }
+}
+
+/* Windows Chrome/Edge compatibility preservation */
+@supports not (-webkit-appearance: none) {
+    @media (min-width: 768px) {
+        .hidden.md\:block {
+            display: block;
+        }
+        
+        .md\:hidden {
+            display: none;
         }
     }
 }

@@ -1444,39 +1444,92 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // ====== Safari 15.6.1 Responsive Header Fix ======
+            // ====== Enhanced Safari 15.6.1 Responsive Header Fix ======
             function fixHeaderResponsiveness() {
                 const nav = document.querySelector('nav[aria-label="Global"]');
                 const menuBtn = document.getElementById('openMenuBtn');
                 
                 if (!nav || !menuBtn) return;
                 
+                // Detect Safari browser
+                const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+                const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+                
                 function updateHeaderDisplay() {
-                    const isMobile = window.innerWidth < 768;
+                    const screenWidth = window.innerWidth;
+                    const isMobile = screenWidth < 768;
+                    
+                    // Force style recalculation for Safari
+                    if (isSafari || isIOS) {
+                        nav.style.cssText = '';
+                        menuBtn.style.cssText = '';
+                        
+                        // Force reflow
+                        nav.offsetHeight;
+                        menuBtn.offsetHeight;
+                    }
                     
                     if (isMobile) {
                         // Mobile: show hamburger, hide navigation
                         nav.style.display = 'none';
+                        nav.style.visibility = 'hidden';
                         menuBtn.style.display = 'block';
+                        menuBtn.style.visibility = 'visible';
+                        
+                        // Remove any conflicting classes for Safari
+                        if (isSafari || isIOS) {
+                            nav.classList.remove('md:block');
+                            menuBtn.classList.remove('md:hidden');
+                        }
                     } else {
                         // Desktop: show navigation, hide hamburger
                         nav.style.display = 'block';
+                        nav.style.visibility = 'visible';
                         menuBtn.style.display = 'none';
+                        menuBtn.style.visibility = 'hidden';
+                        
+                        // Add classes back for other browsers
+                        if (!isSafari && !isIOS) {
+                            nav.classList.add('md:block');
+                            menuBtn.classList.add('md:hidden');
+                        }
+                    }
+                    
+                    // Safari-specific: Force repaint
+                    if (isSafari || isIOS) {
+                        document.body.style.transform = 'translateZ(0)';
+                        setTimeout(() => {
+                            document.body.style.transform = '';
+                        }, 10);
                     }
                 }
                 
-                // Run on load
+                // Run on load with multiple attempts for Safari
                 updateHeaderDisplay();
+                setTimeout(updateHeaderDisplay, 100);
+                setTimeout(updateHeaderDisplay, 300);
+                setTimeout(updateHeaderDisplay, 600);
                 
-                // Run on resize with debouncing
+                // Enhanced resize handling
                 let resizeTimeout;
                 window.addEventListener('resize', () => {
                     clearTimeout(resizeTimeout);
-                    resizeTimeout = setTimeout(updateHeaderDisplay, 100);
+                    resizeTimeout = setTimeout(() => {
+                        updateHeaderDisplay();
+                        // Extra Safari check after resize
+                        if (isSafari || isIOS) {
+                            setTimeout(updateHeaderDisplay, 150);
+                        }
+                    }, 50);
                 });
                 
-                // Safari-specific fix: force recalculation after header loads
-                setTimeout(updateHeaderDisplay, 500);
+                // Orientation change for mobile Safari
+                window.addEventListener('orientationchange', () => {
+                    setTimeout(updateHeaderDisplay, 200);
+                });
+                
+                // Page show event for Safari back/forward cache
+                window.addEventListener('pageshow', updateHeaderDisplay);
             }
             
             // Initialize header fix
