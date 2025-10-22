@@ -48,7 +48,7 @@ jobs:
           echo "✅ Build completado - output.css generado"
 
       - name: Deploy via FTPS to cPanel
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
