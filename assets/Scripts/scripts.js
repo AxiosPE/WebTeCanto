@@ -156,11 +156,41 @@ document.addEventListener('DOMContentLoaded', () => {
         closeMenuBtn.addEventListener('click', closeMenu);
         mobileMenuOverlay.addEventListener('click', closeMenu);
 
-        // Manejar enlaces del menú
-        const mobileMenuLinks = mobileMenuPanel.querySelectorAll('a');
+        // ===== CORRECCIÓN PRINCIPAL: Manejar enlaces del menú con smooth scroll =====
+        const mobileMenuLinks = mobileMenuPanel.querySelectorAll('a[href^="#"]');
         mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                setTimeout(closeMenu, 100);
+            link.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevenir el comportamiento por defecto
+                
+                const href = link.getAttribute('href');
+                const targetId = href.replace('#', '');
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    // Primero cerrar el menú
+                    mobileMenuOverlay.classList.remove('opacity-100');
+                    mobileMenuOverlay.classList.add('opacity-0');
+                    mobileMenuPanel.classList.add('translate-x-full');
+                    mobileMenuPanel.setAttribute('aria-hidden', 'true');
+                    openMenuBtn.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                    
+                    // Esperar a que termine la animación de cierre (300ms) + delay adicional
+                    setTimeout(() => {
+                        mobileMenuOverlay.classList.add('hidden');
+                    }, 300);
+                    
+                    // Hacer el smooth scroll después de un delay mayor para que sea más suave
+                    setTimeout(() => {
+                        targetElement.scrollIntoView({ 
+                            behavior: 'smooth', 
+                            block: 'start' 
+                        });
+                    }, 500); // 500ms para una transición más suave y natural
+                } else {
+                    // Si no encuentra el elemento, solo cierra el menú
+                    closeMenu();
+                }
             });
         });
 
@@ -172,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         mobileMenuInitialized = true;
-        //console.log('Menú móvil inicializado correctamente');
+        console.log('Menú móvil inicializado correctamente con smooth scroll');
         return true;
     }
 
