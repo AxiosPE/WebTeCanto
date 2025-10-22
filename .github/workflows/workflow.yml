@@ -1,56 +1,66 @@
-name: Deploy Website
+name: Deploy to cPanel (FTP)
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: "pages"
+  group: deploy-production
   cancel-in-progress: false
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          version: 10.14.0
+          node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: npm ci
 
       - name: Build CSS with Tailwind
-        run: pnpm run build
+        run: npm run build
 
-      - name: Prepare deployment files
+      - name: Prepare dist folder
         run: |
+          rm -rf dist
           mkdir -p dist
           cp index.html dist/
-          cp -r components/ assets/ dist/
-          cp assets/output.css dist/assets/
+          cp -r components dist/
+          cp -r assets dist/
+          
+          # Verificar que el CSS fue compilado correctamente
+          if [ ! -f dist/assets/output.css ]; then
+            echo "❌ Error: output.css no se generó correctamente"
+            exit 1
+          fi
+          echo "✅ Build completado - output.css generado"
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy via FTPS to cPanel
+        uses: SamKirkland/FTP-Deploy-Action@v4
         with:
-          path: './dist'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: dist/
+          server-dir: '/public_html/'
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/*.zip
+            .well-known/**
+          log-level: standard
