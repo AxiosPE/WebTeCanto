@@ -20,10 +20,11 @@
 
     <main id="contenido" class="bg-amarillo">
         <section class="relative flex items-end justify-center h-screen text-white bg-no-repeat bg-cover hero-cover"
-            style="background-image:
+        style="background-image:
     linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0) 70%),
     linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%),
-    url('./assets/Gallery/3(2).jpg');">
+    url('./assets/Gallery/3(2).jpg');
+    background-position: center top 20%;">
             <div class="relative z-10 text-center mb-32">
                 <h1 class="hero-title karaoke">Cinthia Benaducci Ángeles</h1>
                 <p class="hero-subtitle">
@@ -175,7 +176,7 @@
             role="banner" aria-labelledby="hero-title">
             
             <!-- Overlays -->
-            <div class="overlay"></div>
+            <div class="overlay" style="background: rgba(0,0,0,0.38); position: absolute; inset: 0; z-index: 1;"></div>
             <div class="gradient-overlay"></div>
 
             <div class="container section-content">
@@ -264,22 +265,24 @@
                                 </div>
                             </div>
                             <div class="flip-card-back">
-                                <div class="text-center">
+                                <div class="text-center mr-6">
                                     <h4 class="heading-card">Música Lírica</h4>
                                     <div style="width: 5rem; height: 1px; background: linear-gradient(90deg, transparent, #FFB42F, transparent); margin: 0 auto 2rem;"></div>
-                                    <p class="text-body mb-lg">
-                                        Interpretaciones clásicas y corales que elevan cada ceremonia a un momento memorable y espiritual.
+                                    <p class="text-body">
+                                        Interpretaciones clásicas y corales
                                     </p>
-                                    <ul style="list-style: none; padding: 0; text-align: left;">
-                                        <li class="flex mb-sm" style="align-items: center;">
+                                    <p>que elevan cada ceremonia</p>
+                                    <p class="mb-lg" >a un momento memorable y espiritual</p>
+                                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; align-items: flex-start; padding-left: 1.25rem; max-width: 320px;">
+                                        <li style="display: flex; align-items: center; margin-bottom: 0.75rem;">
                                             <span style="width: 8px; height: 8px; background-color: #FFB42F; border-radius: 50%; margin-right: 1rem; flex-shrink: 0;"></span>
                                             <span>Repertorio sacro y clásico</span>
                                         </li>
-                                        <li class="flex mb-sm" style="align-items: center;">
+                                        <li style="display: flex; align-items: center; margin-bottom: 0.75rem;">
                                             <span style="width: 8px; height: 8px; background-color: #FFB42F; border-radius: 50%; margin-right: 1rem; flex-shrink: 0;"></span>
                                             <span>Ceremonias religiosas</span>
                                         </li>
-                                        <li class="flex mb-sm" style="align-items: center;">
+                                        <li style="display: flex; align-items: center; margin-bottom: 0.75rem;">
                                             <span style="width: 8px; height: 8px; background-color: #FFB42F; border-radius: 50%; margin-right: 1rem; flex-shrink: 0;"></span>
                                             <span>Eventos formales</span>
                                         </li>
@@ -293,7 +296,7 @@
                     <div class="flip-card flip-card-modern">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <div class="text-center">
+                                <div class="text-center mr-6">
                                     <img src="./assets/Logo-transparente.png" alt="Logo TeCanto Music" style="width: 90px; height: 90px; margin: 0 auto 2rem; opacity: 0.97;">
                                     <h3 class="heading-card">MODERNO</h3>
                                     <div style="width: 4rem; height: 1px; background: linear-gradient(90deg, transparent, #FFB42F, transparent); margin: 0 auto 1rem;"></div>
@@ -301,22 +304,23 @@
                                 </div>
                             </div>
                             <div class="flip-card-back">
-                                <div class="text-center">
+                                <div class="text-center mr-6">
                                     <h4 class="heading-card">Música Moderna</h4>
                                     <div style="width: 5rem; height: 1px; background: linear-gradient(90deg, transparent, #FFB42F, transparent); margin: 0 auto 2rem;"></div>
-                                    <p class="text-body mb-lg">
-                                        Repertorio contemporáneo con arreglos frescos, ideal para bodas, bautizos y celebraciones especiales.
+                                    <p class="text-body">
+                                        Repertorio contemporáneo ideal 
                                     </p>
-                                    <ul style="list-style: none; padding: 0; text-align: left;">
-                                        <li class="flex mb-sm" style="align-items: center;">
+                                    <p class="mb-lg">para bodas, bautizos y celebraciones especiales.</p>
+                                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; align-items: flex-start; padding-left: 1.25rem; max-width: 320px;">
+                                        <li style="display: flex; align-items: center; margin-bottom: 0.75rem;">
                                             <span style="width: 8px; height: 8px; background-color: #FFB42F; border-radius: 50%; margin-right: 1rem; flex-shrink: 0;"></span>
                                             <span>Música católica contemporánea</span>
                                         </li>
-                                        <li class="flex mb-sm" style="align-items: center;">
+                                        <li style="display: flex; align-items: center; margin-bottom: 0.75rem;">
                                             <span style="width: 8px; height: 8px; background-color: #FFB42F; border-radius: 50%; margin-right: 1rem; flex-shrink: 0;"></span>
                                             <span>Bodas y celebraciones litúrgicas</span>
                                         </li>
-                                        <li class="flex mb-sm" style="align-items: center;">
+                                        <li style="display: flex; align-items: center; margin-bottom: 0.75rem;">
                                             <span style="width: 8px; height: 8px; background-color: #FFB42F; border-radius: 50%; margin-right: 1rem; flex-shrink: 0;"></span>
                                             <span>Eventos sociales</span>
                                         </li>
@@ -355,15 +359,8 @@
                         </div>
 
                         <div class="gallery-description">
-                            <p class="gallery-intro">Cada presentación es única y especial.</p>
-                            <p class="gallery-paragraph">
-                                Aquí puedes ver algunos de los momentos más memorables de nuestras actuaciones en
-                                diferentes eventos y ceremonias sagradas.
-                            </p>
-                            <p class="gallery-paragraph">
-                                Desde ceremonias íntimas hasta grandes celebraciones, nuestra música ha sido parte de
-                                momentos inolvidables.
-                            </p>
+                            <p class="gallery-intro">Cada presentación es única y especial, desde ceremonias íntimas hasta grandes celebraciones nuestra música ha sido parte de
+                                momentos inolvidables.</p>
                         </div>
                     </div>
 
