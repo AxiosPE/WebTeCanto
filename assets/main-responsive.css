@@ -22,6 +22,8 @@ body {
     background-color: #fff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* CRITICAL FIX: Remove any transform from body to prevent breaking position:fixed */
+    transform: none !important;
 }
 
 .main-content {
@@ -247,6 +249,14 @@ button#openMenuBtn.md\:hidden,
     background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%) !important;
     border-left: 3px solid var(--color-amarillo) !important;
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* CRITICAL: Hide mobile menu panel on desktop */
+@media screen and (min-width: 768px) {
+    #mobileMenuPanel,
+    #mobileMenuOverlay {
+        display: none !important;
+    }
 }
 
 /* Menu header styling */

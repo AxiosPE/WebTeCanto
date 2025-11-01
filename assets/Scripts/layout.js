@@ -25,8 +25,6 @@ async function loadLayout() {
 
             // Insertar el HTML del footer
             footerContainer.innerHTML = footerHTML;
-
-            console.log('Footer cargado exitosamente');
         } catch (error) {
             console.error('Error al cargar el footer:', error);
 
