@@ -202,7 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         mobileMenuInitialized = true;
-        console.log('Menú móvil inicializado correctamente con smooth scroll');
         return true;
     }
 

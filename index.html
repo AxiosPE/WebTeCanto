@@ -11,6 +11,7 @@
         content="TeCanto Music · Coro para bodas, bautizos, funerales y ceremonias. Música en vivo que honra tus momentos." />
     <link rel="stylesheet" href="./assets/output.css" />
     <link rel="stylesheet" href="./assets/main-responsive.css" />
+    <link rel="stylesheet" href="./assets/components.css" />
     <link rel="icon" type="image/png" href="./assets/Logo-transparente.png" />
     <title>TeCanto Music · Coro para tus momentos</title>
 </head>
@@ -479,1070 +480,186 @@
         </section>
     </main>
 
-    <a href="https://wa.me/51982218665" target="_blank" rel="noopener noreferrer" class="whatsapp-btn"
-        aria-label="Contactar por WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.051 3.488" />
-        </svg>
-    </a>
-
-    <style>
-        /* Botón activo (página actual) */
-        .boton-activo {
-            color: #000 !important;
-            background-color: #FFB42F !important;
-            font-weight: 600 !important;
-            padding: 8px 16px !important;
-            border-radius: 6px !important;
-            transition: all 0.3s ease !important;
-        }
-
-        .boton-activo:hover {
-            background-color: #e6a029 !important;
-            transform: translateY(-1px) !important;
-        }
-
-        /* Botón animado para Elenco en index */
-        .boton-animado {
-            color: #FFB42F !important;
-            font-weight: 600 !important;
-            padding: 8px 16px !important;
-            border-radius: 6px !important;
-            position: relative !important;
-            transition: all 0.3s ease !important;
-            animation: bounceGlow 2s ease-in-out infinite !important;
-            border: 2px solid transparent !important;
-        }
-
-        .boton-animado:hover {
-            color: #000 !important;
-            background-color: #FFB42F !important;
-            animation: none !important;
-            transform: translateY(-2px) !important;
-            box-shadow: 0 8px 25px rgba(255, 180, 47, 0.4) !important;
-        }
-
-        /* Botón animado para móvil */
-        .boton-animado-mobile {
-            animation: bounceGlow 2s ease-in-out infinite !important;
-            position: relative !important;
-        }
-
-        .boton-animado-mobile:hover {
-            animation: none !important;
-        }
-
-        /* Animaciones nuevas */
-        @keyframes bounceGlow {
-
-            0%,
-            100% {
-                text-shadow: 0 0 8px rgba(255, 180, 47, 0.6) !important;
-                transform: scale(1) !important;
-            }
-
-            25% {
-                text-shadow: 0 0 15px rgba(255, 180, 47, 0.8) !important;
-                transform: scale(1.02) !important;
-            }
-
-            50% {
-                text-shadow: 0 0 20px rgba(255, 180, 47, 1) !important;
-                transform: scale(1.05) !important;
-            }
-
-            75% {
-                text-shadow: 0 0 15px rgba(255, 180, 47, 0.8) !important;
-                transform: scale(1.02) !important;
-            }
-        }
-
-        /* Botón WhatsApp flotante */
-        .whatsapp-btn {
-            position: fixed !important;
-            bottom: 24px !important;
-            right: 24px !important;
-            width: 56px !important;
-            height: 56px !important;
-            background-color: #FFB42F !important;
-            border-radius: 50% !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
-            z-index: 99999 !important;
-            transition: all 0.3s ease !important;
-            text-decoration: none !important;
-        }
-
-        .whatsapp-btn:hover {
-            transform: scale(1.1) !important;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
-        }
-
-        .whatsapp-btn svg {
-            width: 32px !important;
-            height: 32px !important;
-            fill: #000 !important;
-        }
-
-        /* Responsive Cards Layout - Windows Optimized */
-        .cards-container {
-            display: flex !important;
-            flex-wrap: wrap !important;
-            gap: 2rem !important;
-            max-width: 1200px !important;
-            margin: 0 auto !important;
-            padding: 0 1rem !important;
-            justify-content: center !important;
-            align-items: stretch !important;
-        }
-
-        .service-card {
-            flex: 1 1 calc(50% - 1rem) !important;
-            max-width: 500px !important;
-            min-width: 280px !important;
-            height: 480px !important;
-            perspective: 1000px !important;
-            cursor: pointer !important;
-        }
-
-        .card-content {
-            position: relative !important;
-            width: 100% !important;
-            height: 100% !important;
-            transition: transform 0.5s ease-in-out !important;
-            transform-style: preserve-3d !important;
-        }
-
-        .service-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-        }
-
-        .service-card:hover {
-            transform: translateY(-6px) scale(1.01) !important;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
-        }
-
-        .service-card:hover .card-content {
-            transform: rotateY(180deg) !important;
-        }
-
-        .card-front,
-        .card-back {
-            position: absolute !important;
-            width: 100% !important;
-            height: 100% !important;
-            backface-visibility: hidden !important;
-            border-radius: 1rem !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            padding: 2rem !important;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
-        }
-
-        /* Classic Card (Black) */
-        .classic-card .card-front {
-            background: linear-gradient(135deg, #000000, #1a1a1a) !important;
-            border: 1px solid rgba(255, 180, 47, 0.3) !important;
-        }
-
-        .classic-card .card-back {
-            background: linear-gradient(135deg, #000000, #1a1a1a) !important;
-            border: 1px solid rgba(255, 180, 47, 0.3) !important;
-            transform: rotateY(180deg) !important;
-        }
-
-        /* Modern Card (Light) */
-        .modern-card .card-front {
-            background: linear-gradient(135deg, #fefcf3, #f9f7f4, #ffffff) !important;
-            border: 1px solid rgba(255, 180, 47, 0.4) !important;
-        }
-
-        .modern-card .card-back {
-            background: linear-gradient(135deg, #fefcf3, #f9f7f4, #ffffff) !important;
-            border: 1px solid rgba(255, 180, 47, 0.4) !important;
-            transform: rotateY(180deg) !important;
-        }
-
-        /* Card Content */
-        .card-header {
-            text-align: center !important;
-            color: white !important;
-        }
-
-        .modern-card .card-header {
-            color: #1f2937 !important;
-        }
-
-        .card-logo {
-            width: 80px !important;
-            height: 80px !important;
-            object-fit: contain !important;
-            margin: 0 auto 2rem auto !important;
-            opacity: 0.9 !important;
-            transition: transform 0.3s ease !important;
-        }
-
-        .service-card:hover .card-logo {
-            transform: scale(1.1) !important;
-        }
-
-        .card-title {
-            font-size: 2rem !important;
-            font-weight: 300 !important;
-            letter-spacing: 0.2em !important;
-            margin-bottom: 1rem !important;
-        }
-
-        .card-divider {
-            width: 4rem !important;
-            height: 1px !important;
-            background: linear-gradient(90deg, transparent, #FFB42F, transparent) !important;
-            margin: 0 auto 1rem auto !important;
-        }
-
-        .card-subtitle {
-            font-size: 1rem !important;
-            font-weight: 300 !important;
-            letter-spacing: 0.05em !important;
-            opacity: 0.9 !important;
-        }
-
-        /* Card Back */
-        .card-back-content {
-            text-align: center !important;
-            color: white !important;
-            width: 100% !important;
-        }
-
-        .modern-card .card-back-content {
-            color: #1f2937 !important;
-        }
-
-        .card-back-title {
-            font-size: 1.5rem !important;
-            font-weight: 300 !important;
-            margin-bottom: 1rem !important;
-        }
-
-        .card-back-divider {
-            width: 5rem !important;
-            height: 1px !important;
-            background: linear-gradient(90deg, transparent, #FFB42F, transparent) !important;
-            margin: 0 auto 2rem auto !important;
-        }
-
-        .card-back-description {
-            font-size: 1.1rem !important;
-            font-weight: 300 !important;
-            line-height: 1.6 !important;
-            margin-bottom: 2rem !important;
-        }
-
-        .card-features {
-            list-style: none !important;
-            padding: 0 !important;
-            text-align: left !important;
-        }
-
-        .card-features li {
-            display: flex !important;
-            align-items: center !important;
-            margin-bottom: 1rem !important;
-            font-size: 1rem !important;
-            font-weight: 300 !important;
-        }
-
-        .feature-dot {
-            width: 8px !important;
-            height: 8px !important;
-            background-color: #FFB42F !important;
-            border-radius: 50% !important;
-            margin-right: 1rem !important;
-            flex-shrink: 0 !important;
-        }
-
-        /* Responsive breakpoints for Windows */
-        @media (max-width: 580px) {
-            .cards-container {
-                flex-direction: column !important;
-                gap: 1.5rem !important;
-                padding: 0 0.5rem !important;
-            }
-
-            .service-card {
-                flex: 1 1 100% !important;
-                min-width: 260px !important;
-                height: 350px !important;
-                max-width: 100% !important;
-            }
-
-            .card-front, .card-back {
-                padding: 1.5rem !important;
-            }
-
-            .card-title {
-                font-size: 1.5rem !important;
-            }
-
-            .card-back-description {
-                font-size: 0.95rem !important;
-            }
-        }
-
-        /* Tablet responsive */
-        @media (min-width: 581px) and (max-width: 1024px) {
-            .cards-container {
-                flex-direction: column !important;
-                gap: 2rem !important;
-                padding: 0 1rem !important;
-            }
-
-            .service-card {
-                flex: 1 1 100% !important;
-                max-width: 400px !important;
-                min-width: 320px !important;
-                height: 420px !important;
-                margin: 0 auto !important;
-            }
-        }
-
-        /* Desktop responsive - Windows optimized */
-        @media (min-width: 1025px) {
-            .cards-container {
-                flex-direction: row !important;
-                gap: 3rem !important;
-                padding: 0 2rem !important;
-            }
-
-            .service-card {
-                flex: 1 1 calc(50% - 1.5rem) !important;
-                max-width: 480px !important;
-                min-width: 360px !important;
-                height: 500px !important;
-            }
-        }
-
-        /* Large desktop */
-        @media (min-width: 1400px) {
-            .cards-container {
-                gap: 4rem !important;
-            }
-
-            .service-card {
-                max-width: 520px !important;
-                height: 540px !important;
-            }
-        }
-
-        /* Force desktop layout for Safari 15.6.1 */
-        @media screen and (min-width: 768px) {
-            .cards-container {
-                flex-direction: row !important;
-                gap: 4rem !important;
-            }
-        }
-
-        /* Contact Form Styles - Optimized for Safari 15.6.1 */
-        .contact-section {
-            background-color: #000000 !important;
-            color: #ffffff !important;
-            padding: 5rem 2rem !important;
-            text-align: center !important;
-        }
-
-        .contact-container {
-            max-width: 800px !important;
-            margin: 0 auto !important;
-        }
-
-        .contact-header {
-            margin-bottom: 3rem !important;
-        }
-
-        .contact-title {
-            font-size: 3rem !important;
-            font-weight: 300 !important;
-            color: #FFB42F !important;
-            margin-bottom: 1rem !important;
-            line-height: 1.2 !important;
-        }
-
-        .contact-description {
-            font-size: 1.25rem !important;
-            color: #ffffff !important;
-            line-height: 1.6 !important;
-            margin-bottom: 0 !important;
-        }
-
-        .contact-form {
-            text-align: left !important;
-            max-width: 600px !important;
-            margin: 0 auto !important;
-        }
-
-        /* Form Layout */
-        .form-group {
-            margin-bottom: 1.5rem !important;
-        }
-
-        .form-row {
-            display: flex !important;
-            gap: 1rem !important;
-            margin-bottom: 1.5rem !important;
-        }
-
-        .full-width {
-            width: 100% !important;
-        }
-
-        .half-width {
-            flex: 1 !important;
-            min-width: 200px !important;
-        }
-
-        /* Form Elements */
-        .form-label {
-            display: block !important;
-            font-size: 1rem !important;
-            font-weight: 500 !important;
-            color: #ffffff !important;
-            margin-bottom: 0.5rem !important;
-        }
-
-        .form-input,
-        .form-textarea {
-            width: 100% !important;
-            padding: 0.75rem 1rem !important;
-            font-size: 1rem !important;
-            color: #ffffff !important;
-            background-color: rgba(255, 255, 255, 0.1) !important;
-            border: 1px solid rgba(255, 255, 255, 0.2) !important;
-            border-radius: 0.5rem !important;
-            outline: none !important;
-            transition: all 0.3s ease !important;
-            box-sizing: border-box !important;
-            -webkit-appearance: none !important;
-            -moz-appearance: none !important;
-            appearance: none !important;
-        }
-
-        .form-input:focus,
-        .form-textarea:focus {
-            border-color: #FFB42F !important;
-            box-shadow: 0 0 0 2px rgba(255, 180, 47, 0.3) !important;
-            background-color: rgba(255, 255, 255, 0.15) !important;
-        }
-
-        .form-input::placeholder,
-        .form-textarea::placeholder {
-            color: #9CA3AF !important;
-            opacity: 1 !important;
-        }
-
-        /* Select Styling */
-        .select-wrapper {
-            position: relative !important;
-        }
-
-        .form-select {
-            width: 100% !important;
-            padding: 0.75rem 2.5rem 0.75rem 1rem !important;
-            font-size: 1rem !important;
-            color: #ffffff !important;
-            background-color: rgba(255, 255, 255, 0.1) !important;
-            border: 1px solid rgba(255, 255, 255, 0.2) !important;
-            border-radius: 0.5rem !important;
-            outline: none !important;
-            cursor: pointer !important;
-            transition: all 0.3s ease !important;
-            box-sizing: border-box !important;
-            -webkit-appearance: none !important;
-            -moz-appearance: none !important;
-            appearance: none !important;
-        }
-
-        .form-select:focus {
-            border-color: #FFB42F !important;
-            box-shadow: 0 0 0 2px rgba(255, 180, 47, 0.3) !important;
-            background-color: rgba(255, 255, 255, 0.15) !important;
-        }
-
-        .form-select option {
-            background-color: #ffffff !important;
-            color: #000000 !important;
-            padding: 0.5rem !important;
-        }
-
-        .form-select option:checked {
-            background-color: #FFB42F !important;
-            color: #000000 !important;
-        }
-
-        .form-select option[disabled] {
-            color: #9CA3AF !important;
-        }
-
-        .select-arrow {
-            position: absolute !important;
-            top: 50% !important;
-            right: 1rem !important;
-            transform: translateY(-50%) !important;
-            width: 0 !important;
-            height: 0 !important;
-            border-left: 6px solid transparent !important;
-            border-right: 6px solid transparent !important;
-            border-top: 6px solid #FFB42F !important;
-            pointer-events: none !important;
-        }
-
-        /* Date Input - Safari specific fixes */
-        .date-input {
-            -webkit-appearance: none !important;
-            -moz-appearance: none !important;
-            appearance: none !important;
-        }
-
-        .date-input::-webkit-calendar-picker-indicator {
-            background-color: #FFB42F !important;
-            border-radius: 3px !important;
-            cursor: pointer !important;
-        }
-
-        /* Submit Button */
-        .form-submit {
-            width: 100% !important;
-            padding: 1rem 2rem !important;
-            font-size: 1.125rem !important;
-            font-weight: 400 !important;
-            color: #000000 !important;
-            background-color: #FFB42F !important;
-            border: none !important;
-            border-radius: 0.5rem !important;
-            cursor: pointer !important;
-            transition: all 0.3s ease !important;
-            margin-top: 1rem !important;
-        }
-
-        .form-submit:hover {
-            background-color: #e6a029 !important;
-            transform: translateY(-1px) !important;
-            box-shadow: 0 4px 12px rgba(255, 180, 47, 0.3) !important;
-        }
-
-        .form-submit:active {
-            transform: translateY(0) !important;
-        }
-
-        /* Form Messages */
-        .form-message {
-            margin-top: 1rem !important;
-            padding: 0.75rem 1rem !important;
-            border-radius: 0.5rem !important;
-            font-size: 1rem !important;
-            display: none !important;
-        }
-
-        .success-message {
-            background-color: rgba(34, 197, 94, 0.1) !important;
-            border: 1px solid #22c55e !important;
-            color: #22c55e !important;
-        }
-
-        .error-message {
-            background-color: rgba(239, 68, 68, 0.1) !important;
-            border: 1px solid #ef4444 !important;
-            color: #ef4444 !important;
-        }
-
-        .form-message.show {
-            display: block !important;
-        }
-
-        /* Hidden field */
-        .hidden-field {
-            display: none !important;
-            visibility: hidden !important;
-            position: absolute !important;
-            left: -9999px !important;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .contact-section {
-                padding: 3rem 1rem !important;
-            }
-
-            .contact-title {
-                font-size: 2rem !important;
-            }
-
-            .contact-description {
-                font-size: 1rem !important;
-            }
-
-            .form-row {
-                flex-direction: column !important;
-                gap: 0 !important;
-            }
-
-            .half-width {
-                min-width: 100% !important;
-                margin-bottom: 1.5rem !important;
-            }
-
-            .form-row .half-width:last-child {
-                margin-bottom: 0 !important;
-            }
-        }
-
-        /* Force desktop layout for Safari 15.6.1 */
-        @media screen and (min-width: 768px) {
-            .contact-title {
-                font-size: 4rem !important;
-            }
-
-            .contact-description {
-                font-size: 1.5rem !important;
-            }
-
-            .form-row {
-                display: flex !important;
-                flex-direction: row !important;
-                gap: 1rem !important;
-            }
-
-            .half-width {
-                flex: 1 !important;
-                min-width: 200px !important;
-            }
-        }
-
-        /* Footer Styles - Optimized for Safari 15.6.1 */
-        .footer-section {
-            background-color: #000000 !important;
-            color: #ffffff !important;
-            padding: 3rem 0 !important;
-            position: relative !important;
-            overflow: hidden !important;
-        }
-
-        .footer-decorations {
-            position: absolute !important;
-            top: 0 !important;
-            left: 0 !important;
-            width: 100% !important;
-            height: 100% !important;
-            z-index: 1 !important;
-            pointer-events: none !important;
-        }
-
-        .decoration-line {
-            position: absolute !important;
-            top: 0 !important;
-            left: 0 !important;
-            width: 100% !important;
-            height: 1px !important;
-            background: linear-gradient(90deg, transparent, rgba(255, 180, 47, 0.3), transparent) !important;
-        }
-
-        .decoration-dot {
-            position: absolute !important;
-            border-radius: 50% !important;
-            background-color: rgba(255, 180, 47, 0.2) !important;
-            animation: pulse 2s infinite !important;
-        }
-
-        .dot-1 { top: 2rem; left: 2rem; width: 4px; height: 4px; }
-        .dot-2 { top: 5rem; right: 3rem; width: 6px; height: 6px; animation-delay: 1s; }
-        .dot-3 { bottom: 4rem; left: 4rem; width: 4px; height: 4px; animation-delay: 2s; }
-        .dot-4 { bottom: 2rem; right: 2rem; width: 8px; height: 8px; animation-delay: 3s; }
-
-        .footer-container {
-            max-width: 1200px !important;
-            margin: 0 auto !important;
-            padding: 0 2rem !important;
-            position: relative !important;
-            z-index: 2 !important;
-        }
-
-        /* Social Media Section */
-        .social-section {
-            text-align: center !important;
-            margin-bottom: 3rem !important;
-        }
-
-        .social-title {
-            font-size: 1.5rem !important;
-            font-weight: 700 !important;
-            color: #FFB42F !important;
-            margin-bottom: 1rem !important;
-        }
-
-        .social-icons {
-            display: flex !important;
-            justify-content: center !important;
-            gap: 1rem !important;
-            flex-wrap: wrap !important;
-        }
-
-        .social-icon {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            width: 48px !important;
-            height: 48px !important;
-            background-color: #333333 !important;
-            border-radius: 50% !important;
-            transition: all 0.3s ease !important;
-            text-decoration: none !important;
-        }
-
-        .social-icon svg {
-            width: 24px !important;
-            height: 24px !important;
-            fill: #ffffff !important;
-        }
-
-        .social-icon:hover {
-            transform: scale(1.1) !important;
-        }
-
-        .whatsapp-icon:hover { background-color: #25d366 !important; }
-        .facebook-icon:hover { background-color: #1877f2 !important; }
-        .instagram-icon:hover { background-color: #e4405f !important; }
-        .youtube-icon:hover { background-color: #ff0000 !important; }
-
-        /* Footer Grid */
-        .footer-grid {
-            display: flex !important;
-            flex-wrap: wrap !important;
-            gap: 2rem !important;
-            justify-content: space-between !important;
-        }
-
-        .footer-column {
-            flex: 1 !important;
-            min-width: 250px !important;
-            margin-bottom: 2rem !important;
-        }
-
-        .column-header {
-            display: flex !important;
-            align-items: center !important;
-            gap: 0.5rem !important;
-            margin-bottom: 1.5rem !important;
-            min-height: 64px !important;
-        }
-
-        .footer-logo {
-            width: 24px !important;
-            height: 24px !important;
-            object-fit: contain !important;
-        }
-
-        .column-title {
-            font-size: 1.25rem !important;
-            font-weight: 700 !important;
-            color: #FFB42F !important;
-            margin: 0 !important;
-        }
-
-        .footer-text {
-            color: #cccccc !important;
-            line-height: 1.6 !important;
-            font-size: 0.95rem !important;
-        }
-
-        /* Navigation Links */
-        .footer-links {
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 0.75rem !important;
-        }
-
-        .footer-link {
-            color: #ffffff !important;
-            text-decoration: none !important;
-            font-size: 1rem !important;
-            transition: all 0.3s ease !important;
-            display: block !important;
-        }
-
-        .footer-link:hover {
-            color: #FFB42F !important;
-            transform: translateX(4px) !important;
-        }
-
-        /* Services */
-        .footer-services {
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 0.75rem !important;
-        }
-
-        .service-item {
-            display: flex !important;
-            align-items: center !important;
-            gap: 0.75rem !important;
-        }
-
-        .service-dot {
-            width: 6px !important;
-            height: 6px !important;
-            background-color: #FFB42F !important;
-            border-radius: 50% !important;
-            flex-shrink: 0 !important;
-        }
-
-        /* Contact */
-        .footer-contact {
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 1rem !important;
-        }
-
-        .contact-item {
-            display: flex !important;
-            align-items: center !important;
-            gap: 0.75rem !important;
-        }
-
-        .contact-icon {
-            width: 20px !important;
-            height: 20px !important;
-            fill: #FFB42F !important;
-            flex-shrink: 0 !important;
-        }
-
-        .contact-text {
-            color: #ffffff !important;
-            font-size: 1rem !important;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .footer-grid {
-                flex-direction: column !important;
-                gap: 2rem !important;
-            }
-
-            .footer-column {
-                min-width: 100% !important;
-                text-align: center !important;
-            }
-
-            .column-header {
-                justify-content: center !important;
-            }
-
-            .footer-links,
-            .footer-services,
-            .footer-contact {
-                align-items: center !important;
-            }
-
-            .social-title {
-                font-size: 1.25rem !important;
-            }
-
-            .footer-container {
-                padding: 0 1rem !important;
-            }
-        }
-
-        /* Force desktop layout for Safari 15.6.1 */
-        @media screen and (min-width: 768px) {
-            .footer-grid {
-                display: flex !important;
-                flex-direction: row !important;
-                flex-wrap: wrap !important;
-                gap: 2rem !important;
-            }
-
-            .footer-column {
-                flex: 1 !important;
-                min-width: 250px !important;
-                max-width: 300px !important;
-            }
-        }
-
-        /* Tarjetas flip */
-        .card-container {
-            cursor: pointer;
-            outline: none;
-        }
-
-        .card-inner {
-            transform-style: preserve-3d;
-            transition: transform .7s cubic-bezier(.4, .2, .2, 1);
-        }
-
-        .card-face {
-            backface-visibility: hidden;
-        }
-
-        .card-face.back {
-            transform: rotateY(180deg);
-        }
-
-        @media (hover:hover) and (pointer:fine) {
-            .card-container:hover .card-inner {
-                transform: rotateY(180deg);
-            }
-
-            .card-container:hover .card-logo {
-                transform: scale(1.1);
-            }
-        }
-
-        .card-container.is-flipped .card-inner {
-            transform: rotateY(180deg);
-        }
-
-        .card-container:focus-visible {
-            box-shadow: 0 0 0 3px var(--color-amarillo);
-        }
-
-        @media (min-width:1024px) {
-            .card-container.perspective-1000.px-4[style*="margin-bottom"] {
-                margin-bottom: 0 !important;
-            }
-        }
-
-        /* Carrusel responsive */
-        .carousel-container {
-            width: 350px;
-            height: 260px;
-        }
-
-        @media (min-width:640px) {
-            .carousel-container {
-                width: 450px;
-                height: 340px;
-            }
-        }
-
-        @media (min-width:1024px) {
-            .carousel-container {
-                width: 550px;
-                height: 410px;
-            }
-        }
-    </style>
+    <!-- ========================================
+         CSS Inline Removed
+         All styles moved to assets/components.css
+         for better organization and maintainability
+         ======================================== -->
 
     <script src="./assets/Scripts/safari-desktop-fix.js"></script>
     <script src="./assets/Scripts/layout.js"></script>
     <script src="./assets/Scripts/scripts.js"></script>
 
     <script>
+        // ===== Create WhatsApp Button Dynamically =====
+        (function() {
+            // Create button element
+            const btn = document.createElement('a');
+            btn.href = 'https://wa.me/51982218665';
+            btn.target = '_blank';
+            btn.rel = 'noopener noreferrer';
+            btn.className = 'whatsapp-btn-dynamic';
+            btn.setAttribute('aria-label', 'Contactar por WhatsApp');
+            
+            // Create SVG
+            btn.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.051 3.488"/>
+                </svg>
+            `;
+            
+            // Apply inline styles to GUARANTEE fixed position
+            btn.style.cssText = `
+                position: fixed !important;
+                bottom: 24px !important;
+                right: 24px !important;
+                width: 56px !important;
+                height: 56px !important;
+                background-color: #FFB42F !important;
+                border-radius: 50% !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+                z-index: 999999 !important;
+                transform: none !important;
+                transition: all 0.3s ease !important;
+                text-decoration: none !important;
+                border: none !important;
+                outline: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                top: auto !important;
+                left: auto !important;
+                isolation: isolate !important;
+                animation: bounceGlow 2s ease-in-out infinite !important;
+            `;
+            
+            // Style the SVG
+            const svg = btn.querySelector('svg');
+            if (svg) {
+                svg.style.cssText = `
+                    width: 32px !important;
+                    height: 32px !important;
+                    fill: #000 !important;
+                    pointer-events: none !important;
+                `;
+            }
+            
+            // Add hover effect
+            btn.addEventListener('mouseenter', () => {
+                btn.style.transform = 'scale(1.15) !important';
+                btn.style.boxShadow = '0 12px 32px rgba(0, 0, 0, 0.5) !important';
+                btn.style.animation = 'none !important';
+            });
+            
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'none !important';
+                btn.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.4) !important';
+                btn.style.animation = 'bounceGlow 2s ease-in-out infinite !important';
+            });
+            
+            // Append to body
+            document.body.appendChild(btn);
+        })();
+        
         document.addEventListener('DOMContentLoaded', () => {
-            // ====== Enhanced Safari 15.6.1 Responsive Header Fix ======
-            function fixHeaderResponsiveness() {
+            // ====== Header Initialization - Wait for dynamic load ======
+            const headerObserver = new MutationObserver(() => {
                 const nav = document.querySelector('nav[aria-label="Global"]');
                 const menuBtn = document.getElementById('openMenuBtn');
                 
-                if (!nav || !menuBtn) return;
-                
-                // Detect Safari browser
-                const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-                const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-                
-                function updateHeaderDisplay() {
-                    const screenWidth = window.innerWidth;
-                    const isMobile = screenWidth < 768;
-                    
-                    // Force style recalculation for Safari
-                    if (isSafari || isIOS) {
-                        nav.style.cssText = '';
-                        menuBtn.style.cssText = '';
-                        
-                        // Force reflow
-                        nav.offsetHeight;
-                        menuBtn.offsetHeight;
-                    }
-                    
-                    if (isMobile) {
-                        // Mobile: show hamburger, hide navigation
-                        nav.style.display = 'none';
-                        nav.style.visibility = 'hidden';
-                        menuBtn.style.display = 'block';
-                        menuBtn.style.visibility = 'visible';
-                        
-                        // Remove any conflicting classes for Safari
-                        if (isSafari || isIOS) {
-                            nav.classList.remove('md:block');
-                            menuBtn.classList.remove('md:hidden');
-                        }
-                    } else {
-                        // Desktop: show navigation, hide hamburger
-                        nav.style.display = 'block';
-                        nav.style.visibility = 'visible';
-                        menuBtn.style.display = 'none';
-                        menuBtn.style.visibility = 'hidden';
-                        
-                        // Add classes back for other browsers
-                        if (!isSafari && !isIOS) {
-                            nav.classList.add('md:block');
-                            menuBtn.classList.add('md:hidden');
-                        }
-                    }
-                    
-                    // Safari-specific: Force repaint
-                    if (isSafari || isIOS) {
-                        document.body.style.transform = 'translateZ(0)';
-                        setTimeout(() => {
-                            document.body.style.transform = '';
-                        }, 10);
-                    }
-                }
-                
-                // Run on load with multiple attempts for Safari
-                updateHeaderDisplay();
-                setTimeout(updateHeaderDisplay, 100);
-                setTimeout(updateHeaderDisplay, 300);
-                setTimeout(updateHeaderDisplay, 600);
-                
-                // Enhanced resize handling
-                let resizeTimeout;
-                window.addEventListener('resize', () => {
-                    clearTimeout(resizeTimeout);
-                    resizeTimeout = setTimeout(() => {
-                        updateHeaderDisplay();
-                        // Extra Safari check after resize
-                        if (isSafari || isIOS) {
-                            setTimeout(updateHeaderDisplay, 150);
-                        }
-                    }, 50);
-                });
-                
-                // Orientation change for mobile Safari
-                window.addEventListener('orientationchange', () => {
-                    setTimeout(updateHeaderDisplay, 200);
-                });
-                
-                // Page show event for Safari back/forward cache
-                window.addEventListener('pageshow', updateHeaderDisplay);
-            }
-            
-            // Initialize header fix
-            fixHeaderResponsiveness();
-            
-            // Re-run the fix when header is dynamically loaded
-            const headerObserver = new MutationObserver(() => {
-                const nav = document.querySelector('nav[aria-label="Global"]');
-                if (nav) {
-                    fixHeaderResponsiveness();
+                if (nav && menuBtn) {
+                    // Header loaded - disconnect observer and initialize menu
                     headerObserver.disconnect();
+                    initializeMobileMenu();
+                    // Safari fix: ensure responsive classes work correctly
+                    fixSafariResponsive();
                 }
             });
             
             const headerContainer = document.getElementById('header');
             if (headerContainer) {
                 headerObserver.observe(headerContainer, { childList: true, subtree: true });
+            }
+            
+            // Safari-specific responsive fix without overriding Tailwind classes
+            function fixSafariResponsive() {
+                const nav = document.querySelector('nav[aria-label="Global"]');
+                const menuBtn = document.getElementById('openMenuBtn');
+                
+                if (!nav || !menuBtn) return;
+                
+                // Detect Safari
+                const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+                
+                if (isSafari) {
+                    // Force Safari to recalculate responsive styles on load and resize
+                    function forceResponsiveRecalc() {
+                        // Trigger reflow without overriding Tailwind classes
+                        nav.style.transform = 'translateZ(0)';
+                        menuBtn.style.transform = 'translateZ(0)';
+                        
+                        setTimeout(() => {
+                            nav.style.transform = '';
+                            menuBtn.style.transform = '';
+                        }, 50);
+                    }
+                    
+                    // Initial recalculation
+                    forceResponsiveRecalc();
+                    
+                    // Recalculate on resize
+                    let resizeTimeout;
+                    window.addEventListener('resize', () => {
+                        clearTimeout(resizeTimeout);
+                        resizeTimeout = setTimeout(forceResponsiveRecalc, 100);
+                    });
+                    
+                    // Recalculate on orientation change
+                    window.addEventListener('orientationchange', () => {
+                        setTimeout(forceResponsiveRecalc, 200);
+                    });
+                }
+            }
+            
+            function initializeMobileMenu() {
+                const openBtn = document.getElementById('openMenuBtn');
+                const closeBtn = document.getElementById('closeMenuBtn');
+                const overlay = document.getElementById('mobileMenuOverlay');
+                const panel = document.getElementById('mobileMenuPanel');
+                
+                if (!openBtn || !closeBtn || !overlay || !panel) return;
+                
+                // Mobile menu functionality
+                openBtn.addEventListener('click', () => {
+                    overlay.classList.remove('hidden');
+                    panel.setAttribute('aria-hidden', 'false');
+                    openBtn.setAttribute('aria-expanded', 'true');
+                    setTimeout(() => {
+                        overlay.classList.remove('opacity-0');
+                        panel.classList.remove('translate-x-full');
+                    }, 10);
+                });
+                
+                const closeMenu = () => {
+                    overlay.classList.add('opacity-0');
+                    panel.classList.add('translate-x-full');
+                    openBtn.setAttribute('aria-expanded', 'false');
+                    setTimeout(() => {
+                        overlay.classList.add('hidden');
+                        panel.setAttribute('aria-hidden', 'true');
+                    }, 300);
+                };
+                
+                closeBtn.addEventListener('click', closeMenu);
+                overlay.addEventListener('click', closeMenu);
+                
+                // Close menu when clicking on a link
+                const menuLinks = panel.querySelectorAll('a');
+                menuLinks.forEach(link => {
+                    link.addEventListener('click', closeMenu);
+                });
             }
             
             // ====== Utilidades ======
