@@ -243,4 +243,54 @@ document.addEventListener('DOMContentLoaded', () => {
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
     }
+
+    // ====== Flip Cards para Mobile ======
+    // Detectar si es REALMENTE mobile (no solo touch-capable)
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const isSmallScreen = window.innerWidth < 1024;
+    
+    console.log('🔍 User Agent:', navigator.userAgent);
+    console.log('📱 Es móvil real:', isMobile);
+    console.log('👆 Tiene touch:', isTouchDevice);
+    console.log('📏 Pantalla pequeña (<1024px):', isSmallScreen);
+    console.log('🎯 Activar modo mobile:', isMobile || (isTouchDevice && isSmallScreen));
+    
+    // Solo activar en mobile real O en pantallas pequeñas con touch
+    if (isMobile || (isTouchDevice && isSmallScreen)) {
+        const flipCards = document.querySelectorAll('.flip-card');
+        console.log('🃏 Tarjetas encontradas:', flipCards.length);
+        
+        flipCards.forEach((card, index) => {
+            console.log(`✅ Agregando eventos a tarjeta ${index + 1}`);
+            
+            // Usar touchend en lugar de click para mejor rendimiento en mobile
+            card.addEventListener('touchend', function(e) {
+                e.preventDefault(); // Prevenir el click que viene después
+                console.log(`👆 TOUCHEND en tarjeta ${index + 1}`);
+                console.log('   Estado anterior:', this.classList.contains('is-flipped') ? 'VOLTEADA' : 'NORMAL');
+                
+                // Alternar el estado de esta tarjeta específica
+                this.classList.toggle('is-flipped');
+                
+                console.log('   Estado nuevo:', this.classList.contains('is-flipped') ? 'VOLTEADA' : 'NORMAL');
+                console.log('   Clases actuales:', this.className);
+            });
+            
+            // También agregar click como fallback
+            card.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log(`🖱️ CLICK en tarjeta ${index + 1}`);
+                console.log('   Estado anterior:', this.classList.contains('is-flipped') ? 'VOLTEADA' : 'NORMAL');
+                
+                // Alternar el estado de esta tarjeta específica
+                this.classList.toggle('is-flipped');
+                
+                console.log('   Estado nuevo:', this.classList.contains('is-flipped') ? 'VOLTEADA' : 'NORMAL');
+                console.log('   Clases actuales:', this.className);
+            });
+        });
+    } else {
+        console.log('💻 Modo desktop - usando hover CSS');
+    }
 });
