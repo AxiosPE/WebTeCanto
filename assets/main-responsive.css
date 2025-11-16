@@ -818,6 +818,15 @@ header img[alt="Logo de Te Canto"] {
     opacity: 1;
 }
 
+/* Clase para flip en mobile (touch) */
+.flip-card.is-flipped .flip-card-front {
+    opacity: 0;
+}
+
+.flip-card.is-flipped .flip-card-back {
+    opacity: 1;
+}
+
 .flip-card-classic .flip-card-front,
 .flip-card-classic .flip-card-back {
     background: linear-gradient(135deg, #000000, #1a1a1a);
