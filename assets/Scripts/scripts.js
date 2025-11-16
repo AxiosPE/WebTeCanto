@@ -264,20 +264,53 @@ document.addEventListener('DOMContentLoaded', () => {
         flipCards.forEach((card, index) => {
             console.log(`✅ Agregando eventos a tarjeta ${index + 1}`);
             
-            // Usar touchend en lugar de click para mejor rendimiento en mobile
-            card.addEventListener('touchend', function(e) {
-                e.preventDefault(); // Prevenir el click que viene después
-                console.log(`👆 TOUCHEND en tarjeta ${index + 1}`);
-                console.log('   Estado anterior:', this.classList.contains('is-flipped') ? 'VOLTEADA' : 'NORMAL');
-                
-                // Alternar el estado de esta tarjeta específica
-                this.classList.toggle('is-flipped');
-                
-                console.log('   Estado nuevo:', this.classList.contains('is-flipped') ? 'VOLTEADA' : 'NORMAL');
-                console.log('   Clases actuales:', this.className);
+            let touchStartY = 0;
+            let touchStartX = 0;
+            let isTouching = false;
+            
+            // Capturar posición inicial del touch
+            card.addEventListener('touchstart', function(e) {
+                isTouching = true;
+                touchStartY = e.touches[0].clientY;
+                touchStartX = e.touches[0].clientX;
+                console.log(`📍 TOUCHSTART en tarjeta ${index + 1} - X:${touchStartX}, Y:${touchStartY}`);
             });
             
-            // También agregar click como fallback
+            // Detectar si el usuario está haciendo scroll
+            card.addEventListener('touchmove', function(e) {
+                if (isTouching) {
+                    const touchMoveY = e.touches[0].clientY;
+                    const touchMoveX = e.touches[0].clientX;
+                    const deltaY = Math.abs(touchMoveY - touchStartY);
+                    const deltaX = Math.abs(touchMoveX - touchStartX);
+                    
+                    // Si se movió más de 10px, es un scroll, no un tap
+                    if (deltaY > 10 || deltaX > 10) {
+                        isTouching = false;
+                        console.log(`📜 SCROLL detectado en tarjeta ${index + 1} - deltaY:${deltaY}, deltaX:${deltaX}`);
+                    }
+                }
+            });
+            
+            // Solo voltear si NO hubo scroll
+            card.addEventListener('touchend', function(e) {
+                if (isTouching) {
+                    e.preventDefault();
+                    console.log(`👆 TAP en tarjeta ${index + 1}`);
+                    console.log('   Estado anterior:', this.classList.contains('is-flipped') ? 'VOLTEADA' : 'NORMAL');
+                    
+                    // Alternar el estado de esta tarjeta específica
+                    this.classList.toggle('is-flipped');
+                    
+                    console.log('   Estado nuevo:', this.classList.contains('is-flipped') ? 'VOLTEADA' : 'NORMAL');
+                    console.log('   Clases actuales:', this.className);
+                } else {
+                    console.log(`🚫 SCROLL ignorado en tarjeta ${index + 1}`);
+                }
+                isTouching = false;
+            });
+            
+            // Click como fallback para dispositivos que lo soporten
             card.addEventListener('click', function(e) {
                 e.preventDefault();
                 console.log(`🖱️ CLICK en tarjeta ${index + 1}`);
